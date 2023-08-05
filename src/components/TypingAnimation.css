@@ -1,0 +1,16 @@
+.typing-container {
+    position: relative;
+}
+
+.typing-text {
+    display: inline-block;
+}
+
+.underline-image {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+}

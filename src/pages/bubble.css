@@ -1,0 +1,112 @@
+.bubble_div{
+    height: auto;
+    position: relative;
+    width: 100vw;
+}
+  .first_bubble{
+    position: absolute;
+    height: 20vh;
+    margin-left: 30%;
+}
+
+
+.bubble_div_text1{
+    position: absolute;
+margin-top: 2%;
+    margin-left: 32%;
+
+}
+
+
+.second_bubble{
+    position: absolute;
+    height: 25vh;
+    margin-top: 18%;
+    margin-left: 20%;
+
+}
+
+
+
+.bubble_div_text2{
+    position: absolute;
+   
+    margin-top: 21%;
+    margin-left: 22%;
+}
+
+.bubble_mascot{
+    display: block;
+    width: 400px;
+    margin-left: 40%;
+    
+}
+
+.third_bubble{
+    position: absolute;
+    height: 25vh;
+    margin-top: -30%;
+    margin-left: 65%;
+}
+
+.bubble_div_text3{
+    position: absolute;
+    margin-top: -26.5%;
+    margin-left: 67%;
+}
+
+
+/* Adding Media queries for responsiveness */
+@media (max-width: 768px) {
+    .bubble_div{
+        
+        /* width: 100%; */
+        height:500px;
+    }
+    .first_bubble {
+      height: 13vh;
+      margin-left: 10%;
+    }
+  
+    .bubble_div_text1 {
+        margin-left: 13%;
+      font-size:small;
+    }
+  
+    .second_bubble {
+      height: 15vh;
+      bottom: 0;
+      margin-left: 5%;
+      z-index: 999;
+    }
+  
+    .bubble_div_text2 {
+      bottom:1.2rem;
+      margin-left: 9%;
+      font-size: 11px;
+      z-index: 999;
+    }
+  
+    .bubble_mascot {
+        position: absolute;
+      width: 200px;
+      margin-left: 28vw;
+      top:10vh;
+      object-fit: contain;
+    }
+
+  
+    .third_bubble {
+      height:13.5vh;
+      top:9rem;
+      margin-left: 55%;
+    }
+  
+    .bubble_div_text3 {
+      top: 10rem;
+      margin-left: 57%;
+      font-size: 10px;
+      
+    }
+  }
+  
