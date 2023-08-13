@@ -7,6 +7,8 @@ import UnderlinedText from "../components/UnderlinedText";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import Whyusimg from "../assets/images/why us.png";
 import star from "../assets/images/star.png";
+import bgImage from "../assets/images/Hero bg image.png";
+
 const WhyUs = () => {
   const parentRef = useRef(null);
   const mascotRef = useRef(null);
@@ -50,20 +52,21 @@ const WhyUs = () => {
         sx={{
           display: "flex",
           alignItems: "center",
+          justifyContent: "center",
           flexDirection: "column",
-          m: "8ch auto",
           fontWeight: 500,
-          backgroundSize: "cover",
+          height: "60vh",
+          backgroundImage: `url("${bgImage}")`,
+          backgroundSize: "contain",
           backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
           position: "relative",
         }}
       >
-        <Box align="center" sx={{ m: "auto 8ch" }}>
-          <Typography variant="h1">Delivering Results and Values</Typography>
-        </Box>
+        <Typography variant="h1">Delivering Results and Values</Typography>
         <Box sx={{ my: 2, lineHeight: 1.7, fontSize: "18px" }} />
-        <Typography variant="body2" align="center">
-          WE make your digital success our top priority and assist you to reach
+        <Typography variant="body2" align="center" fontSize="18px">
+          We make your digital success our top priority and assist you to reach
           it.
         </Typography>
       </Container>
@@ -108,27 +111,27 @@ const WhyUs = () => {
           </Grid>
           <Grid item sm={12} md={6} lg={7}>
             <Container>
-              <Box sx={{ mb: "20px" }}>
+              {/* <Box sx={{ mb: "20px" }}>
                 <UnderlinedText>Heading - H2 title</UnderlinedText>
-              </Box>
+              </Box> */}
 
-              <Typography variant="body1" sx={{ my: 2 }}>
+              <Typography variant="body1" sx={{ my: 2 }} fontSize="18px">
                 With globalization, traditional marketing is not sufficient
                 anymore to reach modern consumers who are more connected online
                 and tech-savvy than ever before.
               </Typography>
-              <Typography variant="body1" sx={{ my: 2 }}>
+              <Typography variant="body1" sx={{ my: 2 }} fontSize="18px">
                 A business needs digital marketing services to reach its target
                 audience, build brand awareness, generate leads, and ultimately
                 increase revenue and that is literally everything we do.
               </Typography>
-              <Typography variant="body1" sx={{ my: 2 }}>
+              <Typography variant="body1" sx={{ my: 2 }} fontSize="18px">
                 Our services allow businesses to leverage the power of social
                 media, search engines, email, and other digital platforms to
                 create compelling campaigns that engage and convert potential
                 customers.
               </Typography>
-              <Typography variant="body1" sx={{ my: 2 }}>
+              <Typography variant="body1" sx={{ my: 2 }} fontSize="18px">
                 And we have achieved the best results doing that, which makes
                 our clients trust us!
               </Typography>
@@ -213,9 +216,14 @@ const WhyUs = () => {
                   >
                     70%
                   </Typography>
-                  <Typography sx={{ fontSize: "0.9em","@media (max-width: 959.95px)": {
+                  <Typography
+                    sx={{
+                      fontSize: "0.9em",
+                      "@media (max-width: 959.95px)": {
                         fontSize: "0.5em",
-                      }, }}>
+                      },
+                    }}
+                  >
                     Client Served
                   </Typography>
                 </Box>
@@ -233,9 +241,14 @@ const WhyUs = () => {
                   >
                     97%
                   </Typography>
-                  <Typography sx={{ fontSize: "0.9em" ,"@media (max-width: 959.95px)": {
+                  <Typography
+                    sx={{
+                      fontSize: "0.9em",
+                      "@media (max-width: 959.95px)": {
                         fontSize: "0.5em",
-                      },}}>
+                      },
+                    }}
+                  >
                     Satisfied Customers
                   </Typography>
                 </Box>
@@ -264,19 +277,26 @@ const WhyUs = () => {
                     </Typography>
                     <Image
                       src={star}
-                      sx={{width: "20px",
-                      height: "20px",
-                      objectFit: "contain",
-                      marginTop: "10px",
+                      sx={{
+                        width: "20px",
+                        height: "20px",
+                        objectFit: "contain",
+                        marginTop: "10px",
                         "@media (max-width: 959.95px)": {
-                        marginTop:"0"
-                      }}}
+                          marginTop: "0",
+                        },
+                      }}
                     />
                   </Box>
 
-                  <Typography sx={{ fontSize: "0.9em" ,"@media (max-width: 959.95px)": {
+                  <Typography
+                    sx={{
+                      fontSize: "0.9em",
+                      "@media (max-width: 959.95px)": {
                         fontSize: "0.5em",
-                      },}}>
+                      },
+                    }}
+                  >
                     Overall Ratings
                   </Typography>
                 </Box>
@@ -294,9 +314,14 @@ const WhyUs = () => {
                   >
                     150%
                   </Typography>
-                  <Typography sx={{ fontSize: "0.9em","@media (max-width: 959.95px)": {
+                  <Typography
+                    sx={{
+                      fontSize: "0.9em",
+                      "@media (max-width: 959.95px)": {
                         fontSize: "0.5em",
-                      }, }}>
+                      },
+                    }}
+                  >
                     Growth Ratio
                   </Typography>
                 </Box>

@@ -13,6 +13,7 @@ import { Link } from "react-router-dom";
 import { InputBase, IconButton } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import bgImage from "../assets/images/Hero bg image.png";
+import ReactPaginate from "react-paginate";
 
 // const CustomContainer = styled(Container)(({ theme }) => ({
 //   padding: 0,
@@ -52,26 +53,26 @@ const Blogs = () => {
   }, [pageCount]);
 
   const fetchBlogs = async (currentPage) => {
-    const res = await fetch(
-      `https://admin.exlval.com/api/posts?page=${currentPage}`
-    );
-    const data = await res.json();
-    return data;
+    axios
+      .get(`https://admin.exlval.com/api/posts?page=${currentPage}`)
+      .then((res) => {
+        let data = res.data.posts.data;
+        setBlogData(data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        setLoading(false);
+        console.log(err);
+      });
   };
-  //console.log(infographicsData);
 
   const handlePageClick = async (data) => {
     //console.log(data.selected);
 
     let currentPage = data.selected + 1;
-
-    const res = await fetchBlogs(currentPage);
-    let paginatedBlogData = res.data.posts.data;
-
-    setBlogData(paginatedBlogData);
-    // scroll to the top
-    //window.scrollTo(0, 0)
+    fetchBlogs(currentPage);
   };
+
   return (
     <Grid container padding={5}>
       <Grid container spacing={2}>
@@ -85,21 +86,22 @@ const Blogs = () => {
           sx={{
             display: "flex",
             alignItems: "center",
+            justifyContent: "center",
             flexDirection: "column",
-            m: "8ch auto",
             fontWeight: 500,
+            height: "60vh",
             backgroundImage: `url("${bgImage}")`,
-            backgroundSize: "cover",
+            backgroundSize: "contain",
             backgroundPosition: "center",
-            height: "400px",
+            backgroundRepeat: "no-repeat",
             position: "relative",
           }}
         >
-          <Box align="center">
-            <Typography variant="h1">Crack the code to growth</Typography>
-          </Box>
+          <Typography variant="h1" align="center" maxWidth={"30ch"}>
+            Crack the code to growth
+          </Typography>
           <Box sx={{ my: 2, lineHeight: 1.7, fontSize: "18px" }} />
-          <Typography variant="body2" align="center">
+          <Typography variant="body2" align="center" fontSize={"18px"}>
             Find Insights, Inspiration, and Innovation tight here!
           </Typography>
         </Grid>
@@ -252,12 +254,33 @@ const Blogs = () => {
         </Grid>
       </Grid>
       <Grid
-        container
-        spacing={2}
+        item
+        align={"center"}
+        justifyContent={"center"}
         sx={{
-          height: 3,
+          width: "100%",
         }}
-      ></Grid>
+      >
+        <ReactPaginate
+          previousLabel={"<<"}
+          nextLabel={">>"}
+          breakLabel={"..."}
+          pageCount={pageCount}
+          marginPagesDisplayed={2}
+          pageRangeDisplayed={3}
+          onPageChange={handlePageClick}
+          containerClassName={"pagination-container"}
+          pageClassName={"page-item"}
+          pageLinkClassName={"page-link"}
+          previousClassName={"page-item"}
+          previousLinkClassName={"page-link"}
+          nextClassName={"page-item"}
+          nextLinkClassName={"page-link"}
+          breakClassName={"page-item"}
+          breakLinkClassName={"page-link"}
+          activeClassName={"active-page"}
+        />
+      </Grid>
       <Grid container sx={{ my: "80px" }}>
         <Grid
           item

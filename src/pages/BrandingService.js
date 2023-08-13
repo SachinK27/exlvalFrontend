@@ -10,7 +10,7 @@ import {
   Button,
   useTheme,
   useMediaQuery,
-  Link
+  Link,
 } from "@mui/material";
 import Image from "../components/Image";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
@@ -27,6 +27,7 @@ import Card from "../components/Card";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import ContactForm from "../components/ContactForm";
 import SwipperTest from "../components/SwipperTest";
+import bgImage from "../assets/images/Hero bg image.png";
 
 import "./Sticky.css";
 const iconsData = [
@@ -39,27 +40,31 @@ const iconsData = [
 ];
 //Data for cards
 const cardsData = [
-   
   {
     title: "Logo & Identity Design",
-    content: "Create a unique and memorable brand identity that sets you apart from the competition.",
+    content:
+      "Create a unique and memorable brand identity that sets you apart from the competition.",
   },
   {
     title: "Digital Package Design",
-    content: "Design packaging that stands out in the digital world and boosts your sales.",
+    content:
+      "Design packaging that stands out in the digital world and boosts your sales.",
   },
   {
     title: "Business Collateral",
-    content: "Create professional and consistent marketing materials that represent your brand in the best light.",
+    content:
+      "Create professional and consistent marketing materials that represent your brand in the best light.",
   },
   {
     title: "Brand Style Guide",
-    content: "Develop guidelines to ensure consistent brand messaging and visual identity across all channels.",
+    content:
+      "Develop guidelines to ensure consistent brand messaging and visual identity across all channels.",
   },
   {
     title: "Hoardings and Board Design",
-    content: "Grab the attention of your target audience with creative and impactful outdoor advertising designs.",
-  }
+    content:
+      "Grab the attention of your target audience with creative and impactful outdoor advertising designs.",
+  },
 ];
 const BrandingService = () => {
   const theme = useTheme();
@@ -112,30 +117,24 @@ const BrandingService = () => {
         sx={{
           display: "flex",
           alignItems: "center",
+          justifyContent: "center",
           flexDirection: "column",
-          my: "8ch",
           fontWeight: 500,
-          backgroundSize: "cover",
+          height: "60vh",
+          backgroundImage: `url("${bgImage}")`,
+          backgroundSize: "contain",
           backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
           position: "relative",
         }}
       >
-        <Box
-          align="center"
-          sx={{
-            m: "auto 8ch",
-            px: 15,
-            "@media (max-width: 959.95px)": {
-              m: "0 auto",
-              px: 2,
-            },
-          }}
-        >
-          <Typography variant="h1">Branding</Typography>
-        </Box>
+        <Typography variant="h1" align="center" maxWidth={"20ch"}>
+          Branding
+        </Typography>
         <Box sx={{ my: 2, lineHeight: 1.7, fontSize: "18px" }} />
-        <Typography variant="body1" align="center">
-        Creating branding that is not just good, but world-class - telling your story with impact and trust.
+        <Typography variant="body1" align="center" fontSize="18px">
+          Creating branding that is not just good, but world-class - telling
+          your story with impact and trust.
         </Typography>
         <Container align="center" sx={{ mt: 5 }}>
           <Button
@@ -148,7 +147,7 @@ const BrandingService = () => {
               },
             }}
           >
-           <Link href="/contact-us">Contact us</Link>
+            <Link href="/contact-us">Contact us</Link>
           </Button>
         </Container>
       </Container>
@@ -194,179 +193,177 @@ const BrandingService = () => {
           </Grid>
 
           <Grid item xl={7} lg={7} md={7} sm={12} xs={12}>
-          <Box>
-  <Stack spacing={3} >
-    <Typography sx={{ fontSize: "18px", fontWeight: "bold" }}>
-      A brand is a name and logo, but it is also more than that.
-      It’s about telling your unique story and creating a lasting
-      impression that resonates with your target audience.
-    </Typography>
-    <Stack direction="row" spacing={1}>
-      <IconButton
-        sx={{
-          background: "#F45050",
-          width: "24px",
-          height: "24px",
-        }}
-      >
-        <EastTwoToneIcon sx={{ color: "#fff", fontSize: "18px" }} />
-      </IconButton>
-      <Typography>
-        Is your brand inconsistent or vague (theme, colour,
-        marketing message)?
-      </Typography>
-    </Stack>
-    <Stack direction="row" spacing={1}>
-      <IconButton
-        sx={{
-          background: "#F45050",
-          width: "24px",
-          height: "24px",
-        }}
-      >
-        <EastTwoToneIcon sx={{ color: "#fff", fontSize: "18px" }} />
-      </IconButton>
-      <Typography>
-        No brand story that your audience can relate to?
-      </Typography>
-    </Stack>
-    <Stack direction="row" spacing={1}>
-      <IconButton
-        sx={{
-          background: "#F45050",
-          width: "24px",
-          height: "24px",
-        }}
-      >
-        <EastTwoToneIcon sx={{ color: "#fff", fontSize: "18px" }} />
-      </IconButton>
-      <Typography>
-        Are your marketing efforts different from your brand?
-      </Typography>
-    </Stack>
-    <Stack direction="row" spacing={1}>
-      <IconButton
-        sx={{
-          background: "#F45050",
-          width: "24px",
-          height: "24px",
-        }}
-      >
-        <EastTwoToneIcon sx={{ color: "#fff", fontSize: "18px" }} />
-      </IconButton>
-      <Typography>
-        {" "}
-        Do you have an unsatisfied audience with your product or
-        service after hearing your brand promise/marketing message?
-      </Typography>
-    </Stack>
-    <Stack direction="row" spacing={1}>
-      <IconButton
-        sx={{
-          background: "#F45050",
-          width: "24px",
-          height: "24px",
-        }}
-      >
-        <EastTwoToneIcon sx={{ color: "#fff", fontSize: "18px" }} />
-      </IconButton>
-      <Typography> Do you have zero brand authority?</Typography>
-    </Stack>
-    <Typography>
-      You will find solutions to everything you are facing here.
-    </Typography>
-    <Typography sx={{ fontSize: "18px", fontWeight: "bold" }}>
-      6 things to build a solid brand:
-    </Typography>
+            <Box>
+              <Stack spacing={3}>
+                <Typography sx={{ fontSize: "18px", fontWeight: "bold" }}>
+                  A brand is a name and logo, but it is also more than that.
+                  It’s about telling your unique story and creating a lasting
+                  impression that resonates with your target audience.
+                </Typography>
+                <Stack direction="row" spacing={1}>
+                  <IconButton
+                    sx={{
+                      background: "#F45050",
+                      width: "24px",
+                      height: "24px",
+                    }}
+                  >
+                    <EastTwoToneIcon sx={{ color: "#fff", fontSize: "18px" }} />
+                  </IconButton>
+                  <Typography>
+                    Is your brand inconsistent or vague (theme, colour,
+                    marketing message)?
+                  </Typography>
+                </Stack>
+                <Stack direction="row" spacing={1}>
+                  <IconButton
+                    sx={{
+                      background: "#F45050",
+                      width: "24px",
+                      height: "24px",
+                    }}
+                  >
+                    <EastTwoToneIcon sx={{ color: "#fff", fontSize: "18px" }} />
+                  </IconButton>
+                  <Typography>
+                    No brand story that your audience can relate to?
+                  </Typography>
+                </Stack>
+                <Stack direction="row" spacing={1}>
+                  <IconButton
+                    sx={{
+                      background: "#F45050",
+                      width: "24px",
+                      height: "24px",
+                    }}
+                  >
+                    <EastTwoToneIcon sx={{ color: "#fff", fontSize: "18px" }} />
+                  </IconButton>
+                  <Typography>
+                    Are your marketing efforts different from your brand?
+                  </Typography>
+                </Stack>
+                <Stack direction="row" spacing={1}>
+                  <IconButton
+                    sx={{
+                      background: "#F45050",
+                      width: "24px",
+                      height: "24px",
+                    }}
+                  >
+                    <EastTwoToneIcon sx={{ color: "#fff", fontSize: "18px" }} />
+                  </IconButton>
+                  <Typography>
+                    {" "}
+                    Do you have an unsatisfied audience with your product or
+                    service after hearing your brand promise/marketing message?
+                  </Typography>
+                </Stack>
+                <Stack direction="row" spacing={1}>
+                  <IconButton
+                    sx={{
+                      background: "#F45050",
+                      width: "24px",
+                      height: "24px",
+                    }}
+                  >
+                    <EastTwoToneIcon sx={{ color: "#fff", fontSize: "18px" }} />
+                  </IconButton>
+                  <Typography> Do you have zero brand authority?</Typography>
+                </Stack>
+                <Typography>
+                  You will find solutions to everything you are facing here.
+                </Typography>
+                <Typography sx={{ fontSize: "18px", fontWeight: "bold" }}>
+                  6 things to build a solid brand:
+                </Typography>
 
-    <Stack direction="row" spacing={1}>
-      <IconButton
-        sx={{
-          background: "#F45050",
-          width: "24px",
-          height: "24px",
-        }}
-      >
-        <EastTwoToneIcon sx={{ color: "#fff", fontSize: "18px" }} />
-      </IconButton>
-      <Typography> Identifying the target audience
-</Typography>
-    </Stack>
-    <Stack direction="row" spacing={1}>
-      <IconButton
-        sx={{
-          background: "#F45050",
-          width: "24px",
-          height: "24px",
-        }}
-      >
-        <EastTwoToneIcon sx={{ color: "#fff", fontSize: "18px" }} />
-      </IconButton>
-      <Typography> Building a brand story</Typography>
-    </Stack>
-    <Stack direction="row" spacing={1}>
-      <IconButton
-        sx={{
-          background: "#F45050",
-          width: "24px",
-          height: "24px",
-        }}
-      >
-        <EastTwoToneIcon sx={{ color: "#fff", fontSize: "18px" }} />
-      </IconButton>
-      <Typography> Designing a logo</Typography>
-    </Stack>
-    <Stack direction="row" spacing={1}>
-      <IconButton
-        sx={{
-          background: "#F45050",
-          width: "24px",
-          height: "24px",
-        }}
-      >
-        <EastTwoToneIcon sx={{ color: "#fff", fontSize: "18px" }} />
-      </IconButton>
-      <Typography> Brand positioning and marketing message</Typography>
-    </Stack>
-    <Stack direction="row" spacing={1}>
-      <IconButton
-        sx={{
-          background: "#F45050",
-          width: "24px",
-          height: "24px",
-        }}
-      >
-        <EastTwoToneIcon sx={{ color: "#fff", fontSize: "18px" }} />
-      </IconButton>
-      <Typography> Brand look and theme</Typography>
-    </Stack>
-    <Stack direction="row" spacing={1}>
-      <IconButton
-        sx={{
-          background: "#F45050",
-          width: "24px",
-          height: "24px",
-        }}
-      >
-        <EastTwoToneIcon sx={{ color: "#fff", fontSize: "18px" }} />
-      </IconButton>
-      <Typography> Brand slogan
-</Typography>
-    </Stack>
-    <Typography>
-    These things build trust among the audience and there is a way you can achieve it.
-
-      </Typography>
-      <Typography>
-      Take a look at how?
-
-      </Typography>
-  </Stack>
-  <Image
-    style={{ margin: "3ch auto", display: "block" }}
-    src={arrow}
-  />
-</Box>
+                <Stack direction="row" spacing={1}>
+                  <IconButton
+                    sx={{
+                      background: "#F45050",
+                      width: "24px",
+                      height: "24px",
+                    }}
+                  >
+                    <EastTwoToneIcon sx={{ color: "#fff", fontSize: "18px" }} />
+                  </IconButton>
+                  <Typography> Identifying the target audience</Typography>
+                </Stack>
+                <Stack direction="row" spacing={1}>
+                  <IconButton
+                    sx={{
+                      background: "#F45050",
+                      width: "24px",
+                      height: "24px",
+                    }}
+                  >
+                    <EastTwoToneIcon sx={{ color: "#fff", fontSize: "18px" }} />
+                  </IconButton>
+                  <Typography> Building a brand story</Typography>
+                </Stack>
+                <Stack direction="row" spacing={1}>
+                  <IconButton
+                    sx={{
+                      background: "#F45050",
+                      width: "24px",
+                      height: "24px",
+                    }}
+                  >
+                    <EastTwoToneIcon sx={{ color: "#fff", fontSize: "18px" }} />
+                  </IconButton>
+                  <Typography> Designing a logo</Typography>
+                </Stack>
+                <Stack direction="row" spacing={1}>
+                  <IconButton
+                    sx={{
+                      background: "#F45050",
+                      width: "24px",
+                      height: "24px",
+                    }}
+                  >
+                    <EastTwoToneIcon sx={{ color: "#fff", fontSize: "18px" }} />
+                  </IconButton>
+                  <Typography>
+                    {" "}
+                    Brand positioning and marketing message
+                  </Typography>
+                </Stack>
+                <Stack direction="row" spacing={1}>
+                  <IconButton
+                    sx={{
+                      background: "#F45050",
+                      width: "24px",
+                      height: "24px",
+                    }}
+                  >
+                    <EastTwoToneIcon sx={{ color: "#fff", fontSize: "18px" }} />
+                  </IconButton>
+                  <Typography> Brand look and theme</Typography>
+                </Stack>
+                <Stack direction="row" spacing={1}>
+                  <IconButton
+                    sx={{
+                      background: "#F45050",
+                      width: "24px",
+                      height: "24px",
+                    }}
+                  >
+                    <EastTwoToneIcon sx={{ color: "#fff", fontSize: "18px" }} />
+                  </IconButton>
+                  <Typography> Brand slogan</Typography>
+                </Stack>
+                <Typography>
+                  These things build trust among the audience and there is a way
+                  you can achieve it.
+                </Typography>
+                <Typography>Take a look at how?</Typography>
+              </Stack>
+              <Image
+                style={{ margin: "3ch auto", display: "block" }}
+                src={arrow}
+              />
+            </Box>
           </Grid>
         </Grid>
       </Container>
@@ -402,7 +399,9 @@ const BrandingService = () => {
               </Typography>
               <Typography variant="body2">
                 <em>
-                We conduct an analysis of how your consumers perceive your brand currently and how you want them to perceive it in the future before implementing our branding strategies.
+                  We conduct an analysis of how your consumers perceive your
+                  brand currently and how you want them to perceive it in the
+                  future before implementing our branding strategies.
                 </em>
               </Typography>
             </Card4>
@@ -421,7 +420,8 @@ const BrandingService = () => {
               </Typography>
               <Typography variant="body2">
                 <em>
-                We share a proposal and create a branding formula that fits your specific needs based on the requirements you provide us.
+                  We share a proposal and create a branding formula that fits
+                  your specific needs based on the requirements you provide us.
                 </em>
               </Typography>
             </Card4>
@@ -440,7 +440,10 @@ const BrandingService = () => {
               </Typography>
               <Typography variant="body2">
                 <em>
-                Once we provide you with a quote, we conduct thorough research on your industry and target audience to create a brand style guide. This guide helps us align your branding process with your brand's objective.
+                  Once we provide you with a quote, we conduct thorough research
+                  on your industry and target audience to create a brand style
+                  guide. This guide helps us align your branding process with
+                  your brand's objective.
                 </em>
               </Typography>
             </Card4>
@@ -459,7 +462,10 @@ const BrandingService = () => {
               </Typography>
               <Typography variant="body2">
                 <em>
-                We continuously monitor and improve your branding strategy based on audience feedback and preferences. Our regular reports keep you informed about progress and ensure alignment with your business goals.
+                  We continuously monitor and improve your branding strategy
+                  based on audience feedback and preferences. Our regular
+                  reports keep you informed about progress and ensure alignment
+                  with your business goals.
                 </em>
               </Typography>
             </Card4>
@@ -502,7 +508,9 @@ const BrandingService = () => {
             </Typography>
             <Typography variant="body2">
               <em>
-              We conduct an analysis of how your consumers perceive your brand currently and how you want them to perceive it in the future before implementing our branding strategies.
+                We conduct an analysis of how your consumers perceive your brand
+                currently and how you want them to perceive it in the future
+                before implementing our branding strategies.
               </em>
             </Typography>
           </Card4>
@@ -542,7 +550,8 @@ const BrandingService = () => {
             </Typography>
             <Typography variant="body2">
               <em>
-              We share a proposal and create a branding formula that fits your specific needs based on the requirements you provide us.
+                We share a proposal and create a branding formula that fits your
+                specific needs based on the requirements you provide us.
               </em>
             </Typography>
           </Card4>
@@ -582,7 +591,10 @@ const BrandingService = () => {
             </Typography>
             <Typography variant="body2">
               <em>
-              Once we provide you with a quote, we conduct thorough research on your industry and target audience to create a brand style guide. This guide helps us align your branding process with your brand's objective.
+                Once we provide you with a quote, we conduct thorough research
+                on your industry and target audience to create a brand style
+                guide. This guide helps us align your branding process with your
+                brand's objective.
               </em>
             </Typography>
           </Card4>
@@ -622,7 +634,10 @@ const BrandingService = () => {
             </Typography>
             <Typography variant="body2">
               <em>
-              We continuously monitor and improve your branding strategy based on audience feedback and preferences. Our regular reports keep you informed about progress and ensure alignment with your business goals.
+                We continuously monitor and improve your branding strategy based
+                on audience feedback and preferences. Our regular reports keep
+                you informed about progress and ensure alignment with your
+                business goals.
               </em>
             </Typography>
           </Card4>
@@ -668,7 +683,7 @@ const BrandingService = () => {
             <Box>
               <UnderlinedText>
                 <Typography sx={{ fontSize: "2rem", fontWeight: "medium" }}>
-                Branding Services provided by us:
+                  Branding Services provided by us:
                 </Typography>
               </UnderlinedText>
               <Box sx={{ my: 4 }} />

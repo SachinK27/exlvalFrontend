@@ -5,10 +5,15 @@ import resources from "../assets/images/resources.svg";
 import services from "../assets/images/services.svg";
 import loadingImg from "../assets/images/loading.gif";
 import axios from "axios";
+import { useLocation } from "react-router-dom";
 
 const SideNav = () => {
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+
   const [loading, setLoading] = useState(true);
   const [sideBarData, setSideBarData] = useState([]);
+
   useEffect(() => {
     setLoading(true);
 
@@ -81,14 +86,17 @@ const SideNav = () => {
         ) : (
           <>
             {sideBarData.map((item, index) => {
-              let linkUrl = "/";
+              let linkUrl = `${path}?category=${item.id}`;
               return (
                 <Typography
-                  variant="body1"
+                  // variant="body1"
                   component={Link}
                   href={linkUrl}
                   sx={{
-                    color: "#2B2B2B",
+                    color:
+                      queryParams.get("category") == item.id
+                        ? "#F45050"
+                        : "#2B2B2B",
                     "&:hover": {
                       color: "#F45050",
                     },

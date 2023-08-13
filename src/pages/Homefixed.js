@@ -274,10 +274,9 @@
 //             <Box sx={{ my: 7 }} />
 //             <Box>
 //               <UnderlinedText>Explore Our Result-driven Work</UnderlinedText>
-             
+
 //               <SwipperTest />
 
-              
 //               <Container align="center">
 //                 <Button
 //                   sx={{
@@ -366,18 +365,18 @@
 //                   {
 //                     image:
 //                       "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50",
-//                     text1: `“222222Their personal attention and fast delivery 
+//                     text1: `“222222Their personal attention and fast delivery
 // were Impressive.”`,
-//                     text2: `I have Opted. Exlval for A neat and clean 
-// website on time. As the owner of Exlval, 
-// Lakshman Sharma was in known of me. Then 
-// we started for Website Development and 
-// secondly we started for Search Engine 
+//                     text2: `I have Opted. Exlval for A neat and clean
+// website on time. As the owner of Exlval,
+// Lakshman Sharma was in known of me. Then
+// we started for Website Development and
+// secondly we started for Search Engine
 // Optimization.`,
-//                     text3: `Must say very nice research and execution and 
-// also very professional and good coordination in 
-// between different teams. Their personal 
-// attention and fast delivery were impressive. 
+//                     text3: `Must say very nice research and execution and
+// also very professional and good coordination in
+// between different teams. Their personal
+// attention and fast delivery were impressive.
 // Keep it up Exlval!`,
 //                   },
 //                   {
@@ -397,18 +396,18 @@
 //                   {
 //                     image:
 //                       "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50",
-//                     text1: `“4444Their personal attention and fast delivery 
+//                     text1: `“4444Their personal attention and fast delivery
 // were Impressive.”`,
-//                     text2: `I have Opted. Exlval for A neat and clean 
-// website on time. As the owner of Exlval, 
-// Lakshman Sharma was in known of me. Then 
-// we started for Website Development and 
-// secondly we started for Search Engine 
+//                     text2: `I have Opted. Exlval for A neat and clean
+// website on time. As the owner of Exlval,
+// Lakshman Sharma was in known of me. Then
+// we started for Website Development and
+// secondly we started for Search Engine
 // Optimization.`,
-//                     text3: `Must say very nice research and execution and 
-// also very professional and good coordination in 
-// between different teams. Their personal 
-// attention and fast delivery were impressive. 
+//                     text3: `Must say very nice research and execution and
+// also very professional and good coordination in
+// between different teams. Their personal
+// attention and fast delivery were impressive.
 // Keep it up Exlval!`,
 //                   },
 //                 ]}
@@ -428,27 +427,29 @@
 
 // export default Homepage;
 
-
-
-import React, { useState, useEffect, useRef } from "react";
+import React, {
+  // useState,
+  useEffect,
+  useRef,
+} from "react";
 import {
   Box,
   Button,
   Container,
   Grid,
-  Stack,
+  // Stack,
   Typography,
   Link,
 } from "@mui/material";
 import bgImage from "../assets/images/Hero bg image.png";
-import logo1 from "../assets/images/TSRF.png";
-import logo2 from "../assets/images/Team Aviation.png";
-import logo3 from "../assets/images/Trived Pharma.png";
-import logo4 from "../assets/images/SDECOR Leminates.png";
-import logo5 from "../assets/images/CG Logistics.png";
-import logo6 from "../assets/images/Relitrade.png";
-import logo7 from "../assets/images/Growing Mafia.png";
-import logo8 from "../assets/images/lastCompany.png";
+// import logo1 from "../assets/images/TSRF.png";
+// import logo2 from "../assets/images/Team Aviation.png";
+// import logo3 from "../assets/images/Trived Pharma.png";
+// import logo4 from "../assets/images/SDECOR Leminates.png";
+// import logo5 from "../assets/images/CG Logistics.png";
+// import logo6 from "../assets/images/Relitrade.png";
+// import logo7 from "../assets/images/Growing Mafia.png";
+// import logo8 from "../assets/images/lastCompany.png";
 import mascot from "../assets/images/output-onlinegiftools.gif";
 import mascot6 from "../assets/images/pose_06a.png";
 import bubble1 from "../assets/images/bubble1.svg";
@@ -456,9 +457,9 @@ import bubble2 from "../assets/images/bubble2.svg";
 import bubble3 from "../assets/images/bubble3.svg";
 import Card from "../components/Card";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
-import Carousel from "../components/Carousel";
+// import Carousel from "../components/Carousel";
 import Image from "../components/Image";
-import Card2 from "../components/Card2";
+// import Card2 from "../components/Card2";
 import Carousel2 from "../components/Carousel2";
 import ContactForm from "../components/ContactForm";
 import UnderlinedText from "../components/UnderlinedText";
@@ -568,11 +569,13 @@ const Homefixed = () => {
         </Container>
 
         <Box sx={{ my: 2 }} />
+
         <Typography variant="body1" align="center">
           Our team of experts tailor creative, technical, strategic, and
           data-driven solutions for you <br /> that unlock your business’s full
           potential
         </Typography>
+
         <Container sx={{ mt: 5 }} align="center">
           <Button
             sx={{

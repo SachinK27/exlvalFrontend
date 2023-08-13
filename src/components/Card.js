@@ -46,13 +46,26 @@
 
 // export default Card;
 
-
 import { Box, Card as MuiCard, Stack, Typography } from "@mui/material";
 import AutoGraphIcon from "@mui/icons-material/AutoGraph";
+import Sparkles from "react-sparkle";
+import { useState } from "react";
 
 const Card = ({ title, content, ...rest }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseOver = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseOut = () => {
+    setIsHovered(false);
+  };
+
   return (
     <MuiCard
+      onMouseOver={handleMouseOver}
+      onMouseOut={handleMouseOut}
       elevation={2}
       sx={{
         ...rest,
@@ -61,6 +74,7 @@ const Card = ({ title, content, ...rest }) => {
         border: "1px solid #F45050",
         maxWidth: "360px",
         position: "relative",
+        overflow: "visible",
         display: "inline-block",
         "&:hover": {
           boxShadow: "0 0 5px 3px rgba(0, 0, 0, 0.5)",
@@ -83,6 +97,17 @@ const Card = ({ title, content, ...rest }) => {
         },
       }}
     >
+      {isHovered && (
+        <Sparkles
+          color="red"
+          count={40}
+          minSize={7}
+          maxSize={12}
+          overflowPx={30}
+          fadeOutSpeed={10}
+          flicker={false}
+        />
+      )}
       <Stack spacing={2} direction="row">
         <AutoGraphIcon
           sx={{
@@ -96,12 +121,14 @@ const Card = ({ title, content, ...rest }) => {
             // },
           }}
         />
-        <Typography variant="h6" sx={{ fontWeight: 500,minHeight:"65px"}}>
+        <Typography variant="h6" sx={{ fontWeight: 500, minHeight: "65px" }}>
           {title}
         </Typography>
       </Stack>
       <Box sx={{ my: 0.5 }} />
-      <Typography variant="body1" sx={{minHeight:"100px"}}>{content}</Typography>
+      <Typography variant="body1" sx={{ minHeight: "100px" }}>
+        {content}
+      </Typography>
     </MuiCard>
   );
 };

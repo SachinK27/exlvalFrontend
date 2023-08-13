@@ -12,25 +12,33 @@ import mascot from "../assets/images/pose_03a.svg";
 import loadingImg from "../assets/images/loading.gif";
 import axios from "axios";
 import "./pagination.css";
-import { Link } from "react-router-dom";
-
+import { Link, useLocation } from "react-router-dom";
 
 const CaseStudies = () => {
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+
   const [loading, setLoading] = useState(true);
   const [caseStudyData, setCaseStudies] = useState([]);
+  const [categories, setCategories] = useState([]);
   const [pageCount, setPageCount] = useState(0);
   const [limit, setLimit] = useState(0);
 
   useEffect(() => {
     setLoading(true);
 
+    let category = queryParams.get("category")
+      ? `/category/${queryParams.get("category")}`
+      : "";
+
     axios
-      .get(`https://admin.exlval.com/api/case-studies`)
+      .get(`https://admin.exlval.com/api/case-studies${category}`)
       .then((res) => {
         let data = res.data.casestudies.data;
         setCaseStudies(data);
-        const total = res.data.casestudies.total;
-        const lim = res.data.casestudies.per_page;
+        setCategories(res.data.categories);
+        const total = res.data.total;
+        const lim = res.data.per_page;
         setLimit(lim);
         setPageCount(Math.ceil(total / lim));
         console.log(`pageCount ${pageCount}`);
@@ -45,18 +53,25 @@ const CaseStudies = () => {
   }, [pageCount]);
 
   const fetchCaseStudies = async (currentPage) => {
+    let category = queryParams.get("category")
+      ? `/category/${queryParams.get("category")}`
+      : "";
+
     setLoading(true);
-  axios
-    .get(`https://admin.exlval.com/api/case-studies?page=${currentPage}`)
-    .then((res) => {
-      let data = res.data.infographics.data;
-      setCaseStudies(data);
-      setLoading(false);
-    })
-    .catch((err) => {
-      setLoading(false);
-      console.log(err);
-    });
+    axios
+      .get(
+        `https://admin.exlval.com/api/case-studies${category}?page=${currentPage}`
+      )
+      .then((res) => {
+        let data = res.data.casestudies.data;
+        setCaseStudies(data);
+        setCategories(res.data.categories);
+        setLoading(false);
+      })
+      .catch((err) => {
+        setLoading(false);
+        console.log(err);
+      });
   };
 
   const handlePageClick = async (data) => {
@@ -79,26 +94,22 @@ const CaseStudies = () => {
             sx={{
               display: "flex",
               alignItems: "center",
+              justifyContent: "center",
               flexDirection: "column",
-              m: "8ch auto",
               fontWeight: 500,
+              height: "60vh",
               backgroundImage: `url("${bgImage}")`,
-              backgroundSize: "cover",
+              backgroundSize: "contain",
               backgroundPosition: "center",
-              height: "400px",
+              backgroundRepeat: "no-repeat",
               position: "relative",
             }}
           >
-            <Box align="center">
-              <Typography variant="h1">
-                Visualizing Success with the best form of
-              </Typography>
-              <Typography variant="h1" sx={{ mt: -1 }}>
-                Information
-              </Typography>
-            </Box>
-            <Box sx={{ my: 6, lineHeight: 1.7, fontSize: "18px" }} />
-            <Typography variant="body2" align="center">
+            <Typography variant="h1" align="center" maxWidth={"30ch"}>
+              Visualizing Success with the best form of Information
+            </Typography>
+            <Box sx={{ my: 2, lineHeight: 1.7, fontSize: "18px" }} />
+            <Typography variant="body2" align="center" fontSize="18px">
               The easy-to-digest info that will inspire you!
             </Typography>
           </Grid>
@@ -153,20 +164,22 @@ const CaseStudies = () => {
                 p: "0 !important",
                 maxWidth: "100vw !important",
                 fontSize: "18px",
-              }} 
+              }}
             >
               <Grid
                 container
                 spacing={2}
-                sx={{
-                  // overflowY: "scroll",
-                  // maxHeight: "90vh",
-                  // scrollbarWidth: "none",
-                  // "::-webkit-scrollbar": { display: "none" },
-                  // justifyContent: "space-between",
-                  // width: "100%",
-                  // flexWrap: "wrap",
-                }}
+                sx={
+                  {
+                    // overflowY: "scroll",
+                    // maxHeight: "90vh",
+                    // scrollbarWidth: "none",
+                    // "::-webkit-scrollbar": { display: "none" },
+                    // justifyContent: "space-between",
+                    // width: "100%",
+                    // flexWrap: "wrap",
+                  }
+                }
               >
                 {loading ? (
                   <div
@@ -188,8 +201,12 @@ const CaseStudies = () => {
                     {caseStudyData.map((ele, idx) => {
                       let imgUrl = `https://admin.exlval.com/images/casestudy_cover/${ele.cover_img}`;
                       // console.log(imgUrl);
-                      const metaKeywords = ele.meta_keywords.split(",");
+                      // const metaKeywords = ele.meta_keywords.split(",");
                       // console.log(metaKeywords)
+                      const tag = categories.filter(
+                        (category) => category.id == ele.category
+                      )[0].name;
+
                       return (
                         <Grid
                           item
@@ -203,7 +220,7 @@ const CaseStudies = () => {
                           <Link to={`/case-studies/${ele.slug}`}>
                             <Card3
                               img={imgUrl}
-                              tags={metaKeywords}
+                              tags={["Case Study", tag]}
                               color={"#F9D949"}
                               contained
                               title={ele.title}
@@ -249,34 +266,40 @@ const CaseStudies = () => {
             height: 3,
           }}
         ></Grid>
-        
-        <Grid
-        container
-        sx={{my:"80px"}}
-        >
-        <Grid item
-        sm={12}
-        xs={12}
-        md={6}
-        lg={6}
-        align="center"
-        justifyContent="center"
-        // sx={{width:"100%"}}
-        >
-          <Image src={mascot} objectFit="contain" sx={{mt:"8vh",width:"100%",transform: "scale(1)"}}/>
-        </Grid>
-        <Grid item
-        sm={12}
-        xs={12}
-        md={6}
-        lg={6}
-        align="center"
-        // sx={{width:"100%"}}
-        >
-        <Container align="center" sx={{width:"95%",justifyContent:"center"}}>
+
+        <Grid container sx={{ my: "80px" }}>
+          <Grid
+            item
+            sm={12}
+            xs={12}
+            md={6}
+            lg={6}
+            align="center"
+            justifyContent="center"
+            // sx={{width:"100%"}}
+          >
+            <Image
+              src={mascot}
+              objectFit="contain"
+              sx={{ mt: "8vh", width: "100%", transform: "scale(1)" }}
+            />
+          </Grid>
+          <Grid
+            item
+            sm={12}
+            xs={12}
+            md={6}
+            lg={6}
+            align="center"
+            // sx={{width:"100%"}}
+          >
+            <Container
+              align="center"
+              sx={{ width: "95%", justifyContent: "center" }}
+            >
               <ContactForm />
             </Container>
-        </Grid>
+          </Grid>
         </Grid>
       </Grid>
 

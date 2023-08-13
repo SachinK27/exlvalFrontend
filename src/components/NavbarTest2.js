@@ -3,7 +3,6 @@
 // import logo from "../assets/images/Exlval Logo.png";
 // import image from "../assets/images/Career - Opportunity to upskill.png"
 
-
 // export default function NavbarTest2() {
 //   const [isActive, setIsActive] = useState(false);
 //   const toggleMenu = () => {
@@ -44,7 +43,7 @@
 //               <div class="dropdown">
 //                 <div class="dropdown-inner">
 //                   <div class="dropdown-item">
-//                     <h3 class="item-heading">Marketing</h3>
+//                     <h4 class="item-heading">Marketing</h4>
 //                     <div class="item-list">
 //                       <div class="item-img">
 //                         <img src={image} alt="Icon" style={{
@@ -208,9 +207,6 @@
 //     </header>
 //   );
 // }
-
-
-
 
 // import React, { useState } from "react";
 // import "./navbar.css";
@@ -626,6 +622,7 @@
 // }
 
 import React, { useState } from "react";
+// import { Link } from "react-router-dom";
 import "./navbar.css";
 import logo from "../assets/images/Exlval Logo.png";
 import image from "../assets/images/Career - Opportunity to upskill.png";
@@ -633,7 +630,7 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
-import { Button, Link, Grid, Container,Typography } from "@mui/material";
+import { Button, Link, Grid, Container, Typography } from "@mui/material";
 
 export default function NavbarTest2() {
   const [isActive, setIsActive] = useState(false);
@@ -677,371 +674,427 @@ export default function NavbarTest2() {
 
               {/* onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave} */}
-          <div className="rightMainContainer">
-              <ul className={`nav_menu ${isActive ? "active" : ""}`}>
-                <li class="nav_list nav_list_menu">
-                  <div
-                    onMouseEnter={handleMouseEnterCompany}
-                    onMouseLeave={handleMouseLeaveCompany}
-                    // onClick={!isActive}
-                  >
-                    <a href="#!" class="nav_link">
-                      <span>Company</span>
-                      {isCompanyActive ? (
-                        <ArrowDropUpIcon
-                          sx={{
-                            // marginTop: "5px",
-                          }}
-                        />
-                      ) : (
-                        <ArrowDropDownIcon
-                          sx={{
-                            // marginTop: "5px",
-                          }}
-                        />
-                      )}
-                    </a>
-                    <div class="dropdown-company">
-                      <div class="dropdown-inner-company">
-                        <div class="dropdown-item-company">
-                          <div className="company-option">
-                            <div class="item-list-company">
-                              <div class="item-list-info-company" >
-                                <Link href="/about-us">
-                                  <Typography variant="body1" sx={{fontWeight:"medium"}}>About Us</Typography>
-                                </Link>
+              <div className="rightMainContainer">
+                <ul className={`nav_menu ${isActive ? "active" : ""}`}>
+                  <li class="nav_list nav_list_menu">
+                    <div
+                      onMouseEnter={handleMouseEnterCompany}
+                      onMouseLeave={handleMouseLeaveCompany}
+                      // onClick={!isActive}
+                    >
+                      <a href="#!" class="nav_link">
+                        <span>Company</span>
+                        {isCompanyActive ? (
+                          <ArrowDropUpIcon
+                            sx={
+                              {
+                                // marginTop: "5px",
+                              }
+                            }
+                          />
+                        ) : (
+                          <ArrowDropDownIcon
+                            sx={
+                              {
+                                // marginTop: "5px",
+                              }
+                            }
+                          />
+                        )}
+                      </a>
+                      <div class="dropdown-company">
+                        <div class="dropdown-inner-company">
+                          <div class="dropdown-item-company">
+                            <div className="company-option">
+                              <div class="item-list-company">
+                                <div class="item-list-info-company">
+                                  <Link href="/about-us">
+                                    <Typography
+                                      variant="body1"
+                                      sx={{ fontWeight: "medium" }}
+                                    >
+                                      About Us
+                                    </Typography>
+                                  </Link>
+                                </div>
                               </div>
                             </div>
-                          </div>
-                          <div className="company-option">
-                            <div class="item-list-company">
-                              <div class="item-list-info-company">
-                                <Link href="/our-journey">
-                                  <Typography variant="body1" sx={{fontWeight:"medium"}}>Our Journey</Typography>
-                                </Link>
+                            <div className="company-option">
+                              <div class="item-list-company">
+                                <div class="item-list-info-company">
+                                  <Link href="/our-journey">
+                                    <Typography
+                                      variant="body1"
+                                      sx={{ fontWeight: "medium" }}
+                                    >
+                                      Our Journey
+                                    </Typography>
+                                  </Link>
+                                </div>
                               </div>
                             </div>
-                          </div>
-                          <div className="company-option">
-                            <div class="item-list-company">
-                              <div class="item-list-info-company">
-                                <Link href="/whyus">
-                                  <Typography variant="body1" sx={{fontWeight:"medium"}}>Why Us</Typography>
-                                </Link>
+                            <div className="company-option">
+                              <div class="item-list-company">
+                                <div class="item-list-info-company">
+                                  <Link href="/whyus">
+                                    <Typography
+                                      variant="body1"
+                                      sx={{ fontWeight: "medium" }}
+                                    >
+                                      Why Us
+                                    </Typography>
+                                  </Link>
+                                </div>
                               </div>
                             </div>
-                          </div>
-                          <div className="company-option">
-                            <div class="item-list-company">
-                              <div class="item-list-info-company">
-                                <Link href="/career">
-                                  <Typography variant="body1" sx={{fontWeight:"medium"}}>Career</Typography>
-                                </Link>
+                            <div className="company-option">
+                              <div class="item-list-company">
+                                <div class="item-list-info-company">
+                                  <Link href="/career">
+                                    <Typography
+                                      variant="body1"
+                                      sx={{ fontWeight: "medium" }}
+                                    >
+                                      Career
+                                    </Typography>
+                                  </Link>
+                                </div>
                               </div>
                             </div>
-                          </div>
-                          <div className="company-option">
-                            <div class="item-list-company">
-                              <div class="item-list-info-company">
-                                <Link href="/internships">
-                                  <Typography variant="body1" sx={{fontWeight:"medium"}}>Internship</Typography>
-                                </Link>
+                            <div className="company-option">
+                              <div class="item-list-company">
+                                <div class="item-list-info-company">
+                                  <Link href="/internships">
+                                    <Typography
+                                      variant="body1"
+                                      sx={{ fontWeight: "medium" }}
+                                    >
+                                      Internship
+                                    </Typography>
+                                  </Link>
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </li>
+                  </li>
 
-                <li class="nav_list nav_list_menu">
-                  <div
-                    onMouseEnter={handleMouseEnter}
-                    onMouseLeave={handleMouseLeave}
-                  >
-                    <a href="#!" class="nav_link">
-                      <span>Services</span>
-                      {isDropdownActive ? (
-                        <ArrowDropUpIcon
-                          sx={{
-                            // marginTop: "5px",
-                          }}
-                        />
-                      ) : (
-                        <ArrowDropDownIcon
-                          sx={{
-                            // marginTop: "5px",
-                          }}
-                        />
-                      )}
-                    </a>
-                    <div class="dropdown">
-                      <div class="dropdown-inner">
-                        <div class="dropdown-item">
-                          <div
-                            className="dropdown-header"
-                            style={{
-                              display: "flex",
-                              flexDirection: "row",
-                              gap: "20px",
-                            }}
-                          >
-                            <img
-                              src={image}
-                              alt="Icon"
-                              style={{
-                                width: "40px",
-                              }}
-                            />
-                            <h3
-                              class="item-heading"
-                              style={{
-                                marginTop: "7px",
-                              }}
-                            >
-                              Marketing
-                            </h3>
-                          </div>
-                          <hr
-                            style={{
-                              height: "5px",
-                              marginTop: "10px",
-                              width: "70%",
-                              color: "black",
-                              backgroundColor: "black",
-                            }}
+                  <li class="nav_list nav_list_menu">
+                    <div
+                      onMouseEnter={handleMouseEnter}
+                      onMouseLeave={handleMouseLeave}
+                    >
+                      <a href="#!" class="nav_link">
+                        <span>Services</span>
+                        {isDropdownActive ? (
+                          <ArrowDropUpIcon
+                            sx={
+                              {
+                                // marginTop: "5px",
+                              }
+                            }
                           />
-                          <div class="item-list">
+                        ) : (
+                          <ArrowDropDownIcon
+                            sx={
+                              {
+                                // marginTop: "5px",
+                              }
+                            }
+                          />
+                        )}
+                      </a>
+                      <div class="dropdown">
+                        <div class="dropdown-inner">
+                          <div class="dropdown-item">
                             <div
-                              class="item-list-info"
+                              className="dropdown-header"
                               style={{
-                                
+                                display: "flex",
+                                flexDirection: "row",
+                                gap: "20px",
                               }}
                             >
-                              <Link href="/services-seo">
-                                <h4>Search Engine Optimization</h4>
-                              </Link>
+                              <img
+                                src={image}
+                                alt="Icon"
+                                style={{
+                                  width: "40px",
+                                }}
+                              />
+                              <h3
+                                class="item-heading"
+                                style={{
+                                  marginTop: "7px",
+                                }}
+                              >
+                                Marketing
+                              </h3>
                             </div>
-                          </div>
-                          <div class="item-list">
-                            <div class="item-list-info">
-                              <Link href="/services-socialMediaMarketing">
-                                <h4>Social Media Marketing</h4>
-                              </Link>
-                            </div>
-                          </div>
-                          <div class="item-list">
-                            <div class="item-list-info">
-                              <Link href="/services-performanceMarketing">
-                              <h4>Performance Marketing</h4>
-                              </Link>
-                            </div>
-                          </div>
-                          <div class="item-list">
-                            <div class="item-list-info">
-                              <Link href="/services-influencerMarketing">
-                              <h4>Influencer Marketing</h4>
-                              </Link>
-                            </div>
-                          </div>
-                          <div class="item-list">
-                            <div class="item-list-info">
-                              <Link href="/services-contentMarketing">
-                              <h4>Content Marketing</h4>
-                              </Link>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="dropdown-item">
-                          <div
-                            className="dropdown-header"
-                            style={{
-                              display: "flex",
-                              flexDirection: "row",
-                              gap: "20px",
-                            }}
-                          >
-                            <img
-                              src={image}
-                              alt="Icon"
+                            <hr
                               style={{
-                                width: "40px",
+                                height: "5px",
+                                marginTop: "10px",
+                                width: "70%",
+                                color: "black",
+                                backgroundColor: "black",
                               }}
                             />
-                            <h3
-                              class="item-heading"
+                            <div class="item-list">
+                              <div class="item-list-info" style={{}}>
+                                <Link href="/services-seo">
+                                  <h5>Search Engine Optimization</h5>
+                                </Link>
+                              </div>
+                            </div>
+                            <div class="item-list">
+                              <div class="item-list-info">
+                                <Link href="/services-socialMediaMarketing">
+                                  <h5>Social Media Marketing</h5>
+                                </Link>
+                              </div>
+                            </div>
+                            <div class="item-list">
+                              <div class="item-list-info">
+                                <Link href="/services-performanceMarketing">
+                                  <h5>Performance Marketing</h5>
+                                </Link>
+                              </div>
+                            </div>
+                            <div class="item-list">
+                              <div class="item-list-info">
+                                <Link href="/services-influencerMarketing">
+                                  <h5>Influencer Marketing</h5>
+                                </Link>
+                              </div>
+                            </div>
+                            <div class="item-list">
+                              <div class="item-list-info">
+                                <Link href="/services-contentMarketing">
+                                  <h5>Content Marketing</h5>
+                                </Link>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="dropdown-item">
+                            <div
+                              className="dropdown-header"
                               style={{
-                                marginTop: "7px",
+                                display: "flex",
+                                flexDirection: "row",
+                                gap: "20px",
                               }}
                             >
-                           Branding
-                            </h3>
-                          </div>
-                          <hr
-                            style={{
-                              height: "5px",
-                              marginTop: "10px",
-                              width: "70%",
-                              color: "black",
-                              backgroundColor: "black",
-                            }}
-                          />
-                          <div class="item-list">
-                            <div class="item-list-info">
-                          <Link href="/services-branding"><h4>Branding </h4> </Link> 
+                              <img
+                                src={image}
+                                alt="Icon"
+                                style={{
+                                  width: "40px",
+                                }}
+                              />
+                              <h4
+                                class="item-heading"
+                                style={{
+                                  marginTop: "7px",
+                                }}
+                              >
+                                Branding
+                              </h4>
                             </div>
-                          </div>
-                          <div class="item-list">
-                            <div class="item-list-info">
-                              <Link href="/services-graphicDesign"><h4>Graphic Design</h4> </Link>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="dropdown-item">
-                          <div
-                            className="dropdown-header"
-                            style={{
-                              display: "flex",
-                              flexDirection: "row",
-                              gap: "20px",
-                            }}
-                          >
-                            <img
-                              src={image}
-                              alt="Icon"
+                            <hr
                               style={{
-                                width: "40px",
+                                height: "5px",
+                                marginTop: "10px",
+                                width: "70%",
+                                color: "black",
+                                backgroundColor: "black",
                               }}
                             />
-                            <h3
-                              class="item-heading"
-                              style={{
-                                marginTop: "7px",
-                              }}
-                            >
-                              Website
-                            </h3>
-                          </div>
-                          <hr
-                            style={{
-                              height: "5px",
-                              marginTop: "10px",
-                              width: "70%",
-                              color: "black",
-                              backgroundColor: "black",
-                            }}
-                          />
-                          <div class="item-list">
-                            <div class="item-list-info">
-                             <Link href="/services-webDesign"> <h4>UI/UX</h4></Link>
+                            <div class="item-list">
+                              <div class="item-list-info">
+                                <Link href="/services-branding">
+                                  <h4>Branding </h4>{" "}
+                                </Link>
+                              </div>
+                            </div>
+                            <div class="item-list">
+                              <div class="item-list-info">
+                                <Link href="/services-graphicDesign">
+                                  <h4>Graphic Design</h4>{" "}
+                                </Link>
+                              </div>
                             </div>
                           </div>
-                          <div class="item-list">
-                            <div class="item-list-info">
-                             <Link href="/services-webDevelopment"><h4>Web Development</h4></Link> 
+
+                          <div class="dropdown-item">
+                            <div
+                              className="dropdown-header"
+                              style={{
+                                display: "flex",
+                                flexDirection: "row",
+                                gap: "20px",
+                              }}
+                            >
+                              <img
+                                src={image}
+                                alt="Icon"
+                                style={{
+                                  width: "40px",
+                                }}
+                              />
+                              <h4
+                                class="item-heading"
+                                style={{
+                                  marginTop: "7px",
+                                }}
+                              >
+                                Website
+                              </h4>
+                            </div>
+                            <hr
+                              style={{
+                                height: "5px",
+                                marginTop: "10px",
+                                width: "70%",
+                                color: "black",
+                                backgroundColor: "black",
+                              }}
+                            />
+                            <div class="item-list">
+                              <div class="item-list-info">
+                                <Link href="/services-webDesign">
+                                  {" "}
+                                  <h4>UI/UX</h4>
+                                </Link>
+                              </div>
+                            </div>
+                            <div class="item-list">
+                              <div class="item-list-info">
+                                <Link href="/services-webDevelopment">
+                                  <h4>Web Development</h4>
+                                </Link>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </li>
+                  </li>
 
-                <li class="nav_list">
-                  <a href="#!" class="nav_link">
-                    <Link href="/business-consultancy">
-                      <span>Business Consultancy</span>
-                    </Link>
-                  </a>
-                </li>
-                <li class="nav_list">
-                  <a href="#!" class="nav_link">
-                    <Link href="/blogs">
-                      <span>Blogs</span>
-                    </Link>
-                  </a>
-                </li>
-                <li class="nav_list nav_list_menu">
-                  <div
-                    onMouseEnter={handleMouseEnterResource}
-                    onMouseLeave={handleMouseLeaveResource}
-                  >
+                  <li class="nav_list">
                     <a href="#!" class="nav_link">
-                      <span>Resources</span>
-                      {isResourceActive ? (
-                        <ArrowDropUpIcon
-                          sx={{
-                            // marginTop: "5px",
-                          }}
-                        />
-                      ) : (
-                        <ArrowDropDownIcon
-                          sx={{
-                            // marginTop: "5px",
-                          }}
-                        />
-                      )}
+                      <Link href="/business-consultancy">
+                        <span>Business Consultancy</span>
+                      </Link>
                     </a>
-                    <div class="dropdown-resource">
-                      <div class="dropdown-inner-resource">
-                        <div class="dropdown-item-resource">
-                          <div className="resource-option">
-                            <div class="item-list-resource">
-                              <div class="item-list-info-resource">
-                                <Link href="/case-studies">
-                                <Typography variant="body1" sx={{fontWeight:"medium"}}>Case Studies</Typography>
-                                </Link>
+                  </li>
+                  <li class="nav_list">
+                    <a href="#!" class="nav_link">
+                      <Link href="/blogs">
+                        <span>Blogs</span>
+                      </Link>
+                    </a>
+                  </li>
+                  <li class="nav_list nav_list_menu">
+                    <div
+                      onMouseEnter={handleMouseEnterResource}
+                      onMouseLeave={handleMouseLeaveResource}
+                    >
+                      <a href="#!" class="nav_link">
+                        <span>Resources</span>
+                        {isResourceActive ? (
+                          <ArrowDropUpIcon
+                            sx={
+                              {
+                                // marginTop: "5px",
+                              }
+                            }
+                          />
+                        ) : (
+                          <ArrowDropDownIcon
+                            sx={
+                              {
+                                // marginTop: "5px",
+                              }
+                            }
+                          />
+                        )}
+                      </a>
+                      <div class="dropdown-resource">
+                        <div class="dropdown-inner-resource">
+                          <div class="dropdown-item-resource">
+                            <div className="resource-option">
+                              <div class="item-list-resource">
+                                <div class="item-list-info-resource">
+                                  <Link href="/case-studies">
+                                    <Typography
+                                      variant="body1"
+                                      sx={{ fontWeight: "medium" }}
+                                    >
+                                      Case Studies
+                                    </Typography>
+                                  </Link>
+                                </div>
                               </div>
                             </div>
-                          </div>
-                          <div className="resource-option">
-                            <div class="item-list-resource">
-                              <div class="item-list-info-resource">
-                                <Link href="/ebook">
-                                <Typography variant="body1" sx={{fontWeight:"medium"}}>Ebooks</Typography>
-                                </Link>
+                            <div className="resource-option">
+                              <div class="item-list-resource">
+                                <div class="item-list-info-resource">
+                                  <Link href="/ebook">
+                                    <Typography
+                                      variant="body1"
+                                      sx={{ fontWeight: "medium" }}
+                                    >
+                                      Ebooks
+                                    </Typography>
+                                  </Link>
+                                </div>
                               </div>
                             </div>
-                          </div>
-                          <div className="resource-option">
-                            <div class="item-list-resource">
-                              <div class="item-list-info-resource">
-                                <Link href="/infographics">
-                                <Typography variant="body1" sx={{fontWeight:"medium"}}>Infographics</Typography>
-                                </Link>
+                            <div className="resource-option">
+                              <div class="item-list-resource">
+                                <div class="item-list-info-resource">
+                                  <Link href="/infographics">
+                                    <Typography
+                                      variant="body1"
+                                      sx={{ fontWeight: "medium" }}
+                                    >
+                                      Infographics
+                                    </Typography>
+                                  </Link>
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
+                  </li>
+                </ul>
+                <div class="nav_action">
+                  <Button
+                    sx={{
+                      backgroundColor: "#3C486B",
+                      borderRadius: 4,
+                      padding: "1ch 2ch",
+                      "&:hover": {
+                        backgroundColor: "#3C487E",
+                      },
+                    }}
+                  >
+                    <Link href="/contact-us">Contact us</Link>
+                  </Button>
+                  <div class="nav_toggle">
+                    {isActive ? (
+                      <CloseIcon onClick={toggleMenu} />
+                    ) : (
+                      <MenuIcon onClick={toggleMenu} />
+                    )}
                   </div>
-                </li>
-              </ul>
-              <div class="nav_action">
-                <Button
-                  sx={{
-                    backgroundColor: "#3C486B",
-                    borderRadius: 4,
-                    padding: "1ch 2ch",
-                    "&:hover": {
-                      backgroundColor: "#3C487E",
-                    },
-                  }}
-                >
-                  <Link href="/contact-us">Contact us</Link>
-                </Button>
-                <div class="nav_toggle">
-                  {isActive ? (
-                    <CloseIcon onClick={toggleMenu} />
-                  ) : (
-                    <MenuIcon onClick={toggleMenu} />
-                  )}
                 </div>
-              </div>
               </div>
             </nav>
           </div>

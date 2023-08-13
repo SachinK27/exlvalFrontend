@@ -10,7 +10,7 @@ import {
   Button,
   useTheme,
   useMediaQuery,
-  Link
+  Link,
 } from "@mui/material";
 import Image from "../components/Image";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
@@ -27,8 +27,10 @@ import Card from "../components/Card";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import ContactForm from "../components/ContactForm";
 import SwipperTest from "../components/SwipperTest";
+import bgImage from "../assets/images/Hero bg image.png";
 
 import "./Sticky.css";
+
 const iconsData = [
   { icon: icon1, text: "Social Media Manager" },
   { icon: icon2, text: "Latest Tools" },
@@ -101,29 +103,22 @@ const SocialMediaMarketing = () => {
         sx={{
           display: "flex",
           alignItems: "center",
+          justifyContent: "center",
           flexDirection: "column",
-          my: "8ch",
           fontWeight: 500,
-          backgroundSize: "cover",
+          height: "60vh",
+          backgroundImage: `url("${bgImage}")`,
+          backgroundSize: "contain",
           backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
           position: "relative",
         }}
       >
-        <Box
-          align="center"
-          sx={{
-            m: "auto 8ch",
-            px: 15,
-            "@media (max-width: 959.95px)": {
-              m: "0 auto",
-              px: 2,
-            },
-          }}
-        >
-          <Typography variant="h1">Social Media Marketing</Typography>
-        </Box>
+        <Typography variant="h1" align="center" maxWidth={"20ch"}>
+          Social Media Marketing
+        </Typography>
         <Box sx={{ my: 2, lineHeight: 1.7, fontSize: "18px" }} />
-        <Typography variant="body1" align="center">
+        <Typography variant="body1" align="center" fontSize="18px">
           Get your brand the recognition it deserves with our cutting-edge
           social media marketing techniques.
         </Typography>
@@ -138,7 +133,7 @@ const SocialMediaMarketing = () => {
               },
             }}
           >
-             <Link href="/contact-us">Contact us</Link>
+            <Link href="/contact-us">Contact us</Link>
           </Button>
         </Container>
       </Container>
@@ -264,11 +259,11 @@ const SocialMediaMarketing = () => {
                   </Typography>
                 </Stack>
 
-                <Typography>
+                <Typography fontSize="18px">
                   We truly understand social media platforms and how they can
                   help you reach your goals.
                 </Typography>
-                <Typography>
+                <Typography fontSize="18px">
                   Thus, we create social media strategies that touch your
                   audience and transform them into your raving fans.
                 </Typography>

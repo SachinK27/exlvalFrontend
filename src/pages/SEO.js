@@ -10,7 +10,7 @@ import {
   Button,
   useTheme,
   useMediaQuery,
-  Link
+  Link,
 } from "@mui/material";
 import Image from "../components/Image";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
@@ -27,6 +27,7 @@ import Card from "../components/Card";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import ContactForm from "../components/ContactForm";
 import SwipperTest from "../components/SwipperTest";
+import bgImage from "../assets/images/Hero bg image.png";
 
 import "./Sticky.css";
 const iconsData = [
@@ -58,7 +59,7 @@ const cardsData = [
     title: "Off-page SEO",
     content:
       "Building high-quality backlinks to your website to increase its authority and improve search rankings",
-  }
+  },
 ];
 const SEO = () => {
   const theme = useTheme();
@@ -111,30 +112,24 @@ const SEO = () => {
         sx={{
           display: "flex",
           alignItems: "center",
+          justifyContent: "center",
           flexDirection: "column",
-          my: "8ch",
           fontWeight: 500,
-          backgroundSize: "cover",
+          height: "60vh",
+          backgroundImage: `url("${bgImage}")`,
+          backgroundSize: "contain",
           backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
           position: "relative",
         }}
       >
-        <Box
-          align="center"
-          sx={{
-            m: "auto 8ch",
-            px: 15,
-            "@media (max-width: 959.95px)": {
-              m: "0 auto",
-              px: 2,
-            },
-          }}
-        >
-          <Typography variant="h1">Search Engine Optimization</Typography>
-        </Box>
+        <Typography variant="h1" align="center" sx={{ maxWidth: "30ch" }}>
+          Search Engine Optimization
+        </Typography>
         <Box sx={{ my: 2, lineHeight: 1.7, fontSize: "18px" }} />
-        <Typography variant="body1" align="center">
-        We know the SEO game inside out. Want to hit the jackpot with our expert service?
+        <Typography variant="body1" align="center" fontSize="18px">
+          We know the SEO game inside out. Want to hit the jackpot with our
+          expert service?
         </Typography>
         <Container align="center" sx={{ mt: 5 }}>
           <Button
@@ -147,7 +142,7 @@ const SEO = () => {
               },
             }}
           >
-             <Link href="/contact-us">Contact us</Link>
+            <Link href="/contact-us">Contact us</Link>
           </Button>
         </Container>
       </Container>
@@ -196,7 +191,8 @@ const SEO = () => {
             <Box>
               <Stack spacing={3}>
                 <Typography sx={{ fontSize: "18px", fontWeight: "bold" }}>
-                SEO is like a magic wand for your website - it enhances visibility, attracts clicks, and brings in more business.
+                  SEO is like a magic wand for your website - it enhances
+                  visibility, attracts clicks, and brings in more business.
                 </Typography>
                 <Stack direction="row" spacing={1}>
                   <IconButton
@@ -209,7 +205,7 @@ const SEO = () => {
                     <EastTwoToneIcon sx={{ color: "#fff", fontSize: "18px" }} />
                   </IconButton>
                   <Typography>
-                  Are you worried about your website ranking?
+                    Are you worried about your website ranking?
                   </Typography>
                 </Stack>
                 <Stack direction="row" spacing={1}>
@@ -223,7 +219,7 @@ const SEO = () => {
                     <EastTwoToneIcon sx={{ color: "#fff", fontSize: "18px" }} />
                   </IconButton>
                   <Typography>
-                  Not satisfied with the previous SEO service?
+                    Not satisfied with the previous SEO service?
                   </Typography>
                 </Stack>
                 <Stack direction="row" spacing={1}>
@@ -237,20 +233,22 @@ const SEO = () => {
                     <EastTwoToneIcon sx={{ color: "#fff", fontSize: "18px" }} />
                   </IconButton>
                   <Typography>
-                  Not happy with your website’s organic result or not getting relevant traffic and leads?
+                    Not happy with your website’s organic result or not getting
+                    relevant traffic and leads?
                   </Typography>
                 </Stack>
 
-                <Typography>
-                Does this sound familiar to you?
+                <Typography fontSize="18px">
+                  Does this sound familiar to you?
                 </Typography>
-                <Typography>
-                You don’t need to worry about your website ranking, traffic, and leads with us.
+                <Typography fontSize="18px">
+                  You don’t need to worry about your website ranking, traffic,
+                  and leads with us.
                 </Typography>
                 <Typography sx={{ fontSize: "18px", fontWeight: "bold" }}>
-                Take a look at how we help you achieve success with our SEO service.
+                  Take a look at how we help you achieve success with our SEO
+                  service.
                 </Typography>
-
               </Stack>
               <Image
                 style={{ margin: "3ch auto", display: "block" }}
@@ -292,11 +290,14 @@ const SEO = () => {
               </Typography>
               <Typography variant="body2">
                 <em>
-                our SEO Specialist will take your requirements and gain a solid understanding of your business needs through organic search results.
-                <br/>
-                BONUS - content consulting?
-<br/>
-Get FREE Business Consulting here (covers the content and marketing message audit).
+                  our SEO Specialist will take your requirements and gain a
+                  solid understanding of your business needs through organic
+                  search results.
+                  <br />
+                  BONUS - content consulting?
+                  <br />
+                  Get FREE Business Consulting here (covers the content and
+                  marketing message audit).
                 </em>
               </Typography>
             </Card4>
@@ -315,7 +316,9 @@ Get FREE Business Consulting here (covers the content and marketing message audi
               </Typography>
               <Typography variant="body2">
                 <em>
-                We design and propose packages based on your requirements and use fundamental research and analysis to create winning SEO strategies that deliver organic results.
+                  We design and propose packages based on your requirements and
+                  use fundamental research and analysis to create winning SEO
+                  strategies that deliver organic results.
                 </em>
               </Typography>
             </Card4>
@@ -334,7 +337,11 @@ Get FREE Business Consulting here (covers the content and marketing message audi
               </Typography>
               <Typography variant="body2">
                 <em>
-                Once you go with our proposal, you'll be assigned a dedicated SEO Manager who will lead your campaign. We'll create and share a master plan that's tailored to your specific objectives, and get to work executing that plan with precision and expertise
+                  Once you go with our proposal, you'll be assigned a dedicated
+                  SEO Manager who will lead your campaign. We'll create and
+                  share a master plan that's tailored to your specific
+                  objectives, and get to work executing that plan with precision
+                  and expertise
                 </em>
               </Typography>
             </Card4>
@@ -353,7 +360,10 @@ Get FREE Business Consulting here (covers the content and marketing message audi
               </Typography>
               <Typography variant="body2">
                 <em>
-                With implementing the SEO strategy, we provide reports on a weekly or monthly basis as mutually decided. With that, we analyze and make improvements to our SEO campaign for better results, and we will answer all your queries.
+                  With implementing the SEO strategy, we provide reports on a
+                  weekly or monthly basis as mutually decided. With that, we
+                  analyze and make improvements to our SEO campaign for better
+                  results, and we will answer all your queries.
                 </em>
               </Typography>
             </Card4>
@@ -396,11 +406,14 @@ Get FREE Business Consulting here (covers the content and marketing message audi
             </Typography>
             <Typography variant="body2">
               <em>
-              our SEO Specialist will take your requirements and gain a solid understanding of your business needs through organic search results.
-              <br/>
+                our SEO Specialist will take your requirements and gain a solid
+                understanding of your business needs through organic search
+                results.
+                <br />
                 BONUS - content consulting?
-<br/>
-Get FREE Business Consulting here (covers the content and marketing message audit).
+                <br />
+                Get FREE Business Consulting here (covers the content and
+                marketing message audit).
               </em>
             </Typography>
           </Card4>
@@ -440,7 +453,9 @@ Get FREE Business Consulting here (covers the content and marketing message audi
             </Typography>
             <Typography variant="body2">
               <em>
-              We design and propose packages based on your requirements and use fundamental research and analysis to create winning SEO strategies that deliver organic results.
+                We design and propose packages based on your requirements and
+                use fundamental research and analysis to create winning SEO
+                strategies that deliver organic results.
               </em>
             </Typography>
           </Card4>
@@ -523,7 +538,10 @@ Get FREE Business Consulting here (covers the content and marketing message audi
             </Typography>
             <Typography variant="body2">
               <em>
-              With implementing the SEO strategy, we provide reports on a weekly or monthly basis as mutually decided. With that, we analyze and make improvements to our SEO campaign for better results, and we will answer all your queries.
+                With implementing the SEO strategy, we provide reports on a
+                weekly or monthly basis as mutually decided. With that, we
+                analyze and make improvements to our SEO campaign for better
+                results, and we will answer all your queries.
               </em>
             </Typography>
           </Card4>

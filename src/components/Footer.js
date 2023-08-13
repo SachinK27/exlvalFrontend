@@ -222,7 +222,6 @@
 
 // export default Footer;
 
-
 import * as React from "react";
 import {
   Box,
@@ -252,7 +251,7 @@ function Footer(props) {
   const path = typeof window !== "undefined" ? window.location.pathname : "";
   return (
     <>
-     {path !== "/contact-us" && (
+      {path !== "/contact-us" && (
         // <Container sx={{ py: 7 }}>
         //   <Stack
         //     direction="row"
@@ -285,56 +284,71 @@ function Footer(props) {
         //     />
         //   </Stack>
         // </Container>
-              <Box sx={{ width: "90%", margin: "0 auto",my:8 }}>
-              <Grid
-                container
-                direction="row"
-                justifyContent="center"
-                alignItems="center"
-                spacing={1}
-                sx={{ my: 2, justifyContent: "space-between" }}
-              >
-                <Grid item xs={6} sm={6} md={2} lg={2.1} sx={{ margin: "0", padding: "0" }}>
-                  <Image
-                    src={logo9}
-                    alt="Logo"
-                    sx={{ maxHeight:"140px",width:"100%", objectFit: "contain" }}
-                  />
-                </Grid>
-                <Grid item  xs={6} sm={6} md={2} lg={2.1}>
-                  <Image
-                    src={logo10}
-                    alt="Logo"
-                    sx={{maxHeight:"140px",width:"100%",  objectFit: "contain" }}
-                  />
-                </Grid>
-                <Grid item xs={6} sm={6} md={2} lg={2.1}>
-                  <Image
-                    src={logo11}
-                    alt="Logo"
-                    sx={{maxHeight:"140px",width:"100%",  objectFit: "contain" }}
-                  />
-                </Grid>
-                <Grid item xs={6} sm={6} md={2} lg={2.1}>
-                  <Image
-                    src={logo12}
-                    alt="Logo"
-                    sx={{ maxHeight:"140px",width:"100%", objectFit: "contain" }}
-                  />
-                </Grid>
-                <Grid item xs={12} sm={6} md={4} lg={3.6} sx={{
-                    "@media (max-width: 959.95px)": {
-                      align:"center", margin:"0 auto"
-                    }
-                }}>
-                  <Image
-                    src={logo13}
-                    alt="Logo"
-                    sx={{maxHeight:"100px",width:"100%",  objectFit: "contain" }}
-                  />
-                </Grid>
-              </Grid>
-            </Box>
+        <Box sx={{ width: "90%", margin: "0 auto", my: 8 }}>
+          <Grid
+            container
+            direction="row"
+            justifyContent="center"
+            alignItems="center"
+            spacing={1}
+            sx={{ my: 2, justifyContent: "space-between" }}
+          >
+            <Grid
+              item
+              xs={6}
+              sm={6}
+              md={2}
+              lg={2.1}
+              sx={{ margin: "0", padding: "0" }}
+            >
+              <Image
+                src={logo9}
+                alt="Logo"
+                sx={{ maxHeight: "140px", width: "100%", objectFit: "contain" }}
+              />
+            </Grid>
+            <Grid item xs={6} sm={6} md={2} lg={2.1}>
+              <Image
+                src={logo10}
+                alt="Logo"
+                sx={{ maxHeight: "140px", width: "100%", objectFit: "contain" }}
+              />
+            </Grid>
+            <Grid item xs={6} sm={6} md={2} lg={2.1}>
+              <Image
+                src={logo11}
+                alt="Logo"
+                sx={{ maxHeight: "140px", width: "100%", objectFit: "contain" }}
+              />
+            </Grid>
+            <Grid item xs={6} sm={6} md={2} lg={2.1}>
+              <Image
+                src={logo12}
+                alt="Logo"
+                sx={{ maxHeight: "140px", width: "100%", objectFit: "contain" }}
+              />
+            </Grid>
+            <Grid
+              item
+              xs={12}
+              sm={6}
+              md={4}
+              lg={3.6}
+              sx={{
+                "@media (max-width: 959.95px)": {
+                  align: "center",
+                  margin: "0 auto",
+                },
+              }}
+            >
+              <Image
+                src={logo13}
+                alt="Logo"
+                sx={{ maxHeight: "100px", width: "100%", objectFit: "contain" }}
+              />
+            </Grid>
+          </Grid>
+        </Box>
       )}
       {/* <Grid
         container
@@ -526,7 +540,7 @@ function Footer(props) {
           </Grid>
         </Grid>
       </Grid> */}
-            <Grid
+      <Grid
         container
         sx={{
           background:
@@ -534,7 +548,6 @@ function Footer(props) {
           position: "relative",
           maxWidth: "100vw !important",
           color: "#fff",
-          
         }}
       >
         <Grid
@@ -543,7 +556,16 @@ function Footer(props) {
             p: "5ch 8ch 0ch 8ch",
           }}
         >
-          <Grid item xl={12} lg={12} md={12} sm={12} xs={12} align={"left"} sx={{display:"flex",justifyContent:"flex-start"}}>
+          <Grid
+            item
+            xl={12}
+            lg={12}
+            md={12}
+            sm={12}
+            xs={12}
+            align={"left"}
+            sx={{ display: "flex", justifyContent: "flex-start" }}
+          >
             <Link href="/">
               <Logo />
             </Link>
@@ -621,22 +643,42 @@ function Footer(props) {
                 >
                   Services
                 </Typography>
-                <Link href="/case-studies">
+                <Link href="/services-seo">
                   <Typography variant="body1">
                     Search Enginer Optimization
                   </Typography>
                 </Link>
-                <Typography variant="body1">Scocial Media Marketing</Typography>
-                <Typography variant="body1">Perfomance Marketing</Typography>
-                <Typography variant="body1">Influencer Marketing</Typography>
-                <Typography variant="body1">
-                  Online reputation management
-                </Typography>
-                <Typography variant="body1">Content Marketing</Typography>
-                <Typography variant="body1">Branding Services</Typography>
-                <Typography variant="body1">Graphic Design</Typography>
-                <Typography variant="body1">Website Design</Typography>
-                <Typography variant="body1">Website Development</Typography>
+                <Link href="/services-socialMediaMarketing">
+                  <Typography variant="body1">
+                    Scocial Media Marketing
+                  </Typography>
+                </Link>
+                <Link href="/services-performanceMarketing">
+                  <Typography variant="body1">Perfomance Marketing</Typography>
+                </Link>
+                <Link href="/services-influencerMarketing">
+                  <Typography variant="body1">Influencer Marketing</Typography>
+                </Link>
+                <Link href="/services-seo">
+                  <Typography variant="body1">
+                    Online reputation management
+                  </Typography>
+                </Link>
+                <Link href="/services-contentMarketing">
+                  <Typography variant="body1">Content Marketing</Typography>
+                </Link>
+                <Link href="/services-branding">
+                  <Typography variant="body1">Branding Services</Typography>
+                </Link>
+                <Link href="/services-graphicDesign">
+                  <Typography variant="body1">Graphic Design</Typography>
+                </Link>
+                <Link href="/services-webDesign">
+                  <Typography variant="body1">Website Design</Typography>
+                </Link>
+                <Link href="/services-webDevelopment">
+                  <Typography variant="body1">Website Development</Typography>
+                </Link>
               </Stack>
             </Grid>
             <Grid item xl={1.5} lg={1.5} md={3} sm={12} xs={12} align={"left"}>

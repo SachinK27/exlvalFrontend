@@ -12,7 +12,7 @@ import mascot from "../assets/images/pose_03a.svg";
 import loadingImg from "../assets/images/loading.gif";
 import axios from "axios";
 import "./pagination.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 // const CustomContainer = styled(Container)(({ theme }) => ({
 //   padding: 0,
@@ -23,19 +23,27 @@ import { Link } from "react-router-dom";
 // }));
 
 const Infographics = () => {
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
   const [loading, setLoading] = useState(true);
+
   const [infographicsData, setInfographicsData] = useState([]);
+  const [categories, setCategories] = useState([]);
   const [pageCount, setPageCount] = useState(0);
   const [limit, setLimit] = useState(0);
 
   useEffect(() => {
     setLoading(true);
+    let category = queryParams.get("category")
+      ? `/category/${queryParams.get("category")}`
+      : "";
 
     axios
-      .get(`https://admin.exlval.com/api/infographics`)
+      .get(`https://admin.exlval.com/api/infographics${category}`)
       .then((res) => {
         let data = res.data.infographics.data;
         setInfographicsData(data);
+        setCategories(res.data.categories);
         const total = res.data.infographics.total;
         const lim = res.data.infographics.per_page;
         setLimit(lim);
@@ -53,11 +61,18 @@ const Infographics = () => {
 
   const fetchInfographics = (currentPage) => {
     setLoading(true);
+    let category = queryParams.get("category")
+      ? `/category/${queryParams.get("category")}`
+      : "";
+
     axios
-      .get(`https://admin.exlval.com/api/infographics?page=${currentPage}`)
+      .get(
+        `https://admin.exlval.com/api/infographics${category}?page=${currentPage}`
+      )
       .then((res) => {
         let data = res.data.infographics.data;
         setInfographicsData(data);
+        setCategories(res.data.categories);
         setLoading(false);
       })
       .catch((err) => {
@@ -65,7 +80,6 @@ const Infographics = () => {
         console.log(err);
       });
   };
-
 
   const handlePageClick = async (data) => {
     console.log(data.selected);
@@ -87,26 +101,22 @@ const Infographics = () => {
             sx={{
               display: "flex",
               alignItems: "center",
+              justifyContent: "center",
               flexDirection: "column",
-              m: "8ch auto",
               fontWeight: 500,
+              height: "60vh",
               backgroundImage: `url("${bgImage}")`,
-              backgroundSize: "cover",
+              backgroundSize: "contain",
               backgroundPosition: "center",
-              height: "400px",
+              backgroundRepeat: "no-repeat",
               position: "relative",
             }}
           >
-            <Box align="center">
-              <Typography variant="h1">
-                Visualizing Success with the best form of
-              </Typography>
-              <Typography variant="h1" sx={{ mt: -1 }}>
-                Information
-              </Typography>
-            </Box>
-            <Box sx={{ my: 6, lineHeight: 1.7, fontSize: "18px" }} />
-            <Typography variant="body2" align="center">
+            <Typography variant="h1" align="center" maxWidth={"30ch"}>
+              Visualizing Success with the best form of Information
+            </Typography>
+            <Box sx={{ my: 2, lineHeight: 1.7, fontSize: "18px" }} />
+            <Typography variant="body2" align="center" fontSize="18px">
               The easy-to-digest info that will inspire you!
             </Typography>
           </Grid>
@@ -129,7 +139,9 @@ const Infographics = () => {
           >
             <Typography>Home</Typography>
             <ChevronRightIcon />
-            <Typography sx={{ color: "#F45050" }}><strong>Infographics</strong></Typography>
+            <Typography sx={{ color: "#F45050" }}>
+              <strong>Infographics</strong>
+            </Typography>
           </Grid>
         </Grid>
         <Grid container spacing={2}>
@@ -166,15 +178,17 @@ const Infographics = () => {
               <Grid
                 container
                 spacing={2}
-                sx={{
-                  // overflowY: "scroll",
-                  // maxHeight: "90vh",
-                  // scrollbarWidth: "none",
-                  // "::-webkit-scrollbar": { display: "none" },
-                  // justifyContent: "space-between",
-                  // width: "100%",
-                  // flexWrap: "wrap",
-                }}
+                sx={
+                  {
+                    // overflowY: "scroll",
+                    // maxHeight: "90vh",
+                    // scrollbarWidth: "none",
+                    // "::-webkit-scrollbar": { display: "none" },
+                    // justifyContent: "space-between",
+                    // width: "100%",
+                    // flexWrap: "wrap",
+                  }
+                }
               >
                 {loading ? (
                   <div
@@ -196,8 +210,12 @@ const Infographics = () => {
                     {infographicsData.map((ele, idx) => {
                       let imgUrl = `https://admin.exlval.com/images/infographic_cover/${ele.cover_img}`;
                       // console.log(imgUrl);
-                      const metaKeywords = ele.meta_keywords.split(",");
+                      // const metaKeywords = ele.meta_keywords.split(",");
                       // console.log(metaKeywords)
+                      const tag = categories.filter(
+                        (category) => category.id == ele.category
+                      )[0].name;
+
                       return (
                         <Grid
                           item
@@ -211,7 +229,7 @@ const Infographics = () => {
                           <Link to={`/infographics/${ele.slug}`}>
                             <Card3
                               img={imgUrl}
-                              tags={metaKeywords}
+                              tags={["infographics", tag]}
                               color={"#F9D949"}
                               contained
                               title={ele.title}
@@ -255,33 +273,39 @@ const Infographics = () => {
             height: 3,
           }}
         ></Grid>
-        <Grid
-        container
-        sx={{my:"80px"}}
-        >
-        <Grid item
-        sm={12}
-        xs={12}
-        md={6}
-        lg={6}
-        align="center"
-        justifyContent="center"
-        // sx={{width:"100%"}}
-        >
-          <Image src={mascot} objectFit="contain" sx={{mt:"8vh",width:"100%",transform: "scale(1)"}}/>
-        </Grid>
-        <Grid item
-        sm={12}
-        xs={12}
-        md={6}
-        lg={6}
-        align="center"
-        // sx={{width:"100%"}}
-        >
-        <Container align="center" sx={{width:"95%",justifyContent:"center"}}>
+        <Grid container sx={{ my: "80px" }}>
+          <Grid
+            item
+            sm={12}
+            xs={12}
+            md={6}
+            lg={6}
+            align="center"
+            justifyContent="center"
+            // sx={{width:"100%"}}
+          >
+            <Image
+              src={mascot}
+              objectFit="contain"
+              sx={{ mt: "8vh", width: "100%", transform: "scale(1)" }}
+            />
+          </Grid>
+          <Grid
+            item
+            sm={12}
+            xs={12}
+            md={6}
+            lg={6}
+            align="center"
+            // sx={{width:"100%"}}
+          >
+            <Container
+              align="center"
+              sx={{ width: "95%", justifyContent: "center" }}
+            >
               <ContactForm />
             </Container>
-        </Grid>
+          </Grid>
         </Grid>
       </Grid>
     </>

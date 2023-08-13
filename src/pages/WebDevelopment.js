@@ -10,7 +10,7 @@ import {
   Button,
   useTheme,
   useMediaQuery,
-  Link
+  Link,
 } from "@mui/material";
 import Image from "../components/Image";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
@@ -27,6 +27,7 @@ import Card from "../components/Card";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import ContactForm from "../components/ContactForm";
 import SwipperTest from "../components/SwipperTest";
+import bgImage from "../assets/images/Hero bg image.png";
 
 import "./Sticky.css";
 const iconsData = [
@@ -106,29 +107,22 @@ const WebDevelopment = () => {
         sx={{
           display: "flex",
           alignItems: "center",
+          justifyContent: "center",
           flexDirection: "column",
-          my: "8ch",
           fontWeight: 500,
-          backgroundSize: "cover",
+          height: "60vh",
+          backgroundImage: `url("${bgImage}")`,
+          backgroundSize: "contain",
           backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
           position: "relative",
         }}
       >
-        <Box
-          align="center"
-          sx={{
-            m: "auto 8ch",
-            px: 15,
-            "@media (max-width: 959.95px)": {
-              m: "0 auto",
-              px: 2,
-            },
-          }}
-        >
-          <Typography variant="h1">Website Development</Typography>
-        </Box>
+        <Typography variant="h1" align="center" maxWidth={"20ch"}>
+          Website Development
+        </Typography>
         <Box sx={{ my: 2, lineHeight: 1.7, fontSize: "18px" }} />
-        <Typography variant="body1" align="center">
+        <Typography variant="body1" align="center" fontSize="18px">
           Your website should be an innovative tool for growth, and we build
           websites that meet and exceed your business goals and objectives.
         </Typography>
@@ -189,10 +183,12 @@ const WebDevelopment = () => {
           </Grid>
 
           <Grid item xl={7} lg={7} md={7} sm={12} xs={12}>
-          <Box>
+            <Box>
               <Stack spacing={3}>
                 <Typography sx={{ fontSize: "18px", fontWeight: "bold" }}>
-                Website development is like playing a game of Jenga - strategically piecing together each block to create a stable and impressive online presence.
+                  Website development is like playing a game of Jenga -
+                  strategically piecing together each block to create a stable
+                  and impressive online presence.
                 </Typography>
                 <Stack direction="row" spacing={1}>
                   <IconButton
@@ -205,7 +201,7 @@ const WebDevelopment = () => {
                     <EastTwoToneIcon sx={{ color: "#fff", fontSize: "18px" }} />
                   </IconButton>
                   <Typography>
-                  Is your web design poor and not appealing to the users?
+                    Is your web design poor and not appealing to the users?
                   </Typography>
                 </Stack>
                 <Stack direction="row" spacing={1}>
@@ -219,7 +215,7 @@ const WebDevelopment = () => {
                     <EastTwoToneIcon sx={{ color: "#fff", fontSize: "18px" }} />
                   </IconButton>
                   <Typography>
-                  Does your website have a slow loading speed?
+                    Does your website have a slow loading speed?
                   </Typography>
                 </Stack>
                 <Stack direction="row" spacing={1}>
@@ -233,7 +229,7 @@ const WebDevelopment = () => {
                     <EastTwoToneIcon sx={{ color: "#fff", fontSize: "18px" }} />
                   </IconButton>
                   <Typography>
-                  Is there an irregularity in web publishing?
+                    Is there an irregularity in web publishing?
                   </Typography>
                 </Stack>
                 <Stack direction="row" spacing={1}>
@@ -247,7 +243,7 @@ const WebDevelopment = () => {
                     <EastTwoToneIcon sx={{ color: "#fff", fontSize: "18px" }} />
                   </IconButton>
                   <Typography>
-                  You can’t find a good website developer.
+                    You can’t find a good website developer.
                   </Typography>
                 </Stack>
                 <Stack direction="row" spacing={1}>
@@ -261,23 +257,21 @@ const WebDevelopment = () => {
                     <EastTwoToneIcon sx={{ color: "#fff", fontSize: "18px" }} />
                   </IconButton>
                   <Typography>
-                  Is the database not appropriately managed?
+                    Is the database not appropriately managed?
                   </Typography>
                 </Stack>
 
-
-
+                <Typography>Do you relate to these problems?</Typography>
                 <Typography>
-                Do you relate to these problems?
-                </Typography>
-                <Typography>
-                Our website development services are like a matchmaker that brings together the perfect match between your business needs and your customer's desires.
+                  Our website development services are like a matchmaker that
+                  brings together the perfect match between your business needs
+                  and your customer's desires.
                 </Typography>
                 <Typography sx={{ fontSize: "18px", fontWeight: "bold" }}>
-                We just don’t track the numbers, but we make them work.
+                  We just don’t track the numbers, but we make them work.
                 </Typography>
                 <Typography sx={{ fontSize: "18px", fontWeight: "bold" }}>
-                Without further ado, let’s see how we do that:
+                  Without further ado, let’s see how we do that:
                 </Typography>
               </Stack>
               <Image
@@ -320,7 +314,10 @@ const WebDevelopment = () => {
               </Typography>
               <Typography variant="body2">
                 <em>
-                We begin with a thorough understanding of your objectives, enabling us to create a customized checklist of requirements that will guide us in building a website tailored to your unique needs.
+                  We begin with a thorough understanding of your objectives,
+                  enabling us to create a customized checklist of requirements
+                  that will guide us in building a website tailored to your
+                  unique needs.
                 </em>
               </Typography>
             </Card4>
@@ -339,7 +336,7 @@ const WebDevelopment = () => {
               </Typography>
               <Typography variant="body2">
                 <em>
-                We create a proposal tailored to your goals and requirements.
+                  We create a proposal tailored to your goals and requirements.
                 </em>
               </Typography>
             </Card4>
@@ -358,7 +355,9 @@ const WebDevelopment = () => {
               </Typography>
               <Typography variant="body2">
                 <em>
-                We begin by creating a plan and presenting it to you, before moving on to designing and developing your website with compelling content to capture the attention of your audience.
+                  We begin by creating a plan and presenting it to you, before
+                  moving on to designing and developing your website with
+                  compelling content to capture the attention of your audience.
                 </em>
               </Typography>
             </Card4>
@@ -377,7 +376,9 @@ const WebDevelopment = () => {
               </Typography>
               <Typography variant="body2">
                 <em>
-                We regularly report website analytics to you to provide insight into its performance and help make data-driven decisions for future improvements.
+                  We regularly report website analytics to you to provide
+                  insight into its performance and help make data-driven
+                  decisions for future improvements.
                 </em>
               </Typography>
             </Card4>
@@ -420,7 +421,10 @@ const WebDevelopment = () => {
             </Typography>
             <Typography variant="body2">
               <em>
-              We begin with a thorough understanding of your objectives, enabling us to create a customized checklist of requirements that will guide us in building a website tailored to your unique needs.
+                We begin with a thorough understanding of your objectives,
+                enabling us to create a customized checklist of requirements
+                that will guide us in building a website tailored to your unique
+                needs.
               </em>
             </Typography>
           </Card4>
@@ -460,7 +464,7 @@ const WebDevelopment = () => {
             </Typography>
             <Typography variant="body2">
               <em>
-              We create a proposal tailored to your goals and requirements.
+                We create a proposal tailored to your goals and requirements.
               </em>
             </Typography>
           </Card4>
@@ -500,7 +504,9 @@ const WebDevelopment = () => {
             </Typography>
             <Typography variant="body2">
               <em>
-              We begin by creating a plan and presenting it to you, before moving on to designing and developing your website with compelling content to capture the attention of your audience.
+                We begin by creating a plan and presenting it to you, before
+                moving on to designing and developing your website with
+                compelling content to capture the attention of your audience.
               </em>
             </Typography>
           </Card4>
@@ -540,7 +546,9 @@ const WebDevelopment = () => {
             </Typography>
             <Typography variant="body2">
               <em>
-              We regularly report website analytics to you to provide insight into its performance and help make data-driven decisions for future improvements.
+                We regularly report website analytics to you to provide insight
+                into its performance and help make data-driven decisions for
+                future improvements.
               </em>
             </Typography>
           </Card4>
@@ -586,8 +594,7 @@ const WebDevelopment = () => {
             <Box>
               <UnderlinedText>
                 <Typography sx={{ fontSize: "2rem", fontWeight: "medium" }}>
-                Web Development Services provided by us:
-
+                  Web Development Services provided by us:
                 </Typography>
               </UnderlinedText>
               <Box sx={{ my: 4 }} />

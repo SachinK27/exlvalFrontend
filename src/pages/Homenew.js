@@ -1,22 +1,26 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, {
+  // useState,
+  useEffect,
+  useRef,
+} from "react";
 import {
   Box,
   Button,
   Container,
   Grid,
-  Stack,
+  // Stack,
   Typography,
-  Link
+  Link,
 } from "@mui/material";
 import bgImage from "../assets/images/Hero bg image.png";
-import logo1 from "../assets/images/TSRF.png";
-import logo2 from "../assets/images/Team Aviation.png";
-import logo3 from "../assets/images/Trived Pharma.png";
-import logo4 from "../assets/images/SDECOR Leminates.png";
-import logo5 from "../assets/images/CG Logistics.png";
-import logo6 from "../assets/images/Relitrade.png";
-import logo7 from "../assets/images/Growing Mafia.png";
-import logo8 from "../assets/images/lastCompany.png";
+// import logo1 from "../assets/images/TSRF.png";
+// import logo2 from "../assets/images/Team Aviation.png";
+// import logo3 from "../assets/images/Trived Pharma.png";
+// import logo4 from "../assets/images/SDECOR Leminates.png";
+// import logo5 from "../assets/images/CG Logistics.png";
+// import logo6 from "../assets/images/Relitrade.png";
+// import logo7 from "../assets/images/Growing Mafia.png";
+// import logo8 from "../assets/images/lastCompany.png";
 import mascot from "../assets/images/output-onlinegiftools.gif";
 import mascot6 from "../assets/images/pose_06a.png";
 import bubble1 from "../assets/images/bubble1.svg";
@@ -24,13 +28,13 @@ import bubble2 from "../assets/images/bubble2.svg";
 import bubble3 from "../assets/images/bubble3.svg";
 import Card from "../components/Card";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
-import Carousel from "../components/Carousel";
+// import Carousel from "../components/Carousel";
 import Image from "../components/Image";
-import Card2 from "../components/Card2";
-import Carousel2 from "../components/Carousel2";
+// import Card2 from "../components/Card2";
+// import Carousel2 from "../components/Carousel2";
 import ContactForm from "../components/ContactForm";
 import UnderlinedText from "../components/UnderlinedText";
-import UnderlinedGrowth from "../components/UnderlinedGrowth";
+// import UnderlinedGrowth from "../components/UnderlinedGrowth";
 import TestCard from "../components/TestCard";
 import CompanySlider from "../components/CompanySlider";
 import GrowthGraph from "../assets/images/growth graph - homepage.svg";
@@ -78,76 +82,97 @@ const Homefixed = () => {
   }, []);
 
   // Growth animation delay
-  const [animateGrowthID, setAnimateGrowthID] = useState(false);
+  // const [animateGrowthID, setAnimateGrowthID] = useState(false);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setAnimateGrowthID(true);
-    }, 500);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setAnimateGrowthID(true);
+  //   }, 500);
 
-    return () => {
-      clearTimeout(timer);
-    };
-  }, []);
-
+  //   return () => {
+  //     clearTimeout(timer);
+  //   };
+  // }, []);
 
   //Data for cards
   const cardsData = [
     {
+      link: "services-seo",
       title: "Search Engine Optimization",
-      content: "Want to outrank your competitors? Our SEO service is the secret sauce to help you get there. Lets make your website",
+      content:
+        "Want to outrank your competitors? Our SEO service is the secret sauce to help you get there. Lets make your website",
     },
     {
+      link: "services-contentMarketing",
       title: "Online Reputation Management",
-      content: "Keep your business image spotless with our online reputation management service. We'll help you charm your customers with confidence.",
+      content:
+        "Keep your business image spotless with our online reputation management service. We'll help you charm your customers with confidence.",
     },
     {
+      link: "services-contentMarketing",
       title: "Content Marketing",
-      content: "We give users precisely what they want to find with the help of our content that captures attention, drives traffic and adds a dash of charisma to your message.",
+      content:
+        "We give users precisely what they want to find with the help of our content that captures attention, drives traffic and adds a dash of charisma to your message.",
     },
     {
+      link: "services-performanceMarketing",
       title: "Performance Marketing",
-      content: "Tired of throwing your marketing budget down the drain? Our performance marketing service turns your clicks into conversions!",
+      content:
+        "Tired of throwing your marketing budget down the drain? Our performance marketing service turns your clicks into conversions!",
     },
     {
+      link: "services-socialMarketing",
       title: "Social Media Marketing",
-      content: "We'll give your brand an authentic voice that connects and entertains. And yes, our creativity is the icing on the cake!",
+      content:
+        "We'll give your brand an authentic voice that connects and entertains. And yes, our creativity is the icing on the cake!",
     },
     {
+      link: "services-influencerMarketing",
       title: "Influencer Marketing",
-      content: "Looking for a game-changing marketing strategy? Expand your reach and boost engagement through influencers, while maintaining your brand's personality.",
+      content:
+        "Looking for a game-changing marketing strategy? Expand your reach and boost engagement through influencers, while maintaining your brand's personality.",
     },
     {
+      link: "services-branding",
       title: "Branding",
-      content: "Forge a magnetic brand with our branding services. We'll help you stand out, connect with your audience, and grow your business.",
+      content:
+        "Forge a magnetic brand with our branding services. We'll help you stand out, connect with your audience, and grow your business.",
     },
     {
+      link: "services-graphicDesign",
       title: "Graphic Design",
-      content: "Willing to bring your visions to life? Our team has got you covered. With our design expertise, your brand is sure to stand out from the competition.",
+      content:
+        "Willing to bring your visions to life? Our team has got you covered. With our design expertise, your brand is sure to stand out from the competition.",
     },
     {
+      link: "services-webDesign",
       title: "Website Design",
-      content: "Our website design is like a tailor-made suit for your online presence - perfectly fitted, stylish, and sure to impress. Be the go-to destination for users with us.",
+      content:
+        "Our website design is like a tailor-made suit for your online presence - perfectly fitted, stylish, and sure to impress. Be the go-to destination for users with us.",
     },
     {
+      link: "services-webDevelopment",
       title: "Website Development",
-      content: "Your website is the heart of your online presence. Let our expert developers bring it to life with a touch of magic.",
+      content:
+        "Your website is the heart of your online presence. Let our expert developers bring it to life with a touch of magic.",
     },
   ];
-  
+
   return (
-    <Grid container sx={{overflowX:"hidden"}}>
+    <Grid container sx={{ overflowX: "hidden" }}>
       {/* <CardTemp2/> */}
       <Container
         sx={{
           display: "flex",
           alignItems: "center",
+          justifyContent: "center",
           flexDirection: "column",
-          m: "8ch auto",
           fontWeight: 500,
+          height: "70vh",
           backgroundImage: `url("${bgImage}")`,
-          backgroundSize: "cover",
+          backgroundSize: "contain",
           backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
           position: "relative",
         }}
       >
@@ -167,14 +192,19 @@ const Homefixed = () => {
             <Grid item>
               <Typography variant="h1">Drive</Typography>
             </Grid>
-            
-            <Grid item  sx={{ width:"16rem","@media (max-width: 959.95px)": {
-    width:"10rem"
-  }}}>
-              <Grid container >
-              <TypingAnimationMain />
+
+            <Grid
+              item
+              sx={{
+                width: "16rem",
+                "@media (max-width: 959.95px)": {
+                  width: "10rem",
+                },
+              }}
+            >
+              <Grid container>
+                <TypingAnimationMain />
               </Grid>
-              
             </Grid>
             {/* <Grid item>
               <Typography variant="h1">and</Typography>
@@ -212,7 +242,8 @@ const Homefixed = () => {
               backgroundColor: "#3C486B",
               borderRadius: 4,
               cursor: "pointer",
-              padding: "1ch 2ch",
+              padding: "1ch 4ch",
+              fontSize: "2ch",
               "&:hover": {
                 backgroundColor: "#3C487E",
               },
@@ -270,7 +301,7 @@ const Homefixed = () => {
       </Grid>
 
       <Box ref={parentRef} sx={{ maxWidth: "100vw !important" }}>
-        <Grid container >
+        <Grid container>
           <Grid
             item
             sm={12}
@@ -278,7 +309,7 @@ const Homefixed = () => {
             lg={4.5}
             display={{ xs: "none", sm: "none", md: "block", lg: "block" }}
             style={{ position: "relative" }}
-            sx={{pl:6}}
+            sx={{ pl: 6 }}
           >
             <Image
               src={mascot6}
@@ -287,28 +318,57 @@ const Homefixed = () => {
               ref={mascotRef}
             />
           </Grid>
-          <Grid item xs={12} sm={12} md={7.5} lg={7.5} sx={{pl: "5rem",
-  "@media (max-width: 959.95px)": {
-    pl: 0,
-  }}}>
-        {/* responsive code added */}
-              <Box sx={{"@media (max-width: 959.95px)": {
-   display:"flex",
-   alignItems:"center",
-   justifyContent:"center"
-  }}}><UnderlinedText >Services that unlock potential</UnderlinedText></Box>
-              <Box sx={{ my: 4 }} />
-              <Grid container spacing={2} sx={{width:"95%",mt: 5,"@media (max-width: 959.95px)": {
-    width:"80%",margin:"0 auto",align:"center"
-  } }}>
-      {cardsData.map((card, index) => (
-        <Grid item xs={12} sm={6} key={index}>
-          <Card title={card.title} content={card.content} />
-        </Grid>
-      ))}
-    </Grid>
-           
-           
+
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={7.5}
+            lg={7.5}
+            sx={{
+              pl: "5rem",
+              "@media (max-width: 959.95px)": {
+                pl: 0,
+              },
+            }}
+          >
+            {/* responsive code added */}
+            <Box
+              sx={{
+                "@media (max-width: 959.95px)": {
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                },
+              }}
+            >
+              <UnderlinedText>Services that unlock potential</UnderlinedText>
+            </Box>
+
+            <Box sx={{ my: 4 }} />
+
+            <Grid
+              container
+              spacing={2}
+              sx={{
+                width: "95%",
+                mt: 5,
+                "@media (max-width: 959.95px)": {
+                  width: "80%",
+                  margin: "0 auto",
+                  align: "center",
+                },
+              }}
+            >
+              {cardsData.map((card, index) => (
+                <Grid item xs={12} sm={6} key={index}>
+                  <Link href={card.link}>
+                    <Card title={card.title} content={card.content} />
+                  </Link>
+                </Grid>
+              ))}
+            </Grid>
+
             <Box
               sx={{
                 textAlign: "center",
@@ -324,9 +384,14 @@ const Homefixed = () => {
                 <Typography
                   sx={{
                     //For making responsive
-                    fontSize: { xs: "2.5vh", sm: "5vh", md: "4vh", lg: "5.5vh" },
+                    fontSize: {
+                      xs: "2.5vh",
+                      sm: "5vh",
+                      md: "4vh",
+                      lg: "5.5vh",
+                    },
                     fontWeight: "medium",
-                    lineHeight: "1.3"
+                    lineHeight: "1.3",
                   }}
                 >
                   Drive your growth with reliable
@@ -343,6 +408,7 @@ const Homefixed = () => {
                   cursor: "pointer",
                   borderRadius: 4,
                   padding: "1ch 2ch",
+                  fontSize: "2ch",
                   "&:hover": {
                     backgroundColor: "#3C487E",
                   },
@@ -354,19 +420,32 @@ const Homefixed = () => {
             </Box>
 
             <Box sx={{ my: 10 }} />
+
             <Box>
-               {/* Responsive Code Added */}
-            <Box sx={{"@media (max-width: 959.95px)": {
-   display:"flex",
-   alignItems:"center",
-   justifyContent:"center"
-  }}}><UnderlinedText >Explore Our Result-driven Work</UnderlinedText></Box>
-             
+              {/* Responsive Code Added */}
+              <Box
+                sx={{
+                  "@media (max-width: 959.95px)": {
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  },
+                }}
+              >
+                <UnderlinedText>Explore Our Result-driven Work</UnderlinedText>
+              </Box>
+
               <SwipperTest />
 
-              <Box sx={{width:"95%","@media (max-width: 959.95px)": {
-width:"100%"
-  }}} align="center" >
+              <Box
+                sx={{
+                  width: "95%",
+                  "@media (max-width: 959.95px)": {
+                    width: "100%",
+                  },
+                }}
+                align="center"
+              >
                 <Button
                   sx={{
                     backgroundColor: "#3C486B",
@@ -386,13 +465,20 @@ width:"100%"
 
             <Box sx={{ my: 10 }} />
             {/* <CardTemp2/> */}
+
             <Box sx={{ mt: 3 }}>
               {/* Responsive Code Added */}
-            <Box sx={{"@media (max-width: 959.95px)": {
-   display:"flex",
-   alignItems:"center",
-   justifyContent:"center"
-  }}}><UnderlinedText >Tap to find the solutions</UnderlinedText></Box>
+              <Box
+                sx={{
+                  "@media (max-width: 959.95px)": {
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  },
+                }}
+              >
+                <UnderlinedText>Tap to find the solutions</UnderlinedText>
+              </Box>
 
               {/* <Box sx={{ my: 10 }} /> */}
               <Box
@@ -404,9 +490,9 @@ width:"100%"
                   p: 1,
                   my: 5,
                   "@media (max-width: 959.95px)": {
-                    alignItems:"center",
-                    justifyContent:"center"
-                  }
+                    alignItems: "center",
+                    justifyContent: "center",
+                  },
                 }}
               >
                 <TestCard
@@ -445,15 +531,23 @@ width:"100%"
                 />
               </Box>
             </Box>
+
             <Box sx={{ my: 10 }} />
+
             <Box>
-                            {/* Responsive Code Added */}
-            <Box sx={{"@media (max-width: 959.95px)": {
-   display:"flex",
-   alignItems:"center",
-   justifyContent:"center"
-  }}}><UnderlinedText >What our Clients have to say</UnderlinedText></Box>
-            
+              {/* Responsive Code Added */}
+              <Box
+                sx={{
+                  "@media (max-width: 959.95px)": {
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  },
+                }}
+              >
+                <UnderlinedText>What our Clients have to say</UnderlinedText>
+              </Box>
+
               <Box sx={{ my: 7 }} />
 
               {/* <Carousel2
@@ -522,14 +616,24 @@ Keep it up Exlval!`,
                   },
                 ]}
               /> */}
-              <Imagecarousel/>
+
+              <Imagecarousel />
             </Box>
 
             <Box sx={{ my: 10 }} />
-            <Box sx={{ width: "84%", mb: 5,
-        "@media (max-width: 959.95px)": {
-          margin:"0 auto"
-        } }}>
+
+            <Box
+              sx={{
+                // width: "84%",
+                p: 10,
+                mb: 5,
+
+                "@media (max-width: 959.95px)": {
+                  margin: "0 auto",
+                  p: 2,
+                },
+              }}
+            >
               <ContactForm />
             </Box>
           </Grid>

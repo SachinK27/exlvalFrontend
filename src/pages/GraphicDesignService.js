@@ -10,7 +10,7 @@ import {
   Button,
   useTheme,
   useMediaQuery,
-  Link
+  Link,
 } from "@mui/material";
 import Image from "../components/Image";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
@@ -27,6 +27,7 @@ import Card from "../components/Card";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import ContactForm from "../components/ContactForm";
 import SwipperTest from "../components/SwipperTest";
+import bgImage from "../assets/images/Hero bg image.png";
 
 import "./Sticky.css";
 const iconsData = [
@@ -39,7 +40,6 @@ const iconsData = [
 ];
 //Data for cards
 const cardsData = [
-
   {
     title: "Social Media Graphic Creatives",
     content:
@@ -97,30 +97,24 @@ const GraphicDesignService = () => {
         sx={{
           display: "flex",
           alignItems: "center",
+          justifyContent: "center",
           flexDirection: "column",
-          my: "8ch",
           fontWeight: 500,
-          backgroundSize: "cover",
+          height: "60vh",
+          backgroundImage: `url("${bgImage}")`,
+          backgroundSize: "contain",
           backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
           position: "relative",
         }}
       >
-        <Box
-          align="center"
-          sx={{
-            m: "auto 8ch",
-            px: 15,
-            "@media (max-width: 959.95px)": {
-              m: "0 auto",
-              px: 2,
-            },
-          }}
-        >
-          <Typography variant="h1">Graphic Design</Typography>
-        </Box>
+        <Typography variant="h1" align="center" maxWidth={"20ch"}>
+          Graphic Design
+        </Typography>
         <Box sx={{ my: 2, lineHeight: 1.7, fontSize: "18px" }} />
-        <Typography variant="body1" align="center">
-        Creating not just pretty pictures, but visual storytelling that engages, entertains and inspires your audience!
+        <Typography variant="body1" align="center" fontSize="18px">
+          Creating not just pretty pictures, but visual storytelling that
+          engages, entertains and inspires your audience!
         </Typography>
         <Container align="center" sx={{ mt: 5 }}>
           <Button
@@ -179,74 +173,77 @@ const GraphicDesignService = () => {
           </Grid>
 
           <Grid item xl={7} lg={7} md={7} sm={12} xs={12}>
-          <Box>
-  <Stack spacing={3}>
-    <Typography sx={{ fontSize: "18px", fontWeight: "bold" }}>
-    Graphic design is like playing dress-up for ideas. It's all about putting on the right colours, fonts, and shapes to make your message look its best and catch everyone's eye!
+            <Box>
+              <Stack spacing={3}>
+                <Typography sx={{ fontSize: "18px", fontWeight: "bold" }}>
+                  Graphic design is like playing dress-up for ideas. It's all
+                  about putting on the right colours, fonts, and shapes to make
+                  your message look its best and catch everyone's eye!
+                </Typography>
+                <Stack direction="row" spacing={1}>
+                  <IconButton
+                    sx={{
+                      background: "#F45050",
+                      width: "24px",
+                      height: "24px",
+                    }}
+                  >
+                    <EastTwoToneIcon sx={{ color: "#fff", fontSize: "18px" }} />
+                  </IconButton>
+                  <Typography>
+                    Are you unable to create graphics that tell a story?
+                  </Typography>
+                </Stack>
+                <Stack direction="row" spacing={1}>
+                  <IconButton
+                    sx={{
+                      background: "#F45050",
+                      width: "24px",
+                      height: "24px",
+                    }}
+                  >
+                    <EastTwoToneIcon sx={{ color: "#fff", fontSize: "18px" }} />
+                  </IconButton>
+                  <Typography>
+                    Are you unable to design according to the trends?
+                  </Typography>
+                </Stack>
+                <Stack direction="row" spacing={1}>
+                  <IconButton
+                    sx={{
+                      background: "#F45050",
+                      width: "24px",
+                      height: "24px",
+                    }}
+                  >
+                    <EastTwoToneIcon sx={{ color: "#fff", fontSize: "18px" }} />
+                  </IconButton>
+                  <Typography>
+                    Do you lack the skill to design online and create appealing
+                    visuals?
+                  </Typography>
+                </Stack>
 
-    </Typography>
-    <Stack direction="row" spacing={1}>
-      <IconButton
-        sx={{
-          background: "#F45050",
-          width: "24px",
-          height: "24px",
-        }}
-      >
-        <EastTwoToneIcon sx={{ color: "#fff", fontSize: "18px" }} />
-      </IconButton>
-      <Typography>
-      Are you unable to create graphics that tell a story?
-
-      </Typography>
-    </Stack>
-    <Stack direction="row" spacing={1}>
-      <IconButton
-        sx={{
-          background: "#F45050",
-          width: "24px",
-          height: "24px",
-        }}
-      >
-        <EastTwoToneIcon sx={{ color: "#fff", fontSize: "18px" }} />
-      </IconButton>
-      <Typography>
-      Are you unable to design according to the trends?
-
-      </Typography>
-    </Stack>
-    <Stack direction="row" spacing={1}>
-      <IconButton
-        sx={{
-          background: "#F45050",
-          width: "24px",
-          height: "24px",
-        }}
-      >
-        <EastTwoToneIcon sx={{ color: "#fff", fontSize: "18px" }} />
-      </IconButton>
-      <Typography>
-      Do you lack the skill to design online and create appealing visuals?
-
-      </Typography>
-    </Stack>
-
-    <Typography>
-    It’s alright! We can do it for you while you focus on your business.
-    </Typography>
-    <Typography>Humans not only see with their eyes but with their brains as well. And if it makes an impression on them, it sells.</Typography>
-    <Typography>And our experts will make a long-lasting impression.</Typography>
-    <Typography sx={{ fontSize: "18px", fontWeight: "bold" }}>
-    Let’s see how will that happen:
-    </Typography>
-
-
-  </Stack>
-  <Image
-    style={{ margin: "3ch auto", display: "block" }}
-    src={arrow}
-  />
-</Box>
+                <Typography>
+                  It’s alright! We can do it for you while you focus on your
+                  business.
+                </Typography>
+                <Typography>
+                  Humans not only see with their eyes but with their brains as
+                  well. And if it makes an impression on them, it sells.
+                </Typography>
+                <Typography>
+                  And our experts will make a long-lasting impression.
+                </Typography>
+                <Typography sx={{ fontSize: "18px", fontWeight: "bold" }}>
+                  Let’s see how will that happen:
+                </Typography>
+              </Stack>
+              <Image
+                style={{ margin: "3ch auto", display: "block" }}
+                src={arrow}
+              />
+            </Box>
           </Grid>
         </Grid>
       </Container>
@@ -282,7 +279,8 @@ const GraphicDesignService = () => {
               </Typography>
               <Typography variant="body2">
                 <em>
-                Identify the objectives of your brand to visualize it with a unique style that matches your brand's personality.
+                  Identify the objectives of your brand to visualize it with a
+                  unique style that matches your brand's personality.
                 </em>
               </Typography>
             </Card4>
@@ -301,7 +299,9 @@ const GraphicDesignService = () => {
               </Typography>
               <Typography variant="body2">
                 <em>
-                We then make a proposal according to the brand and its objectives which fall under the different parameters of a brand design style guide.
+                  We then make a proposal according to the brand and its
+                  objectives which fall under the different parameters of a
+                  brand design style guide.
                 </em>
               </Typography>
             </Card4>
@@ -320,7 +320,9 @@ const GraphicDesignService = () => {
               </Typography>
               <Typography variant="body2">
                 <em>
-                Creation of a design style guide for your brand, which will follow a unique brand aesthetic and vibe so your brand identity is created and always stands out.
+                  Creation of a design style guide for your brand, which will
+                  follow a unique brand aesthetic and vibe so your brand
+                  identity is created and always stands out.
                 </em>
               </Typography>
             </Card4>
@@ -339,7 +341,8 @@ const GraphicDesignService = () => {
               </Typography>
               <Typography variant="body2">
                 <em>
-                Consistent reporting of how design and the ideas behind it are helping the brand grow and improvising it along the way.
+                  Consistent reporting of how design and the ideas behind it are
+                  helping the brand grow and improvising it along the way.
                 </em>
               </Typography>
             </Card4>
@@ -382,7 +385,8 @@ const GraphicDesignService = () => {
             </Typography>
             <Typography variant="body2">
               <em>
-              Identify the objectives of your brand to visualize it with a unique style that matches your brand's personality.
+                Identify the objectives of your brand to visualize it with a
+                unique style that matches your brand's personality.
               </em>
             </Typography>
           </Card4>
@@ -422,7 +426,9 @@ const GraphicDesignService = () => {
             </Typography>
             <Typography variant="body2">
               <em>
-              We then make a proposal according to the brand and its objectives which fall under the different parameters of a brand design style guide.
+                We then make a proposal according to the brand and its
+                objectives which fall under the different parameters of a brand
+                design style guide.
               </em>
             </Typography>
           </Card4>
@@ -462,7 +468,9 @@ const GraphicDesignService = () => {
             </Typography>
             <Typography variant="body2">
               <em>
-              Creation of a design style guide for your brand, which will follow a unique brand aesthetic and vibe so your brand identity is created and always stands out.
+                Creation of a design style guide for your brand, which will
+                follow a unique brand aesthetic and vibe so your brand identity
+                is created and always stands out.
               </em>
             </Typography>
           </Card4>
@@ -502,7 +510,8 @@ const GraphicDesignService = () => {
             </Typography>
             <Typography variant="body2">
               <em>
-              Consistent reporting of how design and the ideas behind it are helping the brand grow and improvising it along the way.
+                Consistent reporting of how design and the ideas behind it are
+                helping the brand grow and improvising it along the way.
               </em>
             </Typography>
           </Card4>

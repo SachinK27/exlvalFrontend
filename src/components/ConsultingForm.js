@@ -151,16 +151,18 @@ const ConsultingForm = () => {
         />
       </Stack>
       <Box sx={{ my: 3 }} />
-      <Typography variant="body1" sx={{ fontWeight: "bold", color: "grey" }}>
-  Select the date and time
-</Typography>
-      <Stack direction="row" gap={5}>
+      {/* <Typography variant="body1" sx={{ fontWeight: "400", color: "grey" }}>
+        Select the date and time
+      </Typography> */}
+      <FormControl fullWidth>
         <DatePicker
           selected={selectedDate}
           onChange={(date) => setSelectedDate(date)}
           dateFormat="dd/MM/yyyy" // Customize the date format as needed
+          placeholderText="select the date and time"
+          className="datepicker-wrapper"
         />
-      </Stack>
+      </FormControl>
       <Box sx={{ my: 3 }} />
       <FormControl fullWidth>
         <CSelect

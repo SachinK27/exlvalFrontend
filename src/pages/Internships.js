@@ -18,7 +18,11 @@ import icon1 from "../assets/images/Career - Fun, friendly and learning-based cu
 import icon2 from "../assets/images/Career - Opportunity to upskill.png";
 import icon3 from "../assets/images/Career - Gain market knowledge.png";
 import icon4 from "../assets/images/Career - Annual leaves and holidays.png";
+import bgImage from "../assets/images/Hero bg image.png";
+
 import "./Sticky.css";
+import { PanTool, PanToolAlt } from "@mui/icons-material";
+
 const iconsData = [
   { icon: icon1, text: "Valuable Experience" },
   { icon: icon2, text: "Networking Opportunities" },
@@ -32,7 +36,6 @@ const Internships = () => {
   const mascotRef = useRef(null);
   const contactFormRef = useRef(null);
   useEffect(() => {
-
     // Scroll to the contact form when the page loads with a specific hash in the URL
     if (window.location.hash === "#contact-form") {
       contactFormRef.current.scrollIntoView({ behavior: "smooth" });
@@ -82,27 +85,27 @@ const Internships = () => {
         sx={{
           display: "flex",
           alignItems: "center",
+          justifyContent: "center",
           flexDirection: "column",
-          m: "8ch auto",
           fontWeight: 500,
-          backgroundSize: "cover",
+          height: "60vh",
+          backgroundImage: `url("${bgImage}")`,
+          backgroundSize: "contain",
           backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
           position: "relative",
         }}
       >
-        <Box align="center" sx={{ m: "auto 8ch", px: 15 }}>
-          <Typography variant="h1">
-            A Pathway Designed for Your Success
-          </Typography>
-        </Box>
+        <Typography variant="h1" align="center" sx={{ maxWidth: "20ch" }}>
+          A Pathway Designed for Your Success
+        </Typography>
         <Box sx={{ my: 2, lineHeight: 1.7, fontSize: "18px" }} />
-        <Typography variant="body1" align="center">
+        <Typography variant="body1" align="center" fontSize="18px">
           Launch your digital marketing career with our immersive internships!
         </Typography>
-      </Container>
-      <Container align="center">
         <Button
           sx={{
+            mt: "1rem",
             backgroundColor: "#3C486B",
             borderRadius: 4,
             padding: "1ch 2ch",
@@ -133,10 +136,23 @@ const Internships = () => {
           fontSize: "18px",
         }}
       >
-        <Grid container sx={{ px: 5,"@media (max-width: 959.95px)": {
+        <Grid
+          container
+          sx={{
+            px: 5,
+            "@media (max-width: 959.95px)": {
               px: 0,
-            },}}>
-        <Grid item sm={12} md={5} lg={5} display={{ xs: "none", sm: "none", md: "block", lg: "block" }} style={{ position: "relative" }}>
+            },
+          }}
+        >
+          <Grid
+            item
+            sm={12}
+            md={5}
+            lg={5}
+            display={{ xs: "none", sm: "none", md: "block", lg: "block" }}
+            style={{ position: "relative" }}
+          >
             <Image
               src={mascot5}
               sx={{ width: "28vw", objectFit: "contain", align: "center" }}
@@ -146,26 +162,25 @@ const Internships = () => {
           </Grid>
           <Grid item sm={12} md={6} lg={7}>
             <Container>
-              <Typography variant="body1" sx={{ mb: 2 }}>
+              <Typography variant="body1" sx={{ mb: 2 }} fontSize="18px">
                 Ignite your digital marketing passion and fuel your career
                 ambitions in a dynamic, fast-paced environment.
               </Typography>
-              <Typography variant="body1" sx={{ my: 2 }}>
+              <Typography variant="body1" sx={{ my: 2 }} fontSize="18px">
                 Our extraordinary internship program is your gateway to immerse
                 yourself in the captivating world of digital marketing, where
                 you'll unleash your creativity and gain priceless hands-on
                 experience that sets you apart from the crowd.
               </Typography>
-              <Typography variant="body1" sx={{ my: 2 }}>
+              <Typography variant="body1" sx={{ my: 2 }} fontSize="18px">
                 Here's what you can expect:
               </Typography>
               <Stack direction="row" spacing={1} sx={{ my: 2 }}>
-                <IconButton
-                  sx={{ background: "#F45050", width: "24px", height: "24px" }}
-                >
-                  <EastTwoToneIcon sx={{ color: "#fff", fontSize: "18px" }} />
-                </IconButton>
-                <Typography>
+                <PanToolAlt
+                  sx={{ rotate: "90deg", color: "#F45050", fontSize: "32px" }}
+                />
+                {/* <EastTwoToneIcon sx={{ color: "#fff", fontSize: "18px" }} /> */}
+                <Typography fontSize="18px">
                   <strong>Hands-On Experience:</strong> At Exival, we believe in
                   learning by doing. Here, you'll be an integral part of our
                   team, working on real client projects and contributing to
@@ -175,12 +190,11 @@ const Internships = () => {
               </Stack>
 
               <Stack direction="row" spacing={1} sx={{ my: 2 }}>
-                <IconButton
-                  sx={{ background: "#F45050", width: "24px", height: "24px" }}
-                >
-                  <EastTwoToneIcon sx={{ color: "#fff", fontSize: "18px" }} />
-                </IconButton>
-                <Typography>
+                <PanToolAlt
+                  sx={{ rotate: "90deg", color: "#F45050", fontSize: "32px" }}
+                />
+                {/* <EastTwoToneIcon sx={{ color: "#fff", fontSize: "18px" }} /> */}
+                <Typography fontSize="18px">
                   <strong>Mentorship and Learning Opportunities:</strong>{" "}
                   Unleash your potential with dedicated mentorship and guidance
                   throughout your internship journey. Our experienced
@@ -191,12 +205,11 @@ const Internships = () => {
               </Stack>
 
               <Stack direction="row" spacing={1} sx={{ my: 2 }}>
-                <IconButton
-                  sx={{ background: "#F45050", width: "24px", height: "24px" }}
-                >
-                  <EastTwoToneIcon sx={{ color: "#fff", fontSize: "18px" }} />
-                </IconButton>
-                <Typography>
+                <PanToolAlt
+                  sx={{ rotate: "90deg", color: "#F45050", fontSize: "32px" }}
+                />
+                {/* <EastTwoToneIcon sx={{ color: "#fff", fontSize: "18px" }} /> */}
+                <Typography fontSize="18px">
                   <strong>
                     Exposure to Diverse Igital Marketing Strategies:
                   </strong>{" "}
@@ -207,12 +220,11 @@ const Internships = () => {
               </Stack>
 
               <Stack direction="row" spacing={1} sx={{ my: 2 }}>
-                <IconButton
-                  sx={{ background: "#F45050", width: "24px", height: "24px" }}
-                >
-                  <EastTwoToneIcon sx={{ color: "#fff", fontSize: "18px" }} />
-                </IconButton>
-                <Typography>
+                <PanToolAlt
+                  sx={{ rotate: "90deg", color: "#F45050", fontSize: "32px" }}
+                />
+                {/* <EastTwoToneIcon sx={{ color: "#fff", fontSize: "18px" }} /> */}
+                <Typography fontSize="18px">
                   <strong>Collaboration and Networking:</strong> A collaborative
                   team of passionate professionals where you'll work closely
                   with experienced mentors, collaborate on exciting projects,
@@ -223,12 +235,11 @@ const Internships = () => {
               </Stack>
 
               <Stack direction="row" spacing={1} sx={{ my: 2 }}>
-                <IconButton
-                  sx={{ background: "#F45050", width: "24px", height: "24px" }}
-                >
-                  <EastTwoToneIcon sx={{ color: "#fff", fontSize: "18px" }} />
-                </IconButton>
-                <Typography>
+                <PanToolAlt
+                  sx={{ rotate: "90deg", color: "#F45050", fontSize: "32px" }}
+                />
+                {/* <EastTwoToneIcon sx={{ color: "#fff", fontSize: "18px" }} /> */}
+                <Typography fontSize="18px">
                   <strong>Career Development Opportunities:</strong> Our
                   internship program is designed to be a launching pad for your
                   digital marketing career. Alongside the hands-on experience
@@ -250,9 +261,16 @@ const Internships = () => {
               ))}
             </Grid>
 
-            <Container ref={contactFormRef} sx={{ width: "90%", mb: 5,"@media (max-width: 959.95px)": {
-              width:"100%"
-            }, }}>
+            <Container
+              ref={contactFormRef}
+              sx={{
+                width: "90%",
+                mb: 5,
+                "@media (max-width: 959.95px)": {
+                  width: "100%",
+                },
+              }}
+            >
               <ContactForm />
             </Container>
           </Grid>
