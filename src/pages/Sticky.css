@@ -1,0 +1,46 @@
+
+
+.mascot-image.stickyTop {
+  position: fixed;
+  width: 33vw;
+  top:15vh;
+  /* transition: 3s; */
+}
+
+.mascot-image.stickyBottom {
+  position: absolute;
+  width: 33vw;
+  bottom:0;
+  /* transition: 3s; */
+}
+
+
+.mascot-image-high.stickyTop {
+  position: fixed;
+  width: 28vw;
+  top:15vh;
+  /* transition: 3s; */
+}
+
+.mascot-image-high.stickyBottom {
+  position: absolute;
+  width: 28vw;
+  bottom:0;
+  /* transition: 3s; */
+}
+
+
+
+.mascot-image-width.stickyTop {
+  position: fixed;
+  width: 35vw;
+  top:15vh;
+  /* transition: 3s; */
+}
+
+.mascot-image-width.stickyBottom {
+  position: absolute;
+  width: 35vw;
+  bottom:0;
+  /* transition: 3s; */
+}

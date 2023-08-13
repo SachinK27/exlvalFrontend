@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Ubuntu", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.datepicker-wrapper {
+  width: 100%;
+  font-size: 14px;
+  padding: 1.5ch 2ch;
+  color: #2b2b2b;
+  border: 2px solid #f45050 !important;
+  border-radius: 0.5rem;
+}

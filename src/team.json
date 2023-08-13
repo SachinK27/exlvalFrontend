@@ -1,0 +1,94 @@
+{
+  "team": [
+    {
+      "img": "/images/team/Lakshman.png",
+      "name": "Lakshman Sharma",
+      "role": "Founder/CEO"
+    },
+    {
+      "img": "/images/team/Ravi.png",
+      "name": "Ravi Saini",
+      "role": "Sr. Partner"
+    },
+    {
+      "img": "/images/team/Purvi.png",
+      "name": "Purvi Gusain",
+      "role": "Visualizer"
+    },
+    {
+      "img": "/images/team/Akshita.png",
+      "name": "Akshita Jain",
+      "role": "SEO Manager"
+    },
+    {
+      "img": "/images/team/Renuka.png",
+      "name": "Renuka Paliwal",
+      "role": "SEO Executive"
+    },
+    {
+      "img": "/images/team/Chirag.png",
+      "name": "Chirag Jain",
+      "role": "Social Media and Lead Gen."
+    },
+    {
+      "img": "/images/team/Pooja.png",
+      "name": "Pooja Joshi",
+      "role": "Social Media Executive"
+    },
+    {
+      "img": "/images/team/Jonty.png",
+      "name": "Jonty Rajani",
+      "role": "Art Desinger"
+    },
+    {
+      "img": "/images/team/Nilishma.png",
+      "name": "Nilishma Arora",
+      "role": "Sr. Graphic Desinger"
+    },
+    {
+      "img": "/images/team/Amit.png",
+      "name": "Amit Bhattacharjee",
+      "role": "Graphic/Video Designer"
+    },
+    {
+      "img": "/images/team/Shubham.png",
+      "name": "Shubam Chaudhary",
+      "role": "Graphic Designer"
+    },
+    {
+      "img": "/images/team/Raksha.png",
+      "name": "Raksha Arora",
+      "role": "Graphic Designer"
+    },
+    {
+      "img": "/images/team/Nupur.png",
+      "name": "Nupur Pathak",
+      "role": "Graphic Designer"
+    },
+    {
+      "img": "/images/team/Shilpa.png",
+      "name": "Shilpa Jain",
+      "role": "Sr. Content Writer"
+    },
+    {
+      "img": "/images/team/Sakshi.png",
+      "name": "Sakshi Kaushik",
+      "role": "Content Writer"
+    },
+    {
+      "img": "/images/team/Nikita.png",
+      "name": "Nikita Matta",
+      "role": "Content Writer"
+    },
+    {
+      "img": "/images/team/Sachin.png",
+      "name": "Sachin Kumar",
+      "role": "Web Developer"
+    },
+    {
+      "img": "/images/team/Anoop.png",
+      "name": "Anoop Sharma",
+      "role": "Web Developer"
+    }
+  ]
+}
