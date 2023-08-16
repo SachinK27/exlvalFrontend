@@ -13,6 +13,7 @@ import {
 import rect from "../assets/images/Rectangle 184.svg";
 import WestIcon from "@mui/icons-material/West";
 import EastIcon from "@mui/icons-material/East";
+import testimonials from "../testimonials.json";
 
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import { Autoplay } from "swiper/modules";
@@ -118,338 +119,101 @@ const Imagecarousel = () => {
           <SwiperNavigation />
         </Box>
 
-        <SwiperSlide>
-          <Box>
-            <CCard>
-              <CardContent>
-                <Typography
+        {testimonials.testimonials.map((testimonial) => (
+          <SwiperSlide>
+            <Box>
+              <CCard>
+                <CardContent sx={{ height: "62%" }}>
+                  <Typography
+                    sx={{
+                      color: "#3C486B",
+                      lineHeight: "20px",
+                      fontSize: "14px",
+                    }}
+                  >
+                    <strong>"</strong>
+                    {testimonial.quote}
+                    <strong>"</strong>
+                  </Typography>
+                </CardContent>
+
+                <CardContent
                   sx={{
-                    color: "#3C486B",
-                    lineHeight: "20px",
-                    fontSize: "14px",
-                  }}
-                >
-                  Exlval has a friendly team — they do what is required and
-                  deliver quality work on time.
-                </Typography>
-                <Box sx={{ my: 2 }} />
-                <Typography variant="body2">
-                  Exlval developed and designed my website, and they’re working
-                  on creating content for it. In addition, most of the online
-                  tasks are handled by them, including social media management,
-                  SEO, and paid ads.
-                </Typography>
-                <Box sx={{ my: 2 }} />
-                <Typography variant="body2">
-                  Exlval has assigned us different team members for all the
-                  services they’re providing, including for content, SEO,
-                  design, and social media. Their project management is good;
-                  Exlval is always available when I need them.
-                </Typography>
-              </CardContent>
-              <CardContent
-                sx={{
-                  width: "100%",
-                  position: "relative",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                <img
-                  style={{
-                    position: "absolute",
-                    left: "-1.5ch",
-                    right: 0,
-                    bottom: "-20px",
-                    width: "calc(100% + 3ch)",
-                    height: "12rem",
-                  }}
-                  alt="img"
-                  src={rect}
-                />
-                <Avatar
-                  sx={{
-                    width: "100px",
-                    height: "100px",
-                    border: "3px solid #F9D949",
-                  }}
-                  src={
-                    "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50"
-                  }
-                />
-                <Typography
-                  variant="body2"
-                  sx={{
-                    color: "white",
+                    width: "100%",
                     position: "relative",
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    alignItems: "center",
                   }}
                 >
-                  Daisy Lee
-                </Typography>
-                <Typography
-                  variant="body2"
-                  sx={{
-                    color: "white",
-                    position: "relative",
-                  }}
-                >
-                  Managing Director, Exlaval
-                </Typography>
-              </CardContent>
-            </CCard>
-          </Box>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Box>
-            <CCard>
-              <CardContent>
-                <Typography
-                  sx={{
-                    color: "#3C486B",
-                    lineHeight: "20px",
-                    fontSize: "14px",
-                  }}
-                >
-                  Exlval has a friendly team — they do what is required and
-                  deliver quality work on time.
-                </Typography>
-                <Box sx={{ my: 2 }} />
-                <Typography variant="body2">
-                  Exlval developed and designed my website, and they’re working
-                  on creating content for it. In addition, most of the online
-                  tasks are handled by them, including social media management,
-                  SEO, and paid ads.
-                </Typography>
-                <Box sx={{ my: 2 }} />
-                <Typography variant="body2">
-                  Exlval has assigned us different team members for all the
-                  services they’re providing, including for content, SEO,
-                  design, and social media. Their project management is good;
-                  Exlval is always available when I need them.
-                </Typography>
-              </CardContent>
-              <CardContent
-                sx={{
-                  width: "100%",
-                  position: "relative",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                <img
-                  style={{
-                    position: "absolute",
-                    left: "-1.5ch",
-                    right: 0,
-                    bottom: "-20px",
-                    width: "calc(100% + 3ch)",
-                    height: "12rem",
-                  }}
-                  alt="img"
-                  src={rect}
-                />
-                <Avatar
-                  sx={{
-                    width: "100px",
-                    height: "100px",
-                    border: "3px solid #F9D949",
-                  }}
-                  src={
-                    "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50"
-                  }
-                />
-                <Typography
-                  variant="body2"
-                  sx={{
-                    color: "white",
-                    position: "relative",
-                  }}
-                >
-                  Daisy Lee
-                </Typography>
-                <Typography
-                  variant="body2"
-                  sx={{
-                    color: "white",
-                    position: "relative",
-                  }}
-                >
-                  Managing Director, Exlaval
-                </Typography>
-              </CardContent>
-            </CCard>
-          </Box>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Box>
-            <CCard>
-              <CardContent>
-                <Typography
-                  sx={{
-                    color: "#3C486B",
-                    lineHeight: "20px",
-                    fontSize: "14px",
-                  }}
-                >
-                  Exlval has a friendly team — they do what is required and
-                  deliver quality work on time.
-                </Typography>
-                <Box sx={{ my: 2 }} />
-                <Typography variant="body2">
-                  Exlval developed and designed my website, and they’re working
-                  on creating content for it. In addition, most of the online
-                  tasks are handled by them, including social media management,
-                  SEO, and paid ads.
-                </Typography>
-                <Box sx={{ my: 2 }} />
-                <Typography variant="body2">
-                  Exlval has assigned us different team members for all the
-                  services they’re providing, including for content, SEO,
-                  design, and social media. Their project management is good;
-                  Exlval is always available when I need them.
-                </Typography>
-              </CardContent>
-              <CardContent
-                sx={{
-                  width: "100%",
-                  position: "relative",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                <img
-                  style={{
-                    position: "absolute",
-                    left: "-1.5ch",
-                    right: 0,
-                    bottom: "-20px",
-                    width: "calc(100% + 3ch)",
-                    height: "12rem",
-                  }}
-                  alt="img"
-                  src={rect}
-                />
-                <Avatar
-                  sx={{
-                    width: "100px",
-                    height: "100px",
-                    border: "3px solid #F9D949",
-                  }}
-                  src={
-                    "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50"
-                  }
-                />
-                <Typography
-                  variant="body2"
-                  sx={{
-                    color: "white",
-                    position: "relative",
-                  }}
-                >
-                  Daisy Lee
-                </Typography>
-                <Typography
-                  variant="body2"
-                  sx={{
-                    color: "white",
-                    position: "relative",
-                  }}
-                >
-                  Managing Director, Exlaval
-                </Typography>
-              </CardContent>
-            </CCard>
-          </Box>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Box>
-            <CCard>
-              <CardContent>
-                <Typography
-                  sx={{
-                    color: "#3C486B",
-                    lineHeight: "20px",
-                    fontSize: "14px",
-                  }}
-                >
-                  Exlval has a friendly team — they do what is required and
-                  deliver quality work on time.
-                </Typography>
-                <Box sx={{ my: 2 }} />
-                <Typography variant="body2">
-                  Exlval developed and designed my website, and they’re working
-                  on creating content for it. In addition, most of the online
-                  tasks are handled by them, including social media management,
-                  SEO, and paid ads.
-                </Typography>
-                <Box sx={{ my: 2 }} />
-                <Typography variant="body2">
-                  Exlval has assigned us different team members for all the
-                  services they’re providing, including for content, SEO,
-                  design, and social media. Their project management is good;
-                  Exlval is always available when I need them.
-                </Typography>
-              </CardContent>
-              <CardContent
-                sx={{
-                  width: "100%",
-                  position: "relative",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                <img
-                  style={{
-                    position: "absolute",
-                    left: "-1.5ch",
-                    right: 0,
-                    bottom: "-20px",
-                    width: "calc(100% + 3ch)",
-                    height: "12rem",
-                  }}
-                  alt="img"
-                  src={rect}
-                />
-                <Avatar
-                  sx={{
-                    width: "100px",
-                    height: "100px",
-                    border: "3px solid #F9D949",
-                  }}
-                  src={
-                    "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50"
-                  }
-                />
-                <Typography
-                  variant="body2"
-                  sx={{
-                    color: "white",
-                    position: "relative",
-                  }}
-                >
-                  Daisy Lee
-                </Typography>
-                <Typography
-                  variant="body2"
-                  sx={{
-                    color: "white",
-                    position: "relative",
-                  }}
-                >
-                  Managing Director, Exlaval
-                </Typography>
-              </CardContent>
-            </CCard>
-          </Box>
-        </SwiperSlide>
+                  <img
+                    style={{
+                      position: "absolute",
+                      left: "-1.5ch",
+                      right: 0,
+                      bottom: "-20px",
+                      width: "calc(100% + 3ch)",
+                      height: "12rem",
+                    }}
+                    alt="img"
+                    src={rect}
+                  />
+                  {/* <Avatar
+                    sx={{
+                      width: "100px",
+                      height: "100px",
+                      border: "3px solid #F9D949",
+                    }}
+                    variant="circular"
+                    sizes="width: 200px; height: 200px"
+                    src={testimonial.img}
+                  /> */}
+                  <div
+                    style={{
+                      width: "100px",
+                      height: "100px",
+                      borderRadius: "10rem",
+                      border: "3px solid #F9D949",
+                      overflow: "hidden",
+                      zIndex: "99",
+                    }}
+                  >
+                    <img
+                      src={testimonial.img}
+                      alt="profile"
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                      }}
+                    />
+                  </div>
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      color: "white",
+                      position: "relative",
+                      fontWeight: "600",
+                    }}
+                  >
+                    {testimonial.name}
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      color: "white",
+                      position: "relative",
+                      textAlign: "center",
+                    }}
+                  >
+                    {testimonial.work}
+                  </Typography>
+                </CardContent>
+              </CCard>
+            </Box>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </Box>
   );
