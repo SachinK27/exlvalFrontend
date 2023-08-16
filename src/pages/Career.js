@@ -21,6 +21,7 @@ import icon4 from "../assets/images/Career - Gain market knowledge.png";
 import bgImage from "../assets/images/Hero bg image.png";
 
 import "./Sticky.css";
+import { Helmet } from "react-helmet";
 
 const iconsData = [
   { icon: icon1, text: "Fun, friendly and learning-based culture" },
@@ -74,6 +75,19 @@ const Career = () => {
   };
   return (
     <Grid>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Exlval : Careers in Digital Marketing, Ahmedabad</title>
+        <meta
+          name="description"
+          content="Discover exciting career opportunities at EXLVAL, a leading digital marketing company. Join us to amplify your skills and thrive in a dynamic, innovative environment."
+        />
+        <meta
+          name="keywords"
+          content="Digital Marketing Jobs in Ahmedabad ,SEO Jobs in Ahmedabad,Digital Marketing Careers in Ahmedabad"
+        />
+      </Helmet>
+
       <Container
         sx={{
           display: "flex",
@@ -94,7 +108,7 @@ const Career = () => {
         </Typography>
         <Box sx={{ my: 2, lineHeight: 1.7, fontSize: "18px" }} />
         <Typography variant="body1" align="center" fontSize="18px">
-          Let's create some magic togather!
+          Let's create some magic together!
         </Typography>
         <Button
           sx={{

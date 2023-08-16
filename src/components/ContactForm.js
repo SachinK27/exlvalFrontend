@@ -88,13 +88,15 @@ const ContactForm = () => {
         p: 8,
         borderRadius: "40px",
         "@media (max-width: 959.95px)": {
-          p:5
-        }
+          p: 5,
+        },
       }}
       component="form"
       onSubmit={onSubmit}
     >
-      <Typography variant="h4" sx={{fontWeight:"medium"}}>How may we help you?</Typography>
+      <Typography variant="h4" sx={{ fontWeight: "medium" }}>
+        How may we help you?
+      </Typography>
       <Box sx={{ my: 3 }} />
       <Stack direction="row" gap={5}>
         <CTextField
@@ -164,9 +166,14 @@ const ContactForm = () => {
           <MenuItem value={0} disabled>
             What are you interested in?
           </MenuItem>
-          <MenuItem value={1}>Interest 1</MenuItem>
-          <MenuItem value={2}>Interest 2</MenuItem>
-          <MenuItem value={3}>Interest 3</MenuItem>
+          <MenuItem value={"seo"}>SEO</MenuItem>
+          <MenuItem value={"social media"}>Social Media</MenuItem>
+          <MenuItem value={"influencer marketing"}>
+            Influencer Marketing
+          </MenuItem>
+          <MenuItem value={"orm"}>Influencer Marketing</MenuItem>
+          <MenuItem value={"branding"}>Branding</MenuItem>
+          <MenuItem value={"website"}>Website</MenuItem>
         </CSelect>
       </FormControl>
       <Box sx={{ my: 3 }} />

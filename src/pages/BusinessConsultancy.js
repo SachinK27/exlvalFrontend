@@ -12,6 +12,7 @@ import { InputBase, IconButton } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import bgImage from "../assets/images/Hero bg image.png";
 import "./Sticky.css";
+import { Helmet } from "react-helmet";
 // const CustomContainer = styled(Container)(({ theme }) => ({
 //   padding: 0,
 //   margin: 0,
@@ -59,62 +60,69 @@ const BusinessConsultancy = () => {
   }, []);
   return (
     <Grid container padding={5}>
-      <Grid container spacing={2}>
-        <Grid
-          item
-          xl={12}
-          lg={12}
-          md={12}
-          sm={12}
-          xs={12}
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            flexDirection: "column",
-            fontWeight: 500,
-            height: "60vh",
-            backgroundImage: `url("${bgImage}")`,
-            backgroundSize: "contain",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-            position: "relative",
-          }}
-        >
-          <Typography variant="h1" align="center" maxWidth={"30ch"}>
-            Expertise that helps you thrive
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Exlval: We Get Results</title>
+        <meta
+          name="description"
+          content="Transform your business with our expert consultancy services at Exlval Digital Marketing. Our solutions drive growth, enhance strategies, and maximize success. Reach your goals with us today."
+        />
+        <meta
+          name="keywords"
+          content="Best Digital Marketing company in Ahmedabad, Digital Marketing Consultancy in Ahmedabad, Digital Marketing Company in Ahmedabad, India"
+        />
+      </Helmet>
+
+      <Container
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          flexDirection: "column",
+          fontWeight: 500,
+          height: "60vh",
+          backgroundImage: `url("${bgImage}")`,
+          backgroundSize: "contain",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          position: "relative",
+        }}
+      >
+        <Typography variant="h1" align="center" maxWidth={"30ch"}>
+          Expertise that helps you thrive
+        </Typography>
+        <Box sx={{ my: 1, lineHeight: 2, fontSize: "18px" }} />
+        <Typography variant="h7" align="center" fontSize={"18px"}>
+          Get a competitive edge with our FREE Business Consulting.
+        </Typography>
+      </Container>
+
+      <Grid
+        container
+        item
+        xl={12}
+        lg={12}
+        md={12}
+        sm={12}
+        xs={12}
+        sx={{
+          p: 5,
+          m: 5,
+          "@media (max-width: 959.95px)": {
+            m: 0,
+            px: 2,
+          },
+        }}
+      >
+        <Stack direction="row">
+          <Typography>Home</Typography>
+          <ChevronRightIcon />
+          <Typography sx={{ color: "#F45050" }}>
+            <strong>Business Consultancy</strong>
           </Typography>
-          <Box sx={{ my: 1, lineHeight: 2, fontSize: "18px" }} />
-          <Typography variant="h7" align="center" fontSize={"18px"}>
-            Get a competitive edge with our FREE Business Consulting.
-          </Typography>
-        </Grid>
-        <Grid
-          container
-          item
-          xl={12}
-          lg={12}
-          md={12}
-          sm={12}
-          xs={12}
-          sx={{
-            p: 5,
-            m: 5,
-            "@media (max-width: 959.95px)": {
-              m: 0,
-              px: 2,
-            },
-          }}
-        >
-          <Stack direction="row">
-            <Typography>Home</Typography>
-            <ChevronRightIcon />
-            <Typography sx={{ color: "#F45050" }}>
-              <strong>Business Consultancy</strong>
-            </Typography>
-          </Stack>
-        </Grid>
+        </Stack>
       </Grid>
+
       <Grid
         ref={parentRef}
         container

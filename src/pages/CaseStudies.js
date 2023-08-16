@@ -13,6 +13,7 @@ import loadingImg from "../assets/images/loading.gif";
 import axios from "axios";
 import "./pagination.css";
 import { Link, useLocation } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const CaseStudies = () => {
   const location = useLocation();
@@ -37,8 +38,8 @@ const CaseStudies = () => {
         let data = res.data.casestudies.data;
         setCaseStudies(data);
         setCategories(res.data.categories);
-        const total = res.data.total;
-        const lim = res.data.per_page;
+        const total = res.data.casestudies.total;
+        const lim = res.data.casestudies.per_page;
         setLimit(lim);
         setPageCount(Math.ceil(total / lim));
         console.log(`pageCount ${pageCount}`);
@@ -83,37 +84,41 @@ const CaseStudies = () => {
   return (
     <>
       <Grid container padding={5}>
-        <Grid container spacing={2}>
-          <Grid
-            item
-            xl={12}
-            lg={12}
-            md={12}
-            sm={12}
-            xs={12}
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              flexDirection: "column",
-              fontWeight: 500,
-              height: "60vh",
-              backgroundImage: `url("${bgImage}")`,
-              backgroundSize: "contain",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-              position: "relative",
-            }}
-          >
-            <Typography variant="h1" align="center" maxWidth={"30ch"}>
-              Visualizing Success with the best form of Information
-            </Typography>
-            <Box sx={{ my: 2, lineHeight: 1.7, fontSize: "18px" }} />
-            <Typography variant="body2" align="center" fontSize="18px">
-              The easy-to-digest info that will inspire you!
-            </Typography>
-          </Grid>
-        </Grid>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Exlval: Case Studies That Speak for Themselves</title>
+          <meta
+            name="description"
+            content="Discover real success stories that showcase our expertise in boosting brands and driving results. Explore now"
+          />
+          <meta
+            name="keywords"
+            content="Exlval Digital Marketing Success Stories, Digital Marketing Company in Ahmedabad, Best Digital Marketing Company in Ahmedabad, India"
+          />
+        </Helmet>
+        <Container
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            flexDirection: "column",
+            fontWeight: 500,
+            height: "60vh",
+            backgroundImage: `url("${bgImage}")`,
+            backgroundSize: "contain",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            position: "relative",
+          }}
+        >
+          <Typography variant="h1" align="center" maxWidth={"30ch"}>
+            Visualizing Success with the best form of Information
+          </Typography>
+          <Box sx={{ my: 2, lineHeight: 1.7, fontSize: "18px" }} />
+          <Typography variant="body2" align="center" fontSize="18px">
+            The easy-to-digest info that will inspire you!
+          </Typography>
+        </Container>
         <Grid container>
           <Grid
             item
@@ -219,12 +224,12 @@ const CaseStudies = () => {
                         >
                           <Link to={`/case-studies/${ele.slug}`}>
                             <Card3
+                              key={idx}
                               img={imgUrl}
                               tags={["Case Study", tag]}
                               color={"#F9D949"}
                               contained
                               title={ele.title}
-                              key={idx}
                             />
                           </Link>
                         </Grid>

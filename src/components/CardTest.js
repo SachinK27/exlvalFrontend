@@ -5,6 +5,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Box, Button, CardActionArea, CardActions, Link } from "@mui/material";
 import TrendingFlatIcon from "@mui/icons-material/TrendingFlat";
+import { truncate } from "../utils/truncateString";
 
 export default function CardTest({ title, short_desc, image }) {
   return (
@@ -30,9 +31,11 @@ export default function CardTest({ title, short_desc, image }) {
           height="250"
           width="300"
           image={image}
-          alt="green iguana"
+          alt="blog banner"
           sx={{
             borderRadius: 5,
+            objectFit: "contain",
+            // background: "#f8f8f8",
           }}
         />
         <CardContent
@@ -48,7 +51,7 @@ export default function CardTest({ title, short_desc, image }) {
           <Typography gutterBottom variant="h5" component="div" mt={2}>
             {title}
           </Typography>
-          <Typography variant="body2">{short_desc}</Typography>
+          <Typography variant="body2">{truncate(short_desc, 150)}</Typography>
         </CardContent>
       </CardActionArea>
       <CardActions

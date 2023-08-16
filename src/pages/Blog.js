@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Box, Container, Stack, Typography, Grid } from "@mui/material";
-import { styled } from "@mui/system";
+import { Box, Container, Stack, Typography, Grid, Link } from "@mui/material";
 import Image from "../components/Image";
 import ContactForm from "../components/ContactForm";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
@@ -9,11 +8,12 @@ import CardTest from "../components/CardTest";
 import NewsLetterForm from "../components/NewsLetterForm";
 import axios from "axios";
 import "./pagination.css";
-import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { InputBase, IconButton } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import bgImage from "../assets/images/Hero bg image.png";
 import ReactPaginate from "react-paginate";
+import { Helmet } from "react-helmet";
 
 // const CustomContainer = styled(Container)(({ theme }) => ({
 //   padding: 0,
@@ -24,6 +24,9 @@ import ReactPaginate from "react-paginate";
 // }));
 
 const Blogs = () => {
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+
   const [loading, setLoading] = useState(true);
   const [blogData, setBlogData] = useState([]);
   const [pageCount, setPageCount] = useState(0);
@@ -32,8 +35,12 @@ const Blogs = () => {
   useEffect(() => {
     setLoading(true);
 
+    let category = queryParams.get("category")
+      ? `/category/${queryParams.get("category")}`
+      : "";
+
     axios
-      .get(`https://admin.exlval.com/api/posts`)
+      .get(`https://admin.exlval.com/api/posts${category}`)
       .then((res) => {
         let data = res.data.posts.data;
         setBlogData(data);
@@ -53,8 +60,12 @@ const Blogs = () => {
   }, [pageCount]);
 
   const fetchBlogs = async (currentPage) => {
+    let category = queryParams.get("category")
+      ? `/category/${queryParams.get("category")}`
+      : "";
+
     axios
-      .get(`https://admin.exlval.com/api/posts?page=${currentPage}`)
+      .get(`https://admin.exlval.com/api/posts${category}?page=${currentPage}`)
       .then((res) => {
         let data = res.data.posts.data;
         setBlogData(data);
@@ -75,37 +86,44 @@ const Blogs = () => {
 
   return (
     <Grid container padding={5}>
-      <Grid container spacing={2}>
-        <Grid
-          item
-          xl={12}
-          lg={12}
-          md={12}
-          sm={12}
-          xs={12}
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            flexDirection: "column",
-            fontWeight: 500,
-            height: "60vh",
-            backgroundImage: `url("${bgImage}")`,
-            backgroundSize: "contain",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-            position: "relative",
-          }}
-        >
-          <Typography variant="h1" align="center" maxWidth={"30ch"}>
-            Crack the code to growth
-          </Typography>
-          <Box sx={{ my: 2, lineHeight: 1.7, fontSize: "18px" }} />
-          <Typography variant="body2" align="center" fontSize={"18px"}>
-            Find Insights, Inspiration, and Innovation tight here!
-          </Typography>
-        </Grid>
-      </Grid>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Exlval Digital Marketing Blog</title>
+        <meta
+          name="description"
+          content="Discover insightful blogs on our page at Exlval Digital Marketing. Gain expert insights, tips, and trends to boost your online presence. Stay ahead with our valuable resources."
+        />
+        <meta
+          name="keywords"
+          content="Digital Marketing Company in Ahmedabad, India , Social Media Marketing in Ahmedabad, India, SEO Services in Ahmedabad, India"
+        />
+      </Helmet>
+
+      <Container
+        // spacing={2}
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          flexDirection: "column",
+          fontWeight: 500,
+          height: "60vh",
+          backgroundImage: `url("${bgImage}")`,
+          backgroundSize: "contain",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          position: "relative",
+        }}
+      >
+        <Typography variant="h1" align="center" maxWidth={"30ch"}>
+          Crack the code to growth
+        </Typography>
+        <Box sx={{ my: 2, lineHeight: 1.7, fontSize: "18px" }} />
+        <Typography variant="body2" align="center" fontSize={"18px"}>
+          Find Insights, Inspiration, and Innovation tight here!
+        </Typography>
+      </Container>
+
       <Grid container align={"center"} mb={5}>
         <Grid item xl={2} lg={2} md={2} sm={12} xs={12}></Grid>
         <Grid item xl={8} lg={8} md={8} sm={12} xs={12}>
@@ -183,13 +201,104 @@ const Blogs = () => {
               },
             }}
           >
-            <Typography variant="h6">All</Typography>
-            <Typography variant="h6">SEO</Typography>
-            <Typography variant="h6">Social Media</Typography>
-            <Typography variant="h6">Influencer Marketing</Typography>
-            <Typography variant="h6">ORM</Typography>
-            <Typography variant="h6">Branding</Typography>
-            <Typography variant="h6">Website</Typography>
+            <Typography
+              component={Link}
+              href={location.pathname}
+              variant="h6"
+              sx={{
+                color:
+                  queryParams.get("category") == null ? "#F45050" : "#2B2B2B",
+                "&:hover": {
+                  color: "#F45050",
+                },
+              }}
+            >
+              All
+            </Typography>
+            <Typography
+              component={Link}
+              href={`${location.pathname}?category=2`}
+              variant="h6"
+              sx={{
+                color:
+                  queryParams.get("category") == "2" ? "#F45050" : "#2B2B2B",
+                "&:hover": {
+                  color: "#F45050",
+                },
+              }}
+            >
+              SEO
+            </Typography>
+            <Typography
+              component={Link}
+              href={`${location.pathname}?category=3`}
+              variant="h6"
+              sx={{
+                color:
+                  queryParams.get("category") == "3" ? "#F45050" : "#2B2B2B",
+                "&:hover": {
+                  color: "#F45050",
+                },
+              }}
+            >
+              Social Media
+            </Typography>
+            <Typography
+              component={Link}
+              href={`${location.pathname}?category=1`}
+              variant="h6"
+              sx={{
+                color:
+                  queryParams.get("category") == "1" ? "#F45050" : "#2B2B2B",
+                "&:hover": {
+                  color: "#F45050",
+                },
+              }}
+            >
+              Influencer Marketing
+            </Typography>
+            <Typography
+              component={Link}
+              href={`${location.pathname}?category=5`}
+              variant="h6"
+              sx={{
+                color:
+                  queryParams.get("category") == "5" ? "#F45050" : "#2B2B2B",
+                "&:hover": {
+                  color: "#F45050",
+                },
+              }}
+            >
+              ORM
+            </Typography>
+            <Typography
+              component={Link}
+              href={`${location.pathname}?category=7`}
+              variant="h6"
+              sx={{
+                color:
+                  queryParams.get("category") == "7" ? "#F45050" : "#2B2B2B",
+                "&:hover": {
+                  color: "#F45050",
+                },
+              }}
+            >
+              Branding
+            </Typography>
+            <Typography
+              component={Link}
+              href={`${location.pathname}?category=9`}
+              variant="h6"
+              sx={{
+                color:
+                  queryParams.get("category") == "9" ? "#F45050" : "#2B2B2B",
+                "&:hover": {
+                  color: "#F45050",
+                },
+              }}
+            >
+              Website
+            </Typography>
           </Box>
         </Grid>
         <Grid item xl={2} lg={2} md={2} sm={12} xs={12} align={"center"}></Grid>

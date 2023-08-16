@@ -30,13 +30,26 @@ import SwipperTest from "../components/SwipperTest";
 import bgImage from "../assets/images/Hero bg image.png";
 
 import "./Sticky.css";
+import { Helmet } from "react-helmet";
 const iconsData = [
-  { icon: icon1, text: "Dedicated Designer" },
-  { icon: icon2, text: "Necessary Testing" },
-  { icon: icon2, text: "Timely Reports" },
-  { icon: icon2, text: "Memorable Website" },
-  { icon: icon2, text: "High Customer Retention" },
-  { icon: icon2, text: "More Sales" },
+  {
+    icon: "/images/webdesign/dedicated-designer.png",
+    text: "Dedicated Designer",
+  },
+  {
+    icon: "/images/webdesign/necessary-testing.png",
+    text: "Necessary Testing",
+  },
+  { icon: "/images/webdesign/timely-reports.png", text: "Timely Reports" },
+  {
+    icon: "/images/webdesign/memorable-website.png",
+    text: "Memorable Website",
+  },
+  {
+    icon: "/images/webdesign/high-customer-retention.png",
+    text: "High Customer Retention",
+  },
+  { icon: "/images/webdesign/more-sales.png", text: "More Sales" },
 ];
 //Data for cards
 const cardsData = [
@@ -93,6 +106,22 @@ const WebDesign = () => {
         m: "auto",
       }}
     >
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>
+          UI/UX Designing Company in Ahmedabad, India | UI/UX Designing
+          Specialists in India
+        </title>
+        <meta
+          name="description"
+          content="Leading UI-UX development company in Ahmedabad. Crafting seamless digital experiences through innovative design and user-centered solutions.contact us at 📞+91 9166549902"
+        />
+        <meta
+          name="keywords"
+          content="UI/UX Designing Company in India ,  Creative Solutions Company in Ahmedabad, Best UI-UX Designing Services in Ahmedabad, Graphic Designing Company in Ahmedabad, Exlval, India, Ahmedabad"
+        />
+      </Helmet>
+
       <Container
         sx={{
           display: "flex",
@@ -254,7 +283,7 @@ const WebDesign = () => {
               </Stack>
               <Image
                 style={{ margin: "3ch auto", display: "block" }}
-                src={arrow}
+                src="/images/arrow-down.gif"
               />
             </Box>
           </Grid>

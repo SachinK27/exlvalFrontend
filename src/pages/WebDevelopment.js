@@ -28,15 +28,28 @@ import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import ContactForm from "../components/ContactForm";
 import SwipperTest from "../components/SwipperTest";
 import bgImage from "../assets/images/Hero bg image.png";
+import { Helmet } from "react-helmet";
 
 import "./Sticky.css";
 const iconsData = [
-  { icon: icon1, text: "Dedicated Website Developer" },
-  { icon: icon2, text: "Well-planned Development" },
-  { icon: icon2, text: "Timely Reports" },
-  { icon: icon2, text: "Improves User Engagement" },
-  { icon: icon2, text: "Increase in Sales" },
-  { icon: icon2, text: "Builds Brand Authority" },
+  {
+    icon: "/images/webdev/dedicated-developer.png",
+    text: "Dedicated Website Developer",
+  },
+  {
+    icon: "/images/webdev/well-planned-development.png",
+    text: "Well-planned Development",
+  },
+  { icon: "/images/webdev/timely-reports.png", text: "Timely Reports" },
+  {
+    icon: "/images/webdev/improves-user-engagement.png",
+    text: "Improves User Engagement",
+  },
+  { icon: "/images/webdev/increase-sales.png", text: "Increase in Sales" },
+  {
+    icon: "/images/webdev/builds-brand-authority.png",
+    text: "Builds Brand Authority",
+  },
 ];
 //Data for cards
 const cardsData = [
@@ -103,6 +116,21 @@ const WebDevelopment = () => {
         m: "auto",
       }}
     >
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>
+          Website development company in Ahmedabad | Best web Design services
+        </title>
+        <meta
+          name="description"
+          content="Exlval, based in Ahmedabad, is renowned as a top-tier company, offering exceptional custom web development services at highly competitive prices, while ensuring the incorporation of premium features.          "
+        />
+        <meta
+          name="keywords"
+          content="website development company in Ahmedabad, website development Company in India, best web development services in India, Custom Web Development services in India , Exlval, Top Website development company in Ahmedabad"
+        />
+      </Helmet>
+
       <Container
         sx={{
           display: "flex",
@@ -276,7 +304,7 @@ const WebDevelopment = () => {
               </Stack>
               <Image
                 style={{ margin: "3ch auto", display: "block" }}
-                src={arrow}
+                src="/images/arrow-down.gif"
               />
             </Box>
           </Grid>

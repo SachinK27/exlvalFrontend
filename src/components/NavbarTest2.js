@@ -916,14 +916,14 @@ export default function NavbarTest2() {
                             <div class="item-list">
                               <div class="item-list-info">
                                 <Link href="/services-branding">
-                                  <h4>Branding </h4>{" "}
+                                  <h5>Branding </h5>{" "}
                                 </Link>
                               </div>
                             </div>
                             <div class="item-list">
                               <div class="item-list-info">
                                 <Link href="/services-graphicDesign">
-                                  <h4>Graphic Design</h4>{" "}
+                                  <h5>Graphic Design</h5>{" "}
                                 </Link>
                               </div>
                             </div>
@@ -967,14 +967,14 @@ export default function NavbarTest2() {
                               <div class="item-list-info">
                                 <Link href="/services-webDesign">
                                   {" "}
-                                  <h4>UI/UX</h4>
+                                  <h5>UI/UX</h5>
                                 </Link>
                               </div>
                             </div>
                             <div class="item-list">
                               <div class="item-list-info">
                                 <Link href="/services-webDevelopment">
-                                  <h4>Web Development</h4>
+                                  <h5>Web Development</h5>
                                 </Link>
                               </div>
                             </div>

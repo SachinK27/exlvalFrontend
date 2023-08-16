@@ -31,12 +31,18 @@ import bgImage from "../assets/images/Hero bg image.png";
 
 import "./Sticky.css";
 const iconsData = [
-  { icon: icon1, text: "Dedicated SEO Manager" },
-  { icon: icon2, text: "Best SEO Tools" },
-  { icon: icon2, text: "Timely Reports" },
-  { icon: icon2, text: "Committed Results" },
-  { icon: icon2, text: "Better Ranking" },
-  { icon: icon2, text: "High Domain Authority" },
+  {
+    icon: "/images/seo/dedicated-SEO-manager.png",
+    text: "Dedicated SEO Manager",
+  },
+  { icon: "/images/seo/best-SEO-tools.png", text: "Best SEO Tools" },
+  { icon: "/images/seo/timely-reporting.png", text: "Timely Reports" },
+  { icon: "/images/seo/committed-results.png", text: "Committed Results" },
+  { icon: "/images/seo/better-ranking.png", text: "Better Ranking" },
+  {
+    icon: "/images/seo/high-domain-authority.png",
+    text: "High Domain Authority",
+  },
 ];
 //Data for cards
 const cardsData = [
@@ -252,7 +258,7 @@ const SEO = () => {
               </Stack>
               <Image
                 style={{ margin: "3ch auto", display: "block" }}
-                src={arrow}
+                src="/images/arrow-down.gif"
               />
             </Box>
           </Grid>

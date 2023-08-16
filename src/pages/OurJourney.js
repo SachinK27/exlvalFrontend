@@ -6,10 +6,24 @@ import mascot3 from "../assets/images/pose_03a.svg";
 import Image from "../components/Image";
 import ContactForm from "../components/ContactForm";
 import bgImage from "../assets/images/Hero bg image.png";
+import { Helmet } from "react-helmet";
 
 const OurJourney = () => {
   return (
     <Box sx={{ width: "100%", overflow: "hidden" }}>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Our Passion for Digital Marketing</title>
+        <meta
+          name="description"
+          content="Discover the transformative journey with our premier digital marketing company. Unlock new heights of success with expert strategies and innovative solutions. Join us today."
+        />
+        <meta
+          name="keywords"
+          content="SEO Company in Ahmedabad, Best Digital Marketing Company in Ahmedabad, Top Digital Marketing Company Ahmedabad, India, Social Media Marketing in Ahmedabad ,Content Marketing in Ahmedabad"
+        />
+      </Helmet>
+
       <Container
         sx={{
           display: "flex",

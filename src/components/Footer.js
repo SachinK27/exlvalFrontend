@@ -577,18 +577,26 @@ function Footer(props) {
                 digital marketing.
               </Typography>
               <Stack gap={0.5} direction="row" sx={{ mt: 5 }}>
-                <IconButton>
-                  <FacebookOutlinedIcon />
-                </IconButton>
-                <IconButton>
-                  <LinkedInIcon />
-                </IconButton>
-                <IconButton>
-                  <InstagramIcon />
-                </IconButton>
-                <IconButton>
-                  <TwitterIcon />
-                </IconButton>
+                <Link href="https://www.facebook.com/exlval/">
+                  <IconButton>
+                    <FacebookOutlinedIcon />
+                  </IconButton>
+                </Link>
+                <Link href="https://www.linkedin.com/company/exlval/?viewAsMember=true">
+                  <IconButton>
+                    <LinkedInIcon />
+                  </IconButton>
+                </Link>
+                <Link href="https://www.instagram.com/exlval/">
+                  <IconButton>
+                    <InstagramIcon />
+                  </IconButton>
+                </Link>
+                <Link href="https://twitter.com/ExlVal">
+                  <IconButton>
+                    <TwitterIcon />
+                  </IconButton>
+                </Link>
               </Stack>
             </Grid>
             <Grid item xl={1.5} lg={1.5} md={3} sm={12} xs={12} align={"left"}>

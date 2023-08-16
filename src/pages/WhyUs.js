@@ -8,6 +8,7 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import Whyusimg from "../assets/images/why us.png";
 import star from "../assets/images/star.png";
 import bgImage from "../assets/images/Hero bg image.png";
+import { Helmet } from "react-helmet";
 
 const WhyUs = () => {
   const parentRef = useRef(null);
@@ -48,6 +49,19 @@ const WhyUs = () => {
   }, []);
   return (
     <Grid>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Exlval: Your Digital Marketing Partner</title>
+        <meta
+          name="description"
+          content="Discover excellence with Exlval Digital Marketing. Boost your brand's online presence with our expert strategies. Elevate your business today contact us at 📞+91 9166549902"
+        />
+        <meta
+          name="keywords"
+          content="Exlval Digital Marketing Company ,Digital Marketing Company in Ahmedabad,Best Digital Marketing Company in Ahmedabad"
+        />
+      </Helmet>
+
       <Container
         sx={{
           display: "flex",
