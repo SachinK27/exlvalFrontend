@@ -43,6 +43,7 @@ import "./Sticky.css";
 import "./bubble.css";
 import SwipperTest from "../components/SwipperTest";
 import TypingAnimationMain from "../components/TypingAnimationMain";
+import { Helmet } from "react-helmet";
 const Homefixed = () => {
   const parentRef = useRef(null);
   const mascotRef = useRef(null);
@@ -51,7 +52,6 @@ const Homefixed = () => {
     const handleScroll = () => {
       const parentContainer = parentRef.current;
       const mascotImage = mascotRef.current;
-
       const parentTop =
         parentContainer.offsetTop - (15 * window.innerHeight) / 100; // Adding 15vh
       const mascotHeight = mascotImage.offsetHeight;
@@ -73,9 +73,7 @@ const Homefixed = () => {
         mascotImage.classList.remove("stickyTop");
       }
     };
-
     window.addEventListener("scroll", handleScroll);
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -160,6 +158,19 @@ const Homefixed = () => {
 
   return (
     <Grid container sx={{ overflowX: "hidden" }}>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Exlval: Your Partner for Success in the Digital Age</title>
+        <meta
+          name="description"
+          content="Exlval is a digital marketing company that delivers results. We help businesses increase website traffic, generate leads, and boost sales. Contact us today to get started! contact us at 📞+91 9166549902"
+        />
+        <meta
+          name="keywords"
+          content="Best Digital Marketing Company in Ahmedabad ,Top Digital Marketing Company in Ahmedabad,Digital marketing company in Ahmedabad, India"
+        />
+      </Helmet>
+
       {/* <CardTemp2/> */}
       <Container
         sx={{
@@ -304,9 +315,11 @@ const Homefixed = () => {
         <Grid container>
           <Grid
             item
+            xs={12}
             sm={12}
-            md={4.5}
-            lg={4.5}
+            md={5.5}
+            lg={5.5}
+            xl={5.5}
             display={{ xs: "none", sm: "none", md: "block", lg: "block" }}
             style={{ position: "relative" }}
             sx={{ pl: 6 }}
@@ -321,16 +334,17 @@ const Homefixed = () => {
 
           <Grid
             item
-            xs={12}
+            xl={6.5}
+            lg={6.5}
+            md={6.5}
             sm={12}
-            md={7.5}
-            lg={7.5}
-            sx={{
-              pl: "5rem",
-              "@media (max-width: 959.95px)": {
-                pl: 0,
-              },
-            }}
+            xs={12}
+            // sx={{
+            //   pl: "5rem",
+            //   "@media (max-width: 959.95px)": {
+            //     pl: 0,
+            //   },
+            // }}
           >
             {/* responsive code added */}
             <Box
@@ -622,20 +636,9 @@ Keep it up Exlval!`,
 
             <Box sx={{ my: 10 }} />
 
-            <Box
-              sx={{
-                // width: "84%",
-                p: 10,
-                mb: 5,
-
-                "@media (max-width: 959.95px)": {
-                  margin: "0 auto",
-                  p: 2,
-                },
-              }}
-            >
+            <Container sx={{ width: { sm: "100%", md: "80%" } }}>
               <ContactForm />
-            </Box>
+            </Container>
           </Grid>
         </Grid>
       </Box>

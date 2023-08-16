@@ -15,12 +15,20 @@ const CCard = styled(Card)({
   marginBottom: "1ch",
 });
 
-const Card3 = ({ img, color, contained, tags = [] }) => {
+const Card3 = ({ img, title, color, contained, tags = [] }) => {
   return (
     <Box sx={{ maxWidth: "320px", mb: 4 }} align="center">
       <CCard sx={{ border: `1px solid ${color}` }}>
         <CardContent>
-          <CardMedia component="img" height="300" image={img} />
+          <CardMedia
+            component="img"
+            // height="300"
+            image={img}
+            sx={{
+              borderRadius: 5,
+              objectFit: "contain",
+            }}
+          />
         </CardContent>
       </CCard>
       <Stack direction="row" justifyContent={"space-around"}>
@@ -44,7 +52,7 @@ const Card3 = ({ img, color, contained, tags = [] }) => {
         ))}
       </Stack>
       <Typography variant="h6" sx={{ width: "80%" }}>
-        Linkedin Management for Alok Koshti
+        {title}
       </Typography>
     </Box>
   );

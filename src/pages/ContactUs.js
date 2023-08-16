@@ -9,6 +9,7 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import PermContactCalendarIcon from "@mui/icons-material/PermContactCalendar";
 import AccessTimeFilledIcon from "@mui/icons-material/AccessTimeFilled";
 import "./Sticky.css";
+import { Helmet } from "react-helmet";
 const ContactUs = () => {
   const parentRef = useRef(null);
   const mascotRef = useRef(null);
@@ -53,6 +54,18 @@ const ContactUs = () => {
         m: "auto",
       }}
     >
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Exlval Digital Marketing Get in Touch</title>
+        <meta
+          name="description"
+          content="Connect us EXLVAL Digital Marketing for expert solutions that boost your online presence. Reach us now for tailored strategies and exceptional results. Let's elevate your brand together. contact us at 📞+91 9166549902"
+        />
+        <meta
+          name="keywords"
+          content="Best Digital Marketing Company in Ahmedabad, Top Digital Marketing Company in Ahmedabad ,Digital marketing company in Ahmedabad, India"
+        />
+      </Helmet>
       <Container
         sx={{
           display: "flex",
@@ -90,17 +103,18 @@ const ContactUs = () => {
         </Stack>
       </Container>
       <Box sx={{ my: "7ch" }} />
-      <Container
-        
-        sx={{ pt: 7, maxWidth: "100vw !important", fontSize: "18px" }}
-      >
-        <Grid container ref={parentRef} 
-        sx={{ 
-          px: 5,
-           maxWidth: "100vw",
-          "@media (max-width: 959.95px)": {
-          px:0
-           }}}>
+      <Container sx={{ pt: 7, maxWidth: "100vw !important", fontSize: "18px" }}>
+        <Grid
+          container
+          ref={parentRef}
+          sx={{
+            px: 5,
+            maxWidth: "100vw",
+            "@media (max-width: 959.95px)": {
+              px: 0,
+            },
+          }}
+        >
           <Grid
             item
             sm={12}
@@ -117,24 +131,29 @@ const ContactUs = () => {
             />
           </Grid>
           <Grid item sm={12} md={6.5} lg={6.5}>
-            <Container sx={{  }}>
+            <Container sx={{}}>
               <ContactForm />
             </Container>
             <Box sx={{ my: 7 }} />
-            <Stack sx={{ px: 5,
-        "@media (max-width: 959.95px)": {
-          px:0
-        } }} spacing={3}>
+            <Stack
+              sx={{
+                px: 5,
+                "@media (max-width: 959.95px)": {
+                  px: 0,
+                },
+              }}
+              spacing={3}
+            >
               <Stack
                 sx={{
                   px: 15,
                   py: 2,
                   alignItems: "center",
                   justifyContent: "center",
-                  textAlign:"justify",
+                  textAlign: "justify",
                   "@media (max-width: 959.95px)": {
-                  px:5
-                   }
+                    px: 5,
+                  },
                 }}
                 spacing={2}
               >

@@ -22,6 +22,7 @@ import bgImage from "../assets/images/Hero bg image.png";
 
 import "./Sticky.css";
 import { PanTool, PanToolAlt } from "@mui/icons-material";
+import { Helmet } from "react-helmet";
 
 const iconsData = [
   { icon: icon1, text: "Valuable Experience" },
@@ -81,6 +82,18 @@ const Internships = () => {
 
   return (
     <Grid>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Exlval: Offers Opportunities To Learn and Grow</title>
+        <meta
+          name="description"
+          content="Crafting captivating careers in digital marketing. Join EXLVAL's dynamic internship program to gain hands-on experience and master the art of digital advertising. Unlock your potential with us"
+        />
+        <meta
+          name="keywords"
+          content="Digital Marketing Internship in Ahmedabad ,Digital Marketing Intern in Ahmedabad,Digital Marketing Jobs in Ahmedabad"
+        />
+      </Helmet>
       <Container
         sx={{
           display: "flex",

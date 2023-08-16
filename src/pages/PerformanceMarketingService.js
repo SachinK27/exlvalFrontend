@@ -30,13 +30,26 @@ import SwipperTest from "../components/SwipperTest";
 import bgImage from "../assets/images/Hero bg image.png";
 
 import "./Sticky.css";
+import { Helmet } from "react-helmet";
 const iconsData = [
-  { icon: icon1, text: "Performance Marketing Expertise" },
-  { icon: icon2, text: "Measuring Results" },
-  { icon: icon2, text: "Timely Reports" },
-  { icon: icon2, text: "Timely Reports" },
-  { icon: icon2, text: "Relevant Reach" },
-  { icon: icon2, text: "Audience Building" },
+  {
+    icon: "/images/performance/expertise.png",
+    text: "Performance Marketing Expertise",
+  },
+  {
+    icon: "/images/performance/measuring-results.png",
+    text: "Measuring Results",
+  },
+  { icon: "/images/performance/relevant-reach.png", text: "Relevant Reach" },
+  {
+    icon: "/images/performance/fast-cost-effective-results.png",
+    text: "Cost Effective Results",
+  },
+  { icon: "/images/performance/timely-reports.png", text: "Timely Reports" },
+  {
+    icon: "/images/performance/audience-building.png",
+    text: "Audience Building",
+  },
 ];
 //Data for cards
 const cardsData = [
@@ -123,6 +136,22 @@ const PerformanceMarketingService = () => {
         m: "auto",
       }}
     >
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>
+          Performance Marketing Company in Ahmedabad, India | Performance
+          Marketing Services in India
+        </title>
+        <meta
+          name="description"
+          content="Unlock business growth with Exlval's performance marketing. Data-driven strategies for ROI-focused results. Elevate your digital presence today. contact us at 📞+91 9166549902"
+        />
+        <meta
+          name="keywords"
+          content="Performance Marketing in Ahmedabad, Digital Advertising, Online Marketing, ROI-Focused, Data-Driven Strategies, SEM, PPC, Social Media Ads, Conversion Optimization."
+        />
+      </Helmet>
+
       <Container
         sx={{
           display: "flex",
@@ -314,7 +343,7 @@ const PerformanceMarketingService = () => {
               </Stack>
               <Image
                 style={{ margin: "3ch auto", display: "block" }}
-                src={arrow}
+                src="/images/arrow-down.gif"
               />
             </Box>
           </Grid>

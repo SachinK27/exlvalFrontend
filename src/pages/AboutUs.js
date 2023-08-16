@@ -4,6 +4,7 @@ import {
   Button,
   Container,
   Grid,
+  Link,
   Paper,
   Stack,
   Typography,
@@ -22,6 +23,7 @@ import bgImage from "../assets/images/Hero bg image.png";
 import team from "../team.json";
 
 import "./Sticky.css";
+import { Helmet } from "react-helmet";
 const AboutUs = () => {
   const parentRef = useRef(null);
   const mascotRef = useRef(null);
@@ -68,6 +70,19 @@ const AboutUs = () => {
         m: "auto",
       }}
     >
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Exlval: Trusted by Businesses Worldwide</title>
+        <meta
+          name="description"
+          content="Discover excellence with EXLVAL, your premier digital marketing partner. We craft compelling strategies to elevate your online presence. Join us for innovative solutions and measurable success in the digital realm. and contact us at 📞+91 9166549902"
+        />
+        <meta
+          name="keywords"
+          content="SEO Company in Ahmedabad, Best Digital Marketing Company in Ahmedabad, Top Digital Marketing Company Ahmedabad , India Digital Marketing agency in Ahmedabad"
+        />
+      </Helmet>
+
       <Container
         sx={{
           display: "flex",
@@ -322,7 +337,9 @@ const AboutUs = () => {
                   Want to be an Exlvalion
                 </Typography>
                 <Typography>Start a career</Typography>
-                <Button
+                <Typography
+                  component={Link}
+                  href="/career"
                   sx={{
                     backgroundColor: "#F9D949",
                     p: "0.3ch 2ch",
@@ -334,7 +351,7 @@ const AboutUs = () => {
                   }}
                 >
                   Join us
-                </Button>
+                </Typography>
               </Stack>
             </Box>
           </Box>

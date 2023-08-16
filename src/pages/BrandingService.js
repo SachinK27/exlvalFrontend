@@ -30,13 +30,17 @@ import SwipperTest from "../components/SwipperTest";
 import bgImage from "../assets/images/Hero bg image.png";
 
 import "./Sticky.css";
+import { Helmet } from "react-helmet";
 const iconsData = [
-  { icon: icon1, text: "Brand Manager" },
-  { icon: icon2, text: "Making Online Reputation" },
-  { icon: icon2, text: "Constant Branding" },
-  { icon: icon2, text: "Healthy Profits" },
-  { icon: icon2, text: "Raving Customers" },
-  { icon: icon2, text: "Brand Recognition" },
+  { icon: "/images/branding/brand-manager.png", text: "Brand Manager" },
+  {
+    icon: "/images/branding/making-online-reputation.png",
+    text: "Making Online Reputation",
+  },
+  { icon: "/images/branding/constant-branding.png", text: "Constant Branding" },
+  { icon: "/images/branding/healthy-profits.png", text: "Healthy Profits" },
+  { icon: "/images/branding/raving-customers.png", text: "Raving Customers" },
+  { icon: "/images/branding/brand-recognition.png", text: "Brand Recognition" },
 ];
 //Data for cards
 const cardsData = [
@@ -113,6 +117,22 @@ const BrandingService = () => {
         m: "auto",
       }}
     >
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>
+          UI/UX Designing Company in Ahmedabad, India | UI/UX Designing
+          Specialists in India
+        </title>
+        <meta
+          name="description"
+          content="Elevate your brand with our Ahmedabad-based company's expert branding services. Unleash creativity and strategic excellence for impactful brand identity"
+        />
+        <meta
+          name="keywords"
+          content="Branding Services in Ahmedabad, India, Brand Identity, Logo Design Company in Ahmedabad, Brand Strategy, Creative Branding Company in Ahmedabad, Visual Identity, Marketing, Brand Development."
+        />
+      </Helmet>
+
       <Container
         sx={{
           display: "flex",
@@ -361,7 +381,7 @@ const BrandingService = () => {
               </Stack>
               <Image
                 style={{ margin: "3ch auto", display: "block" }}
-                src={arrow}
+                src="/images/arrow-down.gif"
               />
             </Box>
           </Grid>

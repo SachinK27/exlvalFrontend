@@ -30,13 +30,20 @@ import SwipperTest from "../components/SwipperTest";
 import bgImage from "../assets/images/Hero bg image.png";
 
 import "./Sticky.css";
+import { Helmet } from "react-helmet";
 const iconsData = [
-  { icon: icon1, text: "Finding Right Influencers" },
-  { icon: icon2, text: "Valuable Content" },
-  { icon: icon2, text: "Timely Reports" },
-  { icon: icon2, text: "Brand Building" },
-  { icon: icon2, text: "More Customers" },
-  { icon: icon2, text: "Higher Engagement" },
+  {
+    icon: "/images/influencer/finding-right-influencers.png",
+    text: "Finding Right Influencers",
+  },
+  { icon: "/images/influencer/valuable-content.png", text: "Valuable Content" },
+  { icon: "/images/influencer/timely-reporting.png", text: "Timely Reports" },
+  { icon: "/images/influencer/brand-building.png", text: "Brand Building" },
+  { icon: "/images/influencer/more-customers.png", text: "More Customers" },
+  {
+    icon: "/images/influencer/higher-engagement.png",
+    text: "Higher Engagement",
+  },
 ];
 //Data for cards
 // const cardsData = [
@@ -123,6 +130,20 @@ const InfluencerMarketing = () => {
         m: "auto",
       }}
     >
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>
+          India's Best Influencer Marketing Company in Ahmedabad, India
+        </title>
+        <meta
+          name="description"
+          content="Amplify your brand's reach through Exlval's influencer marketing. Connecting you with authentic influencers for impactful and engaging campaigns. contact us at 📞+91 9166549902"
+        />
+        <meta
+          name="keywords"
+          content="Influencer Marketing Agency in india, Best Influencer Marketing Company in Ahmedabad, India, Collabration Company in India"
+        />
+      </Helmet>
       <Container
         sx={{
           display: "flex",
@@ -294,7 +315,7 @@ const InfluencerMarketing = () => {
               </Stack>
               <Image
                 style={{ margin: "3ch auto", display: "block" }}
-                src={arrow}
+                src="/images/arrow-down.gif"
               />
             </Box>
           </Grid>

@@ -30,13 +30,23 @@ import SwipperTest from "../components/SwipperTest";
 import bgImage from "../assets/images/Hero bg image.png";
 
 import "./Sticky.css";
+import { Helmet } from "react-helmet";
 const iconsData = [
-  { icon: icon1, text: "Dedicated Content Manager" },
-  { icon: icon2, text: "Frequent Content Audit" },
-  { icon: icon2, text: "Timely Reports and Improvisation" },
-  { icon: icon2, text: "Consistent Content" },
-  { icon: icon2, text: "More Leads" },
-  { icon: icon2, text: "Better ROI" },
+  {
+    icon: "/images/content/dedicated-manager.png",
+    text: "Dedicated Content Manager",
+  },
+  { icon: "/images/content/content-audit.png", text: "Frequent Content Audit" },
+  {
+    icon: "/images/content/timely-reports.png",
+    text: "Timely Reports and Improvisation",
+  },
+  {
+    icon: "/images/content/consistent-content.png",
+    text: "Consistent Content",
+  },
+  { icon: "/images/content/more-leads.png", text: "More Leads" },
+  { icon: "/images/content/better-roi.png", text: "Better ROI" },
 ];
 //Data for cards
 const cardsData = [
@@ -128,6 +138,22 @@ const ContactMarketing = () => {
         m: "auto",
       }}
     >
+      <Helmet>
+        <meta charset="UTF-8" />
+        <title>
+          Content Marketing Services in Ahmedabad, India | Content Writing in
+          India
+        </title>
+        <meta
+          name="description"
+          content="Looking for a Content marketing company or content writing service in India? Exlval provides the best content Writing & content Marketing service in India"
+        />
+        <meta
+          name="keywords"
+          content="Content marketing company in ahmedabad, Content marketing company in Ahmedabad,India. Content marketing company in India, content marketing services India, Exlval, Top Content Marketing Services in Ahmedabad,India"
+        />
+      </Helmet>
+
       <Container
         sx={{
           display: "flex",
@@ -291,7 +317,7 @@ const ContactMarketing = () => {
               </Stack>
               <Image
                 style={{ margin: "3ch auto", display: "block" }}
-                src={arrow}
+                src="/images/arrow-down.gif"
               />
             </Box>
           </Grid>

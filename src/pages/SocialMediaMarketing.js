@@ -30,14 +30,17 @@ import SwipperTest from "../components/SwipperTest";
 import bgImage from "../assets/images/Hero bg image.png";
 
 import "./Sticky.css";
+import { Helmet } from "react-helmet";
 
 const iconsData = [
-  { icon: icon1, text: "Social Media Manager" },
-  { icon: icon2, text: "Latest Tools" },
-  { icon: icon2, text: "Timely Reports" },
-  { icon: icon2, text: "Brand Building" },
-  { icon: icon2, text: "Audience Building" },
-  { icon: icon2, text: "Mass Selling" },
+  {
+    icon: "/images/social/dedicated-manager.png",
+    text: "Social Media Manager",
+  },
+  { icon: "/images/social/best-tools.png", text: "Latest Tools" },
+  { icon: "/images/social/timely-reporting.png", text: "Timely Reports" },
+  { icon: "/images/social/audience-building.png", text: "Audience Building" },
+  { icon: "/images/social/mass-selling.png", text: "Mass Selling" },
 ];
 //Data for cards
 const cardsData = [
@@ -99,6 +102,21 @@ const SocialMediaMarketing = () => {
         m: "auto",
       }}
     >
+      <Helmet>
+        <meta charset="UTF-8" />
+        <title>
+          Social Media Marketing Company in Ahmedabad, India | Best SMM Services
+        </title>
+        <meta
+          name="description"
+          content="Are you in need of the leading Social Media Marketing Company in India? Look no further and get in touch with Exlval, the premier provider of social media marketing services located in Ahmedabad, Gujarat, India."
+        />
+        <meta
+          name="keywords"
+          content="social media marketing company in ahmedabad, India. social media marketing services company, best social media marketing services, top social media marketing companies in india, Exlval, SMM Paid Ads Marketing in Ahmedabad, SMM company in Ahmedabad, India. "
+        />
+      </Helmet>
+
       <Container
         sx={{
           display: "flex",
@@ -276,7 +294,7 @@ const SocialMediaMarketing = () => {
               </Stack>
               <Image
                 style={{ margin: "3ch auto", display: "block" }}
-                src={arrow}
+                src="/images/arrow-down.gif"
               />
             </Box>
           </Grid>

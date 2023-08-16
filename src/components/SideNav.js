@@ -31,8 +31,6 @@ const SideNav = () => {
       });
   }, []);
 
-  const path = typeof window !== "undefined" ? window.location.pathname : "";
-
   return (
     <Stack sx={{ position: "sticky" }}>
       <Stack direction={"row"} spacing={1}>
@@ -47,7 +45,10 @@ const SideNav = () => {
           variant="body1"
           component={Link}
           href={"/case-studies"}
-          sx={{ color: path === "/case-studies" ? "#F45050" : "#2B2B2B" }}
+          sx={{
+            color:
+              location.pathname === "/case-studies" ? "#F45050" : "#2B2B2B",
+          }}
         >
           Case Studies
         </Typography>
@@ -55,7 +56,7 @@ const SideNav = () => {
           variant="body1"
           component={Link}
           href={"/ebook"}
-          sx={{ color: path === "/ebook" ? "#F45050" : "#2B2B2B" }}
+          sx={{ color: location.pathname === "/ebook" ? "#F45050" : "#2B2B2B" }}
         >
           Ebook
         </Typography>
@@ -63,7 +64,10 @@ const SideNav = () => {
           variant="body1"
           component={Link}
           href={"/infographics"}
-          sx={{ color: path === "/infographics" ? "#F45050" : "#2B2B2B" }}
+          sx={{
+            color:
+              location.pathname === "/infographics" ? "#F45050" : "#2B2B2B",
+          }}
         >
           Infographics
         </Typography>
@@ -86,7 +90,7 @@ const SideNav = () => {
         ) : (
           <>
             {sideBarData.map((item, index) => {
-              let linkUrl = `${path}?category=${item.id}`;
+              let linkUrl = `${location.pathname}?category=${item.id}`;
               return (
                 <Typography
                   // variant="body1"

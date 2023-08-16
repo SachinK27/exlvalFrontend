@@ -30,13 +30,14 @@ import SwipperTest from "../components/SwipperTest";
 import bgImage from "../assets/images/Hero bg image.png";
 
 import "./Sticky.css";
+import { Helmet } from "react-helmet";
 const iconsData = [
-  { icon: icon1, text: "Consistent Design" },
-  { icon: icon2, text: "Brand Reputation" },
-  { icon: icon2, text: "Brand Identity" },
-  { icon: icon2, text: "Brand Recognition" },
-  { icon: icon2, text: "Raving Customers" },
-  { icon: icon2, text: "Healthy Profits" },
+  { icon: "/images/graphic/consistent-design.png", text: "Consistent Design" },
+  { icon: "/images/graphic/brand-reputation.png", text: "Brand Reputation" },
+  { icon: "/images/graphic/brand-identity.png", text: "Brand Identity" },
+  { icon: "/images/graphic/brand-recognition.png", text: "Brand Recognition" },
+  { icon: "/images/graphic/raving-customers.png", text: "Raving Customers" },
+  { icon: "/images/graphic/healthy-profits.png", text: "Healthy Profits" },
 ];
 //Data for cards
 const cardsData = [
@@ -93,6 +94,22 @@ const GraphicDesignService = () => {
         m: "auto",
       }}
     >
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>
+          Graphic Designing Company in Ahmedabad, India | Graphic Designing
+          Specialists in India
+        </title>
+        <meta
+          name="description"
+          content="With our team of highly skilled and experienced specialists, we offer innovative and creative solutions tailored to meet your unique design needs. contact us at 📞+91 9166549902"
+        />
+        <meta
+          name="keywords"
+          content="Graphic Designing Company in India ,  Graphic Designing Company in Ahmedabad, Best Graphic Designing services in Ahmedabad, Graphic Designing Company in Ahmedabad, Exlval, India, Ahmedabad"
+        />
+      </Helmet>
+
       <Container
         sx={{
           display: "flex",
@@ -241,7 +258,7 @@ const GraphicDesignService = () => {
               </Stack>
               <Image
                 style={{ margin: "3ch auto", display: "block" }}
-                src={arrow}
+                src="/images/arrow-down.gif"
               />
             </Box>
           </Grid>
