@@ -126,7 +126,7 @@
 //                     Search Enginer Optimization
 //                   </Typography>
 //                 </Link>
-//                 <Typography variant="body1">Scocial Media Marketing</Typography>
+//                 <Typography variant="body1">social Media Marketing</Typography>
 //                 <Typography variant="body1">Perfomance Marketing</Typography>
 //                 <Typography variant="body1">Influencer Marketing</Typography>
 //                 <Typography variant="body1">
@@ -450,7 +450,7 @@ function Footer(props) {
                     Search Enginer Optimization
                   </Typography>
                 </Link>
-                <Typography variant="body1">Scocial Media Marketing</Typography>
+                <Typography variant="body1">social Media Marketing</Typography>
                 <Typography variant="body1">Perfomance Marketing</Typography>
                 <Typography variant="body1">Influencer Marketing</Typography>
                 <Typography variant="body1">
@@ -658,7 +658,7 @@ function Footer(props) {
                 </Link>
                 <Link href="/services-socialMediaMarketing">
                   <Typography variant="body1">
-                    Scocial Media Marketing
+                    Social Media Marketing
                   </Typography>
                 </Link>
                 <Link href="/services-performanceMarketing">

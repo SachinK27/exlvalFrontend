@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Box, Container, Stack, Typography, Grid, Link } from "@mui/material";
+import { Link } from "react-router-dom";
+import { Box, Container, Stack, Typography, Grid } from "@mui/material";
 import Image from "../components/Image";
 import ContactForm from "../components/ContactForm";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";

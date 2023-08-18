@@ -175,7 +175,8 @@ const WhyUs = () => {
               >
                 <Typography
                   sx={{
-                    fontSize: "100%",
+                    fontSize: "1rem",
+                    textAlign: "center",
                     color: "#F45050",
                     ml: "4rem",
                     "@media (max-width: 959.95px)": {
@@ -183,11 +184,12 @@ const WhyUs = () => {
                     },
                   }}
                 >
-                  Business Consulting
+                  Free Business Consulting
                 </Typography>
                 <Typography
                   sx={{
-                    fontSize: "100%",
+                    fontSize: "1rem",
+                    textAlign: "center",
                     color: "#F45050",
                     ml: "4rem",
                     "@media (max-width: 959.95px)": {
@@ -195,11 +197,12 @@ const WhyUs = () => {
                     },
                   }}
                 >
-                  Business Consulting
+                  2x Customer Retention
                 </Typography>
                 <Typography
                   sx={{
-                    fontSize: "100%",
+                    fontSize: "1rem",
+                    textAlign: "center",
                     color: "#F45050",
                     ml: "4rem",
                     "@media (max-width: 959.95px)": {
@@ -207,7 +210,7 @@ const WhyUs = () => {
                     },
                   }}
                 >
-                  Business Consulting
+                  Dedicated Experts
                 </Typography>
               </Box>
               <Box
@@ -356,7 +359,8 @@ const WhyUs = () => {
               >
                 <Typography
                   sx={{
-                    fontSize: "100%",
+                    fontSize: "1rem",
+                    textAlign: "center",
                     color: "#F45050",
                     ml: "7.5rem",
                     "@media (max-width: 959.95px)": {
@@ -364,11 +368,12 @@ const WhyUs = () => {
                     },
                   }}
                 >
-                  Business Consulting
+                  Healthy Client Servicing
                 </Typography>
                 <Typography
                   sx={{
-                    fontSize: "100%",
+                    fontSize: "1rem",
+                    textAlign: "center",
                     color: "#F45050",
                     ml: "4rem",
                     "@media (max-width: 959.95px)": {
@@ -376,11 +381,12 @@ const WhyUs = () => {
                     },
                   }}
                 >
-                  Business Consulting
+                  Serious Timely Reporting
                 </Typography>
                 <Typography
                   sx={{
-                    fontSize: "100%",
+                    fontSize: "1rem",
+                    textAlign: "center",
                     color: "#F45050",
                     ml: "4rem",
                     "@media (max-width: 959.95px)": {
@@ -388,7 +394,7 @@ const WhyUs = () => {
                     },
                   }}
                 >
-                  Business Consulting
+                  Seamless Communication
                 </Typography>
               </Box>
             </Box>
