@@ -34,7 +34,7 @@ const Homepage = () => {
           flexDirection: "column",
           m: "8ch auto",
           fontWeight: 500,
-          backgroundImage: `url("${bgImage}")`,
+          backgroundImage: { xs: "none", md: `url("${bgImage}")` },
           backgroundSize: "cover",
           backgroundPosition: "center",
           height: "300px",
@@ -126,7 +126,16 @@ const Homepage = () => {
             </Box>
             <Box sx={{ my: 7 }} />
             <Box align="center">
-              <UnderlinedText>Explore Our Result-driven Work</UnderlinedText>
+              <UnderlinedText>
+                <Typography
+                  sx={{
+                    fontSize: { xs: "1.5rem", md: "2rem" },
+                    fontWeight: "medium",
+                  }}
+                >
+                  Why our clients love this service
+                </Typography>
+              </UnderlinedText>
               <Box sx={{ my: 10 }} />
               <Carousel
                 cards={[

@@ -121,8 +121,10 @@ const SEO = () => {
           justifyContent: "center",
           flexDirection: "column",
           fontWeight: 500,
-          height: "60vh",
-          backgroundImage: `url("${bgImage}")`,
+          minHeight: "40vh",
+          p: "2ch 2ch",
+          height: { xs: "auto", md: "60vh" },
+          backgroundImage: { xs: "none", md: `url("${bgImage}")` },
           backgroundSize: "contain",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -592,7 +594,13 @@ const SEO = () => {
           <Grid item sm={12} md={7.5} lg={7.5} sx={{ maxWidth: "100%" }}>
             <Box>
               <UnderlinedText>
-                <Typography sx={{ fontSize: "2rem", fontWeight: "medium" }}>
+                <Typography
+                  sx={{
+                    fontSize: { xs: "1.6rem", md: "2rem" },
+                    fontWeight: "medium",
+                    textAlign: "center",
+                  }}
+                >
                   SEO Services provided by us:
                 </Typography>
               </UnderlinedText>
@@ -610,14 +618,17 @@ const SEO = () => {
               </Grid>
             </Box>
             <Box my={7} />
-            <Box
-              sx={{
-                "@media (max-width: 959.95px)": {
-                  px: 0,
-                },
-              }}
-            >
-              <UnderlinedText>Why our clients love this service</UnderlinedText>
+            <Box>
+              <UnderlinedText>
+                <Typography
+                  sx={{
+                    fontSize: { xs: "1.5rem", md: "2rem" },
+                    fontWeight: "medium",
+                  }}
+                >
+                  Why our clients love this service
+                </Typography>
+              </UnderlinedText>
               <Box sx={{ my: 4 }} />
 
               <Grid container spacing={2} sx={{ my: 5 }}>
@@ -642,7 +653,16 @@ const SEO = () => {
             </Box>
             <Box my={10} />
             <Box>
-              <UnderlinedText>Explore Our Result-driven Work</UnderlinedText>
+              <UnderlinedText>
+                <Typography
+                  sx={{
+                    fontSize: { xs: "1.5rem", md: "2rem" },
+                    fontWeight: "medium",
+                  }}
+                >
+                  Explore Our Result-driven Work
+                </Typography>
+              </UnderlinedText>
 
               <SwipperTest />
 

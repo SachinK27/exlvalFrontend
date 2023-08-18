@@ -290,7 +290,7 @@ function Footer(props) {
             direction="row"
             justifyContent="center"
             alignItems="center"
-            spacing={1}
+            spacing={4}
             sx={{ my: 2, justifyContent: "space-between" }}
           >
             <Grid
@@ -553,7 +553,7 @@ function Footer(props) {
         <Grid
           container
           sx={{
-            p: "5ch 8ch 0ch 8ch",
+            p: { xs: "2ch 2ch", md: "5ch 8ch 0ch 8ch" },
           }}
         >
           <Grid
@@ -743,11 +743,11 @@ function Footer(props) {
           </Grid>
           <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
             <Stack
-              direction="row"
+              direction={{ xs: "column-reverse", md: "row" }}
               sx={{
                 justifyContent: "space-between",
                 alignItem: "center",
-                padding: "2ch 9ch",
+                padding: { xs: "2ch 2ch", md: "2ch 9ch" },
               }}
             >
               <Typography component={Link}>

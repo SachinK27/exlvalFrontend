@@ -11,6 +11,8 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
+import { toast } from "react-hot-toast";
+import axios from "axios";
 
 const CTextField = styled(TextField)({
   "& input": {
@@ -65,17 +67,27 @@ const CSelect = styled(Select)({
 
 const NewsLetterForm = () => {
   const [form, setForm] = React.useState({
-    firstName: "",
-    lastName: "",
+    name: "",
     email: "",
-    phone: "",
-    interest: 0,
-    company: "",
-    message: "",
   });
 
-  const onSubmit = () => {
-    console.log(form);
+  const onSubmit = async (e) => {
+    e.preventDefault();
+
+    const toastId = toast.loading("Submitting...");
+
+    try {
+      const res = await axios.post(`https://admin.exlval.com/api/newsletter`, {
+        name: form.name,
+        email: form.email,
+      });
+
+      if (res.data) {
+        toast.success(res.data.message, { id: toastId });
+      }
+    } catch (e) {
+      toast.error("Oopse! try again later.");
+    }
   };
   //
 
@@ -86,7 +98,7 @@ const NewsLetterForm = () => {
         width: "90%",
         borderLeft: "8px solid #F45050",
         borderBottom: "8px solid #F45050",
-         boxShadow: "3px 0px 8px #d4d6d5",
+        boxShadow: "3px 0px 8px #d4d6d5",
         p: 4,
         borderRadius: "40px",
       }}
@@ -95,12 +107,15 @@ const NewsLetterForm = () => {
     >
       <Typography variant="h6">Subscribe to our newsletter</Typography>
       <Box sx={{ my: 3 }} />
-      <Stack direction={{ xs: 'column', sm: 'column', md: 'row',lg:'row' }} gap={5}>
+      <Stack
+        direction={{ xs: "column", sm: "column", md: "row", lg: "row" }}
+        gap={5}
+      >
         <CTextField
           fullWidth
           placeholder="Name"
           name="name"
-          value={form.firstName}
+          value={form.name}
           onChange={(e) =>
             setForm((state) => ({
               ...state,
@@ -112,7 +127,7 @@ const NewsLetterForm = () => {
           fullWidth
           placeholder="email"
           name="email"
-          value={form.lastName}
+          value={form.email}
           onChange={(e) =>
             setForm((state) => ({
               ...state,

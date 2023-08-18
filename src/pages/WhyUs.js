@@ -69,15 +69,19 @@ const WhyUs = () => {
           justifyContent: "center",
           flexDirection: "column",
           fontWeight: 500,
-          height: "60vh",
-          backgroundImage: `url("${bgImage}")`,
+          p: "2ch 2ch",
+          minHeight: "40vh",
+          height: { xs: "auto", md: "60vh" },
+          backgroundImage: { xs: "none", md: `url("${bgImage}")` },
           backgroundSize: "contain",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           position: "relative",
         }}
       >
-        <Typography variant="h1">Delivering Results and Values</Typography>
+        <Typography variant="h1" align="center">
+          Delivering Results and Values
+        </Typography>
         <Box sx={{ my: 2, lineHeight: 1.7, fontSize: "18px" }} />
         <Typography variant="body2" align="center" fontSize="18px">
           We make your digital success our top priority and assist you to reach

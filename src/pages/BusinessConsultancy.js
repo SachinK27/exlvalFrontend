@@ -59,7 +59,7 @@ const BusinessConsultancy = () => {
     };
   }, []);
   return (
-    <Grid container padding={5}>
+    <Grid container padding={{ xs: 2, md: 5 }}>
       <Helmet>
         <meta charSet="utf-8" />
         <title>Exlval: We Get Results</title>
@@ -80,8 +80,10 @@ const BusinessConsultancy = () => {
           justifyContent: "center",
           flexDirection: "column",
           fontWeight: 500,
-          height: "60vh",
-          backgroundImage: `url("${bgImage}")`,
+          minHeight: "40vh",
+          p: "2ch 2ch",
+          height: { xs: "auto", md: "60vh" },
+          backgroundImage: { xs: "none", md: `url("${bgImage}")` },
           backgroundSize: "contain",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",

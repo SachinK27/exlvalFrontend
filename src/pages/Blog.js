@@ -85,7 +85,7 @@ const Blogs = () => {
   };
 
   return (
-    <Grid container padding={5}>
+    <Grid container padding={{ xs: 2, md: 5 }}>
       <Helmet>
         <meta charSet="utf-8" />
         <title>Exlval Digital Marketing Blog</title>
@@ -107,8 +107,10 @@ const Blogs = () => {
           justifyContent: "center",
           flexDirection: "column",
           fontWeight: 500,
-          height: "60vh",
-          backgroundImage: `url("${bgImage}")`,
+          minHeight: "40vh",
+          p: "2ch 2ch",
+          height: { xs: "auto", md: "60vh" },
+          backgroundImage: { xs: "none", md: `url("${bgImage}")` },
           backgroundSize: "contain",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -124,13 +126,15 @@ const Blogs = () => {
         </Typography>
       </Container>
 
-      <Grid container align={"center"} mb={5}>
-        <Grid item xl={2} lg={2} md={2} sm={12} xs={12}></Grid>
-        <Grid item xl={8} lg={8} md={8} sm={12} xs={12}>
-          <NewsLetterForm />
-        </Grid>
-        <Grid item xl={2} lg={2} md={2} sm={12} xs={12}></Grid>
-      </Grid>
+      <Container
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <NewsLetterForm />
+      </Container>
       <Grid container mt={5}>
         <Grid
           item
