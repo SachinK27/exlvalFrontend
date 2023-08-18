@@ -19,7 +19,7 @@ import TestData from "./TestData";
 
 const TestCaseStudies = () => {
   return (
-    <Grid container padding={5}>
+    <Grid container padding={{ xs: 2, md: 5 }}>
       <Grid container spacing={2}>
         <Grid
           item
@@ -34,7 +34,7 @@ const TestCaseStudies = () => {
             flexDirection: "column",
             m: "8ch auto",
             fontWeight: 500,
-            backgroundImage: `url("${bgImage}")`,
+            backgroundImage: { xs: "none", md: `url("${bgImage}")` },
             backgroundSize: "cover",
             backgroundPosition: "center",
             height: "400px",
@@ -53,17 +53,25 @@ const TestCaseStudies = () => {
           </Typography>
         </Grid>
       </Grid>
-      <Grid container >
-        <Grid item xl={12} lg={12} md={12} sm={12} xs={12} align={"left"} mb={10} sx={{
-              display: "flex",
-              flexDirection: "row",
-              paddingLeft: 8
-            }}>
-          
-            <Typography>Home</Typography>
-            <ChevronRightIcon />
-            <Typography sx={{ color: "#F45050" }}>Case studies</Typography>
-          
+      <Grid container>
+        <Grid
+          item
+          xl={12}
+          lg={12}
+          md={12}
+          sm={12}
+          xs={12}
+          align={"left"}
+          mb={10}
+          sx={{
+            display: "flex",
+            flexDirection: "row",
+            paddingLeft: 8,
+          }}
+        >
+          <Typography>Home</Typography>
+          <ChevronRightIcon />
+          <Typography sx={{ color: "#F45050" }}>Case studies</Typography>
         </Grid>
       </Grid>
       <Grid container spacing={2}>
@@ -149,7 +157,10 @@ const TestCaseStudies = () => {
             justifyContent: "center",
           }}
         >
-          <Image src={mascot} style={{ width: "100%", transform: "scale(1.3)" }} />
+          <Image
+            src={mascot}
+            style={{ width: "100%", transform: "scale(1.3)" }}
+          />
         </Grid>
         <Grid
           item

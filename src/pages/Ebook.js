@@ -89,7 +89,7 @@ const EBook = () => {
 
   return (
     <>
-      <Grid container padding={5}>
+      <Grid container padding={{ xs: 2, md: 5 }}>
         <Helmet>
           <meta charSet="utf-8" />
           <title>The Ultimate Guide to Digital Marketing</title>
@@ -110,7 +110,7 @@ const EBook = () => {
             flexDirection: "column",
             fontWeight: 500,
             height: "60vh",
-            backgroundImage: `url("${bgImage}")`,
+            backgroundImage: { xs: "none", md: `url("${bgImage}")` },
             backgroundSize: "contain",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
@@ -138,7 +138,7 @@ const EBook = () => {
             sx={{
               display: "flex",
               flexDirection: "row",
-              paddingLeft: 8,
+              paddingLeft: { xs: 2, md: 8 },
             }}
           >
             <Typography>Home</Typography>
@@ -159,7 +159,7 @@ const EBook = () => {
               xs={12}
               align={"left"}
               sx={{
-                paddingLeft: 10,
+                paddingLeft: { xs: 4, lg: 10 },
               }}
             >
               <SideNav />
@@ -247,27 +247,37 @@ const EBook = () => {
                   </>
                 )}
               </Grid>
-              <Grid item xl={9} lg={9} md={9} sm={12} xs={12} align={"center"}>
-                <ReactPaginate
-                  previousLabel={"<<"}
-                  nextLabel={">>"}
-                  breakLabel={"..."}
-                  pageCount={pageCount}
-                  marginPagesDisplayed={2}
-                  pageRangeDisplayed={3}
-                  onPageChange={handlePageClick}
-                  containerClassName={"pagination-container"}
-                  pageClassName={"page-item"}
-                  pageLinkClassName={"page-link"}
-                  previousClassName={"page-item"}
-                  previousLinkClassName={"page-link"}
-                  nextClassName={"page-item"}
-                  nextLinkClassName={"page-link"}
-                  breakClassName={"page-item"}
-                  breakLinkClassName={"page-link"}
-                  activeClassName={"active-page"}
-                />
-              </Grid>
+              {pageCount > 0 && (
+                <Grid
+                  item
+                  xl={9}
+                  lg={9}
+                  md={9}
+                  sm={12}
+                  xs={12}
+                  align={"center"}
+                >
+                  <ReactPaginate
+                    previousLabel={"<<"}
+                    nextLabel={">>"}
+                    breakLabel={"..."}
+                    pageCount={pageCount}
+                    marginPagesDisplayed={2}
+                    pageRangeDisplayed={3}
+                    onPageChange={handlePageClick}
+                    containerClassName={"pagination-container"}
+                    pageClassName={"page-item"}
+                    pageLinkClassName={"page-link"}
+                    previousClassName={"page-item"}
+                    previousLinkClassName={"page-link"}
+                    nextClassName={"page-item"}
+                    nextLinkClassName={"page-link"}
+                    breakClassName={"page-item"}
+                    breakLinkClassName={"page-link"}
+                    activeClassName={"active-page"}
+                  />
+                </Grid>
+              )}
             </Grid>
           </Grid>
         </Grid>
@@ -287,7 +297,7 @@ const EBook = () => {
             lg={6}
             align="center"
             justifyContent="center"
-            // sx={{width:"100%"}}
+            sx={{ display: { xs: "none", md: "block" } }}
           >
             <Image
               src={mascot}
@@ -306,7 +316,7 @@ const EBook = () => {
           >
             <Container
               align="center"
-              sx={{ width: "95%", justifyContent: "center" }}
+              sx={{ width: { xs: "98%", md: "95%" }, justifyContent: "center" }}
             >
               <ContactForm />
             </Container>

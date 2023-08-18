@@ -73,7 +73,7 @@ const ContactUs = () => {
           flexDirection: "column",
           m: "8ch auto",
           fontWeight: 500,
-          backgroundImage: `url("${bgImage}")`,
+          backgroundImage: { xs: "none", md: `url("${bgImage}")` },
           backgroundSize: "cover",
           backgroundPosition: "center",
           height: "300px",
@@ -161,9 +161,13 @@ const ContactUs = () => {
                   <LocationOnIcon fontSize="large" sx={{ color: "#F45050" }} />
                   <Typography variant="h3">Address</Typography>
                 </Stack>
-                <Typography>
-                  Lörem ipsum ärade ohektigt fastän bedonde sysit. Syvektig
-                  faten uban. Multihufagel trede gagån, alltså deciprelingar.{" "}
+                <Typography
+                  variant="body1"
+                  // sx={{ textDecoration: "underline" }}
+                >
+                  204 (VM-014), SF, Corporate House Anubhuti Commercial Complex
+                  Opp: Torrent Pharma, Off Ashram Road, Ahmedabad, Gujarat -
+                  380009, India
                 </Typography>
               </Stack>
               <Stack

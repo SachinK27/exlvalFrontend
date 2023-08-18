@@ -35,10 +35,12 @@ import ContentMarketing from "./pages/ContentMarketing";
 import WebDevelopment from "./pages/WebDevelopment";
 import WebDesign from "./pages/WebDesign";
 import Post from "./pages/Post";
+import { Toaster } from "react-hot-toast";
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
+      <Toaster />
       <NavbarTest2 />
       <BrowserRouter>
         <Routes>

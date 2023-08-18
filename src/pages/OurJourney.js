@@ -30,10 +30,12 @@ const OurJourney = () => {
           alignItems: "center",
           justifyContent: "center",
           flexDirection: "column",
-          height: "60vh",
           fontWeight: 500,
           position: "relative",
-          backgroundImage: `url("${bgImage}")`,
+          minHeight: "40vh",
+          p: "2ch 2ch",
+          height: { xs: "auto", md: "60vh" },
+          backgroundImage: { xs: "none", md: `url("${bgImage}")` },
           backgroundSize: "contain",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -81,7 +83,7 @@ const OurJourney = () => {
           lg={6}
           align="center"
           justifyContent="center"
-          // sx={{width:"100%"}}
+          sx={{ display: { xs: "none", md: "block" } }}
         >
           <Image
             src={mascot3}
@@ -89,18 +91,10 @@ const OurJourney = () => {
             sx={{ mt: "8vh", width: "100%", transform: "scale(1)" }}
           />
         </Grid>
-        <Grid
-          item
-          sm={12}
-          xs={12}
-          md={6}
-          lg={6}
-          align="center"
-          // sx={{width:"100%"}}
-        >
+        <Grid item sm={12} xs={12} md={6} lg={6} align="center">
           <Container
             align="center"
-            sx={{ width: "95%", justifyContent: "center" }}
+            sx={{ width: { xs: "98%", md: "95%" }, justifyContent: "center" }}
           >
             <ContactForm />
           </Container>

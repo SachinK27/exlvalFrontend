@@ -124,8 +124,10 @@ const SocialMediaMarketing = () => {
           justifyContent: "center",
           flexDirection: "column",
           fontWeight: 500,
-          height: "60vh",
-          backgroundImage: `url("${bgImage}")`,
+          minHeight: "40vh",
+          p: "2ch 2ch",
+          height: { xs: "auto", md: "60vh" },
+          backgroundImage: { xs: "none", md: `url("${bgImage}")` },
           backgroundSize: "contain",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -619,7 +621,13 @@ const SocialMediaMarketing = () => {
           <Grid item sm={12} md={7.5} lg={7.5} sx={{ maxWidth: "100%" }}>
             <Box>
               <UnderlinedText>
-                <Typography sx={{ fontSize: "2rem", fontWeight: "medium" }}>
+                <Typography
+                  sx={{
+                    fontSize: { xs: "1.8rem", md: "2rem" },
+                    fontWeight: "medium",
+                    textAlign: "center",
+                  }}
+                >
                   Social Media Services provided by us:
                 </Typography>
               </UnderlinedText>
@@ -644,7 +652,16 @@ const SocialMediaMarketing = () => {
                 },
               }}
             >
-              <UnderlinedText>Why our clients love this service</UnderlinedText>
+              <UnderlinedText>
+                <Typography
+                  sx={{
+                    fontSize: { xs: "1.5rem", md: "2rem" },
+                    fontWeight: "medium",
+                  }}
+                >
+                  Why our clients love this service
+                </Typography>
+              </UnderlinedText>
               <Box sx={{ my: 4 }} />
 
               <Grid container spacing={2} sx={{ my: 5 }}>
@@ -669,7 +686,16 @@ const SocialMediaMarketing = () => {
             </Box>
             <Box my={10} />
             <Box>
-              <UnderlinedText>Explore Our Result-driven Work</UnderlinedText>
+              <UnderlinedText>
+                <Typography
+                  sx={{
+                    fontSize: { xs: "1.5rem", md: "2rem" },
+                    fontWeight: "medium",
+                  }}
+                >
+                  Why our clients love this service
+                </Typography>
+              </UnderlinedText>
 
               <SwipperTest />
 

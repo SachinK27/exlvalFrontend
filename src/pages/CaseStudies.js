@@ -83,7 +83,7 @@ const CaseStudies = () => {
 
   return (
     <>
-      <Grid container padding={5}>
+      <Grid container padding={{ xs: 2, md: 5 }}>
         <Helmet>
           <meta charSet="utf-8" />
           <title>Exlval: Case Studies That Speak for Themselves</title>
@@ -96,6 +96,7 @@ const CaseStudies = () => {
             content="Exlval Digital Marketing Success Stories, Digital Marketing Company in Ahmedabad, Best Digital Marketing Company in Ahmedabad, India"
           />
         </Helmet>
+
         <Container
           sx={{
             display: "flex",
@@ -103,8 +104,9 @@ const CaseStudies = () => {
             justifyContent: "center",
             flexDirection: "column",
             fontWeight: 500,
-            height: "60vh",
-            backgroundImage: `url("${bgImage}")`,
+            p: "2ch 2ch",
+            height: { xs: "auto", md: "60vh" },
+            backgroundImage: { xs: "none", md: `url("${bgImage}")` },
             backgroundSize: "contain",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
@@ -119,6 +121,7 @@ const CaseStudies = () => {
             The easy-to-digest info that will inspire you!
           </Typography>
         </Container>
+
         <Grid container>
           <Grid
             item
@@ -128,11 +131,11 @@ const CaseStudies = () => {
             sm={12}
             xs={12}
             align={"left"}
-            mb={10}
+            my={5}
             sx={{
               display: "flex",
               flexDirection: "row",
-              paddingLeft: 8,
+              paddingLeft: { xs: 2, md: 8 },
             }}
           >
             <Typography>Home</Typography>
@@ -151,7 +154,7 @@ const CaseStudies = () => {
               xs={12}
               align={"left"}
               sx={{
-                paddingLeft: 10,
+                paddingLeft: { xs: 4, lg: 10 },
               }}
             >
               <SideNav />
@@ -166,7 +169,6 @@ const CaseStudies = () => {
               align={"center"}
               sx={{
                 padding: 2,
-                p: "0 !important",
                 maxWidth: "100vw !important",
                 fontSize: "18px",
               }}
@@ -240,27 +242,37 @@ const CaseStudies = () => {
 
                 {/* <button onClick={handleClick}>Fetch Data</button> */}
               </Grid>
-              <Grid item xl={9} lg={9} md={9} sm={12} xs={12} align={"center"}>
-                <ReactPaginate
-                  previousLabel={"<<"}
-                  nextLabel={">>"}
-                  breakLabel={"..."}
-                  pageCount={pageCount}
-                  marginPagesDisplayed={2}
-                  pageRangeDisplayed={3}
-                  onPageChange={handlePageClick}
-                  containerClassName={"pagination-container"}
-                  pageClassName={"page-item"}
-                  pageLinkClassName={"page-link"}
-                  previousClassName={"page-item"}
-                  previousLinkClassName={"page-link"}
-                  nextClassName={"page-item"}
-                  nextLinkClassName={"page-link"}
-                  breakClassName={"page-item"}
-                  breakLinkClassName={"page-link"}
-                  activeClassName={"active-page"}
-                />
-              </Grid>
+              {pageCount > 0 && (
+                <Grid
+                  item
+                  xl={9}
+                  lg={9}
+                  md={9}
+                  sm={12}
+                  xs={12}
+                  align={"center"}
+                >
+                  <ReactPaginate
+                    previousLabel={"<<"}
+                    nextLabel={">>"}
+                    breakLabel={"..."}
+                    pageCount={pageCount}
+                    marginPagesDisplayed={2}
+                    pageRangeDisplayed={3}
+                    onPageChange={handlePageClick}
+                    containerClassName={"pagination-container"}
+                    pageClassName={"page-item"}
+                    pageLinkClassName={"page-link"}
+                    previousClassName={"page-item"}
+                    previousLinkClassName={"page-link"}
+                    nextClassName={"page-item"}
+                    nextLinkClassName={"page-link"}
+                    breakClassName={"page-item"}
+                    breakLinkClassName={"page-link"}
+                    activeClassName={"active-page"}
+                  />
+                </Grid>
+              )}
             </Grid>
           </Grid>
         </Grid>
@@ -281,7 +293,7 @@ const CaseStudies = () => {
             lg={6}
             align="center"
             justifyContent="center"
-            // sx={{width:"100%"}}
+            sx={{ display: { xs: "none", md: "block" } }}
           >
             <Image
               src={mascot}
@@ -300,7 +312,7 @@ const CaseStudies = () => {
           >
             <Container
               align="center"
-              sx={{ width: "95%", justifyContent: "center" }}
+              sx={{ width: { xs: "98%", md: "95%" }, justifyContent: "center" }}
             >
               <ContactForm />
             </Container>

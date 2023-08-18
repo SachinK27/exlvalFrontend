@@ -179,8 +179,8 @@ const Homefixed = () => {
           justifyContent: "center",
           flexDirection: "column",
           fontWeight: 500,
-          height: "70vh",
-          backgroundImage: `url("${bgImage}")`,
+          height: { xs: "max-content", md: "70vh" },
+          backgroundImage: { sm: "none", md: `url("${bgImage}")` },
           backgroundSize: "contain",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -446,7 +446,16 @@ const Homefixed = () => {
                   },
                 }}
               >
-                <UnderlinedText>Explore Our Result-driven Work</UnderlinedText>
+                <UnderlinedText>
+                  <Typography
+                    sx={{
+                      fontSize: { xs: "1.5rem", md: "2rem" },
+                      fontWeight: "medium",
+                    }}
+                  >
+                    Why our clients love this service
+                  </Typography>
+                </UnderlinedText>
               </Box>
 
               <SwipperTest />

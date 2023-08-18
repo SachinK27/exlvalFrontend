@@ -11,6 +11,8 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
+import axios from "axios";
+import { toast } from "react-hot-toast";
 
 const CTextField = styled(TextField)({
   "& input": {
@@ -72,10 +74,31 @@ const ContactForm = () => {
     interest: 0,
     company: "",
     message: "",
+    error: "",
   });
 
-  const onSubmit = () => {
-    console.log(form);
+  const onSubmit = async (e) => {
+    e.preventDefault();
+
+    const toastId = toast.loading("Submitting...");
+
+    try {
+      const res = await axios.post(`https://admin.exlval.com/api/contact`, {
+        fname: form.firstName,
+        lname: form.lastName,
+        email: form.email,
+        phone: form.phone,
+        interest: form.interest,
+        company: form.company,
+        message: form.message,
+      });
+
+      if (res.data) {
+        toast.success(res.data.message, { id: toastId });
+      }
+    } catch (e) {
+      toast.error("Oopse! try again later.");
+    }
   };
 
   return (

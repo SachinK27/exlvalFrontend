@@ -89,10 +89,12 @@ const AboutUs = () => {
           alignItems: "center",
           justifyContent: "center",
           flexDirection: "column",
-          height: "60vh",
           fontWeight: 500,
           position: "relative",
-          backgroundImage: `url("${bgImage}")`,
+          minHeight: "40vh",
+          p: "2ch 2ch",
+          height: { xs: "auto", md: "60vh" },
+          backgroundImage: { xs: "none", md: `url("${bgImage}")` },
           backgroundSize: "contain",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -206,10 +208,16 @@ const AboutUs = () => {
                         that reaches the best digital marketing solutions.
                       </Typography>
                     </Box>
-                    <Image
-                      style={{ transform: "scale(0.7)", margin: "0 -1ch" }}
-                      src={"/images/rocket.png"}
-                    />
+                    <Box
+                      sx={{
+                        display: { xs: "none", md: "block" },
+                      }}
+                    >
+                      <Image
+                        style={{ transform: "scale(0.7)", margin: "0 -1ch" }}
+                        src={"/images/rocket.png"}
+                      />
+                    </Box>
                     <Box sx={{ mt: "25%" }}>
                       <Typography>
                         <UnderlinedText small>Our Mission</UnderlinedText>
@@ -232,13 +240,8 @@ const AboutUs = () => {
                       reaches the best digital marketing solutions.
                     </Typography>
                   </Grid>
-                  <Grid item xs={12} sm={12}>
-                    <Image
-                      style={{ transform: "scale(0.7", margin: "0 -1ch" }}
-                      src={"/images/rocket.png"}
-                    />
-                  </Grid>
-                  <Grid item xs={12} sm={12}>
+
+                  <Grid item xs={12} sm={12} sx={{ mt: "2rem" }}>
                     <UnderlinedText small>Our Mission</UnderlinedText>
                     <Typography>
                       Delivering value and strength to businesses with our
@@ -370,7 +373,16 @@ const AboutUs = () => {
         </Box>
         <Box sx={{ my: 7 }} />
         <Grid container>
-          <Grid item xl={5.5} lg={5.5} md={5.5} sm={12} xs={12} align="center">
+          <Grid
+            item
+            xl={5.5}
+            lg={5.5}
+            md={5.5}
+            sm={12}
+            xs={12}
+            align="center"
+            sx={{ display: { xs: "none", md: "block" } }}
+          >
             <Image
               src={mascot}
               style={{ height: "70vh", maxWidth: "80vw", objectFit: "contain" }}

@@ -34,7 +34,7 @@
 //             flexDirection: "column",
 //             m: "8ch auto",
 //             fontWeight: 500,
-//             backgroundImage: `url("${bgImage}")`,
+//             backgroundImage: { xs: "none",  md: `url("${bgImage}")` },
 //             backgroundSize: "cover",
 //             backgroundPosition: "center",
 //             height: "400px",
@@ -61,11 +61,11 @@
 //               flexDirection: "row",
 //               paddingLeft: 8
 //             }}>
-          
+
 //             <Typography>Home</Typography>
 //             <ChevronRightIcon />
 //             <Typography sx={{ color: "#F45050" }}>Infographics</Typography>
-          
+
 //         </Grid>
 //       </Grid>
 //       <Grid container spacing={2}>
