@@ -70,24 +70,24 @@ const ContactUs = () => {
         sx={{
           display: "flex",
           alignItems: "center",
+          justifyContent: "center",
           flexDirection: "column",
-          m: "8ch auto",
           fontWeight: 500,
+          minHeight: "40vh",
+          p: "2ch 2ch",
+          height: { xs: "auto", md: "60vh" },
           backgroundImage: { xs: "none", md: `url("${bgImage}")` },
-          backgroundSize: "cover",
+          backgroundSize: "contain",
           backgroundPosition: "center",
-          height: "300px",
+          backgroundRepeat: "no-repeat",
           position: "relative",
         }}
       >
-        <Box align="center">
-          <Typography variant="h1">Let’s take your business to new</Typography>
-          <Typography variant="h1" sx={{ mt: -1 }}>
-            heights
-          </Typography>
-        </Box>
-        <Box sx={{ my: 2, lineHeight: 1.7, fontSize: "18px" }} />
-        <Typography variant="body2" align="center">
+        <Typography variant="h1" align="center" maxWidth={"30ch"}>
+          Let’s take your business to new heights
+        </Typography>
+        <Box sx={{ my: 2, lineHeight: 1.7 }} />
+        <Typography variant="body2" align="center" fontSize="18px">
           Ready to take the next step in your business? No request is big or
           small for us. Get in touch with us today!
         </Typography>
@@ -188,7 +188,7 @@ const ContactUs = () => {
                   <Typography variant="h3">Contact</Typography>
                 </Stack>
                 <Typography>(+91) 9166549902</Typography>
-                <Typography>lakshman@exlval.com</Typography>
+                <Typography>value@exlval.com</Typography>
               </Stack>
               <Stack
                 sx={{
@@ -205,8 +205,8 @@ const ContactUs = () => {
                   />
                   <Typography variant="h3">Business Hours</Typography>
                 </Stack>
-                <Typography>Monday to Saturday, 10:00am - 6:00pm</Typography>
-                <Typography>Sunday, 10:00am - 3:00pm</Typography>
+                <Typography>Monday to Friday 10 am to 7:30pm</Typography>
+                <Typography>Saturday 10am to 2pm</Typography>
               </Stack>
             </Stack>
             <Box align="center" sx={{ my: 7 }} />
