@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { Box, Container, Stack, Typography, Grid, Link } from "@mui/material";
+import React, { useState, useEffect, useMemo } from "react";
+import { Link } from "react-router-dom";
+import { Box, Container, Stack, Typography, Grid } from "@mui/material";
 import Image from "../components/Image";
 import ContactForm from "../components/ContactForm";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
@@ -25,7 +26,10 @@ import { Helmet } from "react-helmet";
 
 const Blogs = () => {
   const location = useLocation();
-  const queryParams = new URLSearchParams(location.search);
+  const queryParams = useMemo(
+    () => new URLSearchParams(location.search),
+    [location.search]
+  );
 
   const [loading, setLoading] = useState(true);
   const [blogData, setBlogData] = useState([]);
@@ -57,7 +61,7 @@ const Blogs = () => {
         setLoading(false);
         console.log(err);
       });
-  }, [pageCount]);
+  }, [pageCount, queryParams]);
 
   const fetchBlogs = async (currentPage) => {
     let category = queryParams.get("category")
@@ -207,7 +211,7 @@ const Blogs = () => {
           >
             <Typography
               component={Link}
-              href={location.pathname}
+              to={location.pathname}
               variant="h6"
               sx={{
                 color:
@@ -221,7 +225,7 @@ const Blogs = () => {
             </Typography>
             <Typography
               component={Link}
-              href={`${location.pathname}?category=2`}
+              to={`${location.pathname}?category=2`}
               variant="h6"
               sx={{
                 color:
@@ -235,7 +239,7 @@ const Blogs = () => {
             </Typography>
             <Typography
               component={Link}
-              href={`${location.pathname}?category=3`}
+              to={`${location.pathname}?category=3`}
               variant="h6"
               sx={{
                 color:
@@ -249,7 +253,7 @@ const Blogs = () => {
             </Typography>
             <Typography
               component={Link}
-              href={`${location.pathname}?category=1`}
+              to={`${location.pathname}?category=1`}
               variant="h6"
               sx={{
                 color:
@@ -263,7 +267,7 @@ const Blogs = () => {
             </Typography>
             <Typography
               component={Link}
-              href={`${location.pathname}?category=5`}
+              to={`${location.pathname}?category=5`}
               variant="h6"
               sx={{
                 color:
@@ -277,7 +281,7 @@ const Blogs = () => {
             </Typography>
             <Typography
               component={Link}
-              href={`${location.pathname}?category=7`}
+              to={`${location.pathname}?category=7`}
               variant="h6"
               sx={{
                 color:
@@ -291,7 +295,7 @@ const Blogs = () => {
             </Typography>
             <Typography
               component={Link}
-              href={`${location.pathname}?category=9`}
+              to={`${location.pathname}?category=9`}
               variant="h6"
               sx={{
                 color:

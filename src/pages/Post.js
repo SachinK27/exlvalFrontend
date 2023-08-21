@@ -21,38 +21,45 @@ import PhoneIcon from "@mui/icons-material/Phone";
 import NewsLetterForm from "../components/NewsLetterForm";
 import axios from "axios";
 import loadingImg from "../assets/images/loading.gif";
+import { truncate } from "../utils/truncateString";
 
 const Post = () => {
   const { type, slug } = useParams();
   const [postData, setPostData] = useState();
   const [loading, setLoading] = useState(true);
-  const [coverImageUrl, setCoverImageUrl] = useState("")
+  const [coverImageUrl, setCoverImageUrl] = useState("");
 
   useEffect(() => {
     setLoading(true);
 
-    const getData = async()=> {
-      let res = await axios.get(`https://admin.exlval.com/api/${type}/${slug}`)
-      setPostData(res.data)
-      console.log(res.data)
-      if(type === "infographics"){
-        setCoverImageUrl(`https://admin.exlval.com/images/infographic_cover/${res.data.cover_img}`)
-      }else if(type === "article"){
-        setCoverImageUrl(`https://admin.exlval.com/images/post_cover/${res.data.cover_img}`)
-      }else if(type === 'case-studies'){
-        setCoverImageUrl(`https://admin.exlval.com/images/infographic_cover/${res.data.cover_img}`) 
+    const getData = async () => {
+      let res = await axios.get(`https://admin.exlval.com/api/${type}/${slug}`);
+      setPostData(res.data);
+      console.log(res.data);
+      if (type === "infographics") {
+        setCoverImageUrl(
+          `https://admin.exlval.com/images/infographic_cover/${res.data.cover_img}`
+        );
+      } else if (type === "article") {
+        setCoverImageUrl(
+          `https://admin.exlval.com/images/post_cover/${res.data.cover_img}`
+        );
+      } else if (type === "case-studies") {
+        setCoverImageUrl(
+          `https://admin.exlval.com/images/infographic_cover/${res.data.cover_img}`
+        );
       }
-      setLoading(false)
-    }
-    if(slug){
-      getData()
-    }else{
-      setLoading(true)
+      setLoading(false);
+    };
+    if (slug) {
+      getData();
+    } else {
+      setLoading(true);
     }
   }, [slug, type]);
 
   console.log(postData);
-  console.log(slug)
+  console.log(slug);
 
   return (
     <>
@@ -73,7 +80,7 @@ const Post = () => {
         </div>
       ) : (
         <>
-          <Grid container mt={7} padding={5}>
+          <Grid container padding={{ xs: 2, md: 5 }}>
             <Grid
               item
               xl={6}
@@ -90,7 +97,9 @@ const Post = () => {
               }}
             >
               <Typography sx={{ color: "#F45050" }}>05 May 2023</Typography>
-              <Typography variant="h2">{postData.title}</Typography>
+              <Typography fontSize={{ xs: "32px", md: "42px" }}>
+                {postData.title}
+              </Typography>
             </Grid>
             <Grid
               item
@@ -112,7 +121,7 @@ const Post = () => {
                 style={{
                   width: "80%",
                   height: "auto",
-                  borderRadius: "50px",
+                  borderRadius: "1rem",
                 }}
               />
             </Grid>
@@ -136,8 +145,7 @@ const Post = () => {
               <Typography>{type}</Typography>
               <ChevronRightIcon />
               <Typography sx={{ color: "#F45050" }}>
-                {" "}
-                {postData.title}
+                {truncate(postData.title, 20)}
               </Typography>
             </Grid>
             <Grid
@@ -152,8 +160,8 @@ const Post = () => {
               sx={{
                 display: "flex",
                 flexDirection: "column",
-                paddingLeft: "20%",
-                paddingRight: "20%",
+                paddingLeft: { xs: "5%", md: "10%" },
+                paddingRight: { xs: "5%", md: "10%" },
               }}
             >
               {Parser().parse(postData.content)}
@@ -182,11 +190,13 @@ const Post = () => {
               xs={12}
               align={"center"}
               mb={10}
-              sx={{
-                // display: "flex",
-                // flexDirection: "row",
-                // alignItems: "center",
-              }}
+              sx={
+                {
+                  // display: "flex",
+                  // flexDirection: "row",
+                  // alignItems: "center",
+                }
+              }
             >
               <NewsLetterForm />
             </Grid>

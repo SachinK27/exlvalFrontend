@@ -36,11 +36,14 @@ import WebDevelopment from "./pages/WebDevelopment";
 import WebDesign from "./pages/WebDesign";
 import Post from "./pages/Post";
 import { Toaster } from "react-hot-toast";
+import Opening from "./pages/Opening";
+import Audit from "./components/Audit";
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Toaster />
+      <Audit />
       <NavbarTest2 />
       <BrowserRouter>
         <Routes>
@@ -88,6 +91,7 @@ const App = () => {
             element={<BusinessConsultancy />}
           />
           <Route path="/career" element={<Career />} />
+          <Route path="/career/:id" element={<Opening />} />
           <Route path="/sticky" element={<Sticky />} />
         </Routes>
       </BrowserRouter>

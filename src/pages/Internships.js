@@ -25,12 +25,30 @@ import { PanTool, PanToolAlt } from "@mui/icons-material";
 import { Helmet } from "react-helmet";
 
 const iconsData = [
-  { icon: icon1, text: "Valuable Experience" },
-  { icon: icon2, text: "Networking Opportunities" },
-  { icon: icon3, text: "Resume Enhancement" },
-  { icon: icon4, text: "Personal & Professional Growth" },
-  { icon: icon4, text: "Potential Career Opportunities" },
-  { icon: icon4, text: "Job Recommendations" },
+  {
+    icon: "/images/internship/valuable-experience.png",
+    text: "Valuable Experience",
+  },
+  {
+    icon: "/images/internship/opportunities.png",
+    text: "Networking Opportunities",
+  },
+  {
+    icon: "/images/internship/resume-enhancement.png",
+    text: "Resume Enhancement",
+  },
+  {
+    icon: "/images/internship/growth.png",
+    text: "Personal & Professional Growth",
+  },
+  {
+    icon: "/images/internship/opportunities.png",
+    text: "Potential Career Opportunities",
+  },
+  {
+    icon: "/images/internship/job-recommendations.png",
+    text: "Job Recommendations",
+  },
 ];
 const Internships = () => {
   const parentRef = useRef(null);

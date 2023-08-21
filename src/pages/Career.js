@@ -8,6 +8,7 @@ import {
   Typography,
   IconButton,
 } from "@mui/material";
+import { LocationOn, AccessTime } from "@mui/icons-material";
 import mascot5 from "../assets/images/Mascot 5.svg";
 import Image from "../components/Image";
 import ContactForm from "../components/ContactForm";
@@ -19,9 +20,11 @@ import icon2 from "../assets/images/Career - Opportunity to upskill.png";
 import icon3 from "../assets/images/Career - Annual leaves and holidays.png";
 import icon4 from "../assets/images/Career - Gain market knowledge.png";
 import bgImage from "../assets/images/Hero bg image.png";
+import jobs from "../jobs.json";
 
 import "./Sticky.css";
 import { Helmet } from "react-helmet";
+import { Link } from "react-router-dom";
 
 const iconsData = [
   { icon: icon1, text: "Fun, friendly and learning-based culture" },
@@ -221,6 +224,75 @@ const Career = () => {
               <Box ref={joinOpeningsRef} sx={{ my: 5 }}>
                 <UnderlinedText>Join Openings</UnderlinedText>
               </Box>
+
+              <Stack>
+                {jobs.jobs.map((job) => {
+                  return (
+                    <Box
+                      key={job.id}
+                      sx={{
+                        border: "2px solid #F9D949",
+                        borderRadius: "1rem",
+                        padding: "2rem",
+                        display: "flex",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <Stack spacing={2}>
+                        <Typography fontWeight={"500"} fontSize="24px">
+                          {job.role}
+                        </Typography>
+                        <Box
+                          sx={{
+                            display: "flex",
+                          }}
+                        >
+                          <Box
+                            sx={{
+                              display: "flex",
+                              justifyContent: "center",
+                              alignItems: "center",
+                            }}
+                          >
+                            <LocationOn color={"#F45050"} />
+                            <Typography>Remote</Typography>
+                          </Box>
+                          <Box
+                            sx={{
+                              ml: 2,
+                              display: "flex",
+                              justifyContent: "center",
+                              alignItems: "center",
+                            }}
+                          >
+                            <AccessTime color={"#F45050"} />
+                            <Typography>Full Time</Typography>
+                          </Box>
+                        </Box>
+                      </Stack>
+                      <Stack spacing={2}>
+                        <Typography>{2} Openings</Typography>
+                        <Typography
+                          component={Link}
+                          to={`/career/${job.id}`}
+                          sx={{
+                            backgroundColor: "#F9D949",
+                            p: "1ch 2ch",
+                            borderRadius: "10px",
+                            "&:hover": {
+                              backgroundColor: "#F9E949",
+                            },
+                            color: "#2B2B2B",
+                            fontWeight: "500",
+                          }}
+                        >
+                          Apply
+                        </Typography>
+                      </Stack>
+                    </Box>
+                  );
+                })}
+              </Stack>
             </Container>
           </Grid>
         </Grid>

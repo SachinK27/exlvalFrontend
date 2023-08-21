@@ -34,7 +34,6 @@ function Footer(props) {
           position: "relative",
           maxWidth: "100vw !important",
           color: "#fff",
-          
         }}
       >
         <Grid
@@ -126,7 +125,7 @@ function Footer(props) {
                     Search Enginer Optimization
                   </Typography>
                 </Link>
-                <Typography variant="body1">Scocial Media Marketing</Typography>
+                <Typography variant="body1">social Media Marketing</Typography>
                 <Typography variant="body1">Perfomance Marketing</Typography>
                 <Typography variant="body1">Influencer Marketing</Typography>
                 <Typography variant="body1">
