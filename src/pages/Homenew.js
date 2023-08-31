@@ -277,35 +277,95 @@ const Homefixed = () => {
 
       <Grid container mb={30} sx={{ my: 10 }}>
         <Grid lg={12} md={12} sm={12}>
-          <div className="bubble_div">
-            <img src={bubble1} className="first_bubble" alt="first_bubble" />
+          <Box
+            sx={{
+              height: "80vh",
+              backgroundImage: `url(${mascot})`,
+              backgroundSize: { xs: "50%", lg: "contain" },
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center",
+            }}
+            className="bubble_div"
+          >
+            <Box
+              sx={{
+                position: "absolute",
+                top: { xs: "20%", lg: 0 },
+                left: { xs: "5%", lg: "30%" },
+                width: "max-content",
+                height: "max-content",
+                p: "2rem .5rem",
+                backgroundImage: `url(${bubble1})`,
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "fill",
+              }}
+              // className="bubble_div_text1"
+            >
+              <Typography fontSize={{ xs: "0.8rem", lg: "1rem" }}>
+                Hey, wonderful humans!
+                <br /> &emsp;&emsp;I’m ExlWiz.
+                <br /> I’ll be your host here!
+              </Typography>
+            </Box>
 
-            <p className="bubble_div_text1">
-              Hey, wonderful humans!
-              <br /> &emsp;&emsp;I’m ExlWiz.
-              <br /> I’ll be your host here!
-            </p>
+            <Box
+              sx={{
+                position: "absolute",
+                bottom: { xs: "10%", lg: "10%" },
+                left: { xs: "10%", lg: "20%" },
+                width: "max-content",
+                height: "max-content",
+                p: "2rem 1rem",
+                backgroundImage: `url(${bubble2})`,
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "fill",
+              }}
+              // className="bubble_div_text2"
+            >
+              <Typography
+                sx={{ rotate: "10deg" }}
+                fontSize={{ xs: "0.8rem", lg: "1rem" }}
+              >
+                &ensp; I’ll be the one to guide you <br />
+                &ensp; through the site of Exlval. <br />
+                So, be ready to discover the <br />
+                &emsp; spells for your growth, <br />
+                &emsp;&emsp;&emsp;curated by us!
+              </Typography>
+            </Box>
 
-            <img src={bubble2} className="second_bubble" alt="first_bubble" />
-            <p className="bubble_div_text2">
-              &ensp; I’ll be the one to guide you <br />
-              &ensp; through the site of Exlval. <br />
-              So, be ready to discover the <br />
-              &emsp; spells for your growth, <br />
-              &emsp;&emsp;&emsp;curated by us!
-            </p>
+            {/* <img src={mascot} className="bubble_mascot" alt="first_bubble" /> */}
 
-            <img src={mascot} className="bubble_mascot" alt="first_bubble" />
+            <Box
+              sx={{
+                position: "absolute",
+                top: { xs: "15%", lg: "10%" },
+                right: { xs: 0, lg: "20%" },
+                width: "max-content",
+                height: "max-content",
+                p: { xs: "2rem 1rem", lg: "4rem 1rem" },
+                backgroundImage: `url(${bubble3})`,
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "fill",
+              }}
+              // className="bubble_div_text3"
+            >
+              <Typography
+                sx={{ rotate: "10deg" }}
+                fontSize={{ xs: "0.6rem", lg: "1rem" }}
+              >
+                &emsp;A personal tip from me, keep
+                <br /> your dreams and desires in mind,
+                <br />
+                &emsp; for they shall come true with <br />
+                &emsp;&emsp;&emsp;&emsp;&emsp;Exlval.
+              </Typography>
+            </Box>
 
-            <img src={bubble3} className="third_bubble" alt="first_bubble" />
-            <p className="bubble_div_text3">
-              &emsp;A personal tip from me, keep
-              <br /> your dreams and desires in mind,
-              <br />
-              &emsp; for they shall come true with <br />
-              &emsp;&emsp;&emsp;&emsp;&emsp;Exlval.
-            </p>
-          </div>
+            {/* <img src={bubble1} className="first_bubble" alt="first_bubble" /> */}
+            {/* <img src={bubble2} className="second_bubble" alt="first_bubble" /> */}
+            {/* <img src={bubble3} className="third_bubble" alt="first_bubble" /> */}
+          </Box>
         </Grid>
 
         <Box sx={{ display: "flex", justifyContent: "center" }}></Box>

@@ -190,13 +190,21 @@ const ContactForm = () => {
             What are you interested in?
           </MenuItem>
           <MenuItem value={"seo"}>SEO</MenuItem>
-          <MenuItem value={"social media"}>Social Media</MenuItem>
-          <MenuItem value={"influencer marketing"}>
+          <MenuItem value={"digital-marketing"}>Digital Marketing</MenuItem>
+          <MenuItem value={"social-media-marketing"}>
+            Social Media Marketing
+          </MenuItem>
+          <MenuItem value={"influencer-marketing"}>
             Influencer Marketing
           </MenuItem>
-          <MenuItem value={"orm"}>Influencer Marketing</MenuItem>
+          <MenuItem value={"performance-marketing"}>
+            Performance Marketing
+          </MenuItem>
+          <MenuItem value={"content-marketing"}>Content Marketing</MenuItem>
           <MenuItem value={"branding"}>Branding</MenuItem>
-          <MenuItem value={"website"}>Website</MenuItem>
+          <MenuItem value={"graphic-design"}>Graphic Design</MenuItem>
+          <MenuItem value={"ui-ux"}>UI/UX</MenuItem>
+          <MenuItem value={"website"}>Website Development</MenuItem>
         </CSelect>
       </FormControl>
       <Box sx={{ my: 3 }} />

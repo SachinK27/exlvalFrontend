@@ -145,7 +145,7 @@ const Career = () => {
         ref={parentRef}
         sx={{ pt: 7, maxWidth: "100vw !important", fontSize: "18px" }}
       >
-        <Grid container sx={{ px: 5 }}>
+        <Grid container sx={{ px: { sm: 2, lg: 5 } }}>
           <Grid
             item
             sm={12}
@@ -235,6 +235,7 @@ const Career = () => {
                         borderRadius: "1rem",
                         padding: "2rem",
                         display: "flex",
+                        flexDirection: { xs: "column", md: "row" },
                         justifyContent: "space-between",
                       }}
                     >
@@ -270,8 +271,9 @@ const Career = () => {
                           </Box>
                         </Box>
                       </Stack>
+
                       <Stack spacing={2}>
-                        <Typography>{2} Openings</Typography>
+                        <Typography sx={{ px: 2 }}>{2} Openings</Typography>
                         <Typography
                           component={Link}
                           to={`/career/${job.id}`}

@@ -257,6 +257,7 @@ const AboutUs = () => {
         </Grid>
       </Box>
       <Box sx={{ my: "7ch" }} />
+
       <Box sx={{ maxWidth: "100vw !important" }}>
         <Box sx={{ width: "100%" }}>
           <Box sx={{ px: 5 }}>
@@ -371,6 +372,7 @@ const AboutUs = () => {
 
           {/* </Stack> */}
         </Box>
+
         <Box sx={{ my: 7 }} />
         <Grid container>
           <Grid

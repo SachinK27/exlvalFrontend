@@ -89,7 +89,12 @@ const Blogs = () => {
   };
 
   return (
-    <Grid container padding={{ xs: 2, md: 5 }}>
+    <Container
+      sx={{
+        p: 0,
+        m: "auto",
+      }}
+    >
       <Helmet>
         <meta charSet="utf-8" />
         <title>Exlval Digital Marketing Blog</title>
@@ -139,6 +144,7 @@ const Blogs = () => {
       >
         <NewsLetterForm />
       </Container>
+
       <Grid container mt={5}>
         <Grid
           item
@@ -161,7 +167,8 @@ const Blogs = () => {
           </Typography>
         </Grid>
       </Grid>
-      <Grid container spacing={2} mb={10} align={"center"} mt={5}>
+
+      <Grid container px={"1rem"} spacing={2} mb={10} align={"center"} mt={5}>
         <Grid item xl={2} lg={2} md={2} sm={12} xs={12} align={"center"}></Grid>
         <Grid item xl={8} lg={8} md={8} sm={12} xs={12} align={"center"}>
           <Container
@@ -196,17 +203,20 @@ const Blogs = () => {
         </Grid>
         <Grid item xl={2} lg={2} md={2} sm={12} xs={12} align={"center"}></Grid>
       </Grid>
-      <Grid container spacing={2} mb={10} align={"center"} mt={5}>
+
+      <Grid container px={"1rem"} spacing={2} mb={10} align={"center"} mt={5}>
         <Grid item xl={2} lg={2} md={2} sm={12} xs={12} align={"center"}></Grid>
         <Grid item xl={8} lg={8} md={8} sm={12} xs={12} align={"center"}>
           <Box
             sx={{
               display: "flex",
               flexDirection: "row",
-              justifyContent: "space-between",
-              "@media (max-width: 959.95px)": {
-                flexDirection: "column",
-              },
+              justifyContent: "center",
+              flexWrap: "wrap",
+              gap: "1rem",
+              // "@media (max-width: 959.95px)": {
+              //   flexDirection: "column",
+              // },
             }}
           >
             <Typography
@@ -311,6 +321,7 @@ const Blogs = () => {
         </Grid>
         <Grid item xl={2} lg={2} md={2} sm={12} xs={12} align={"center"}></Grid>
       </Grid>
+
       <Grid container spacing={2} mt={5}>
         <Grid container justifyContent="space-between">
           <Grid
@@ -370,6 +381,7 @@ const Blogs = () => {
           </Grid>
         </Grid>
       </Grid>
+
       <Grid
         item
         align={"center"}
@@ -398,41 +410,30 @@ const Blogs = () => {
           activeClassName={"active-page"}
         />
       </Grid>
-      <Grid container sx={{ my: "80px" }}>
+
+      <Grid container>
         <Grid
           item
+          xl={5.5}
+          lg={5.5}
+          md={5.5}
           sm={12}
           xs={12}
-          md={6}
-          lg={6}
           align="center"
-          justifyContent="center"
-          // sx={{width:"100%"}}
+          sx={{ display: { xs: "none", md: "block" } }}
         >
           <Image
             src={mascot}
-            objectFit="contain"
-            sx={{ mt: "8vh", width: "100%", transform: "scale(1)" }}
+            style={{ height: "70vh", maxWidth: "80vw", objectFit: "contain" }}
           />
         </Grid>
-        <Grid
-          item
-          sm={12}
-          xs={12}
-          md={6}
-          lg={6}
-          align="center"
-          // sx={{width:"100%"}}
-        >
-          <Container
-            align="center"
-            sx={{ width: "100%", justifyContent: "center" }}
-          >
+        <Grid item xl={6.5} lg={6.5} md={6.5} sm={12} xs={12}>
+          <Container sx={{ width: "100%" }}>
             <ContactForm />
           </Container>
         </Grid>
       </Grid>
-    </Grid>
+    </Container>
   );
 };
 
