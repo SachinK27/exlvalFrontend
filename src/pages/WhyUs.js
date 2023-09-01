@@ -48,7 +48,12 @@ const WhyUs = () => {
     };
   }, []);
   return (
-    <Grid>
+    <Container
+      sx={{
+        p: 0,
+        m: "auto",
+      }}
+    >
       <Helmet>
         <meta charSet="utf-8" />
         <title>Exlval: Your Digital Marketing Partner</title>
@@ -105,18 +110,20 @@ const WhyUs = () => {
       >
         <Grid
           container
-          sx={{
-            px: 5,
-            "@media (max-width: 959.95px)": {
-              px: 2,
-            },
-          }}
+          sx={
+            {
+              // px: 2,
+              // "@media (max-width: 959.95px)": {
+              //   px: 2,
+              // },
+            }
+          }
         >
           <Grid
             item
             sm={12}
-            md={5}
-            lg={5}
+            md={5.5}
+            lg={5.5}
             display={{ xs: "none", sm: "none", md: "block", lg: "block" }}
             style={{ position: "relative" }}
           >
@@ -127,7 +134,8 @@ const WhyUs = () => {
               ref={mascotRef}
             />
           </Grid>
-          <Grid item sm={12} md={6} lg={7}>
+
+          <Grid item sm={12} md={6.5} lg={6.5}>
             <Container>
               {/* <Box sx={{ mb: "20px" }}>
                 <UnderlinedText>Heading - H2 title</UnderlinedText>
@@ -404,7 +412,7 @@ const WhyUs = () => {
           </Grid>
         </Grid>
       </Container>
-    </Grid>
+    </Container>
   );
 };
 

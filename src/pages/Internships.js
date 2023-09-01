@@ -99,7 +99,12 @@ const Internships = () => {
   };
 
   return (
-    <Grid>
+    <Container
+      sx={{
+        p: 0,
+        m: "auto",
+      }}
+    >
       <Helmet>
         <meta charSet="utf-8" />
         <title>Exlval: Offers Opportunities To Learn and Grow</title>
@@ -171,18 +176,18 @@ const Internships = () => {
       >
         <Grid
           container
-          sx={{
-            px: 5,
-            "@media (max-width: 959.95px)": {
-              px: 0,
-            },
-          }}
+          // sx={{
+          //   px: 5,
+          //   "@media (max-width: 959.95px)": {
+          //     px: 0,
+          //   },
+          // }}
         >
           <Grid
             item
             sm={12}
-            md={5}
-            lg={5}
+            md={5.5}
+            lg={5.5}
             display={{ xs: "none", sm: "none", md: "block", lg: "block" }}
             style={{ position: "relative" }}
           >
@@ -193,7 +198,8 @@ const Internships = () => {
               ref={mascotRef}
             />
           </Grid>
-          <Grid item sm={12} md={6} lg={7}>
+
+          <Grid item sm={12} md={6.5} lg={6.5}>
             <Container>
               <Typography variant="body1" sx={{ mb: 2 }} fontSize="18px">
                 Ignite your digital marketing passion and fuel your career
@@ -294,22 +300,13 @@ const Internships = () => {
               ))}
             </Grid>
 
-            <Container
-              ref={contactFormRef}
-              sx={{
-                width: "90%",
-                mb: 5,
-                "@media (max-width: 959.95px)": {
-                  width: "100%",
-                },
-              }}
-            >
+            <Container sx={{ width: "100%" }}>
               <ContactForm />
             </Container>
           </Grid>
         </Grid>
       </Container>
-    </Grid>
+    </Container>
   );
 };
 

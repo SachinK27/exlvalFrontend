@@ -107,13 +107,15 @@ const ContactUs = () => {
         <Grid
           container
           ref={parentRef}
-          sx={{
-            px: 5,
-            maxWidth: "100vw",
-            "@media (max-width: 959.95px)": {
-              px: 0,
-            },
-          }}
+          sx={
+            {
+              // px: 5,
+              // maxWidth: "100vw",
+              // "@media (max-width: 959.95px)": {
+              //   px: 0,
+              // },
+            }
+          }
         >
           <Grid
             item
