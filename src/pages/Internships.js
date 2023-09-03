@@ -99,11 +99,11 @@ const Internships = () => {
   };
 
   return (
-    <Container
-      sx={{
-        p: 0,
-        m: "auto",
-      }}
+    <Box
+    // sx={{
+    //   p: 0,
+    //   m: "auto",
+    // }}
     >
       <Helmet>
         <meta charSet="utf-8" />
@@ -170,8 +170,8 @@ const Internships = () => {
         ref={parentRef}
         sx={{
           pt: 7,
-          maxWidth: "100vw !important",
-          fontSize: "18px",
+          // maxWidth: "100vw !important",
+          // fontSize: "18px",
         }}
       >
         <Grid
@@ -306,7 +306,7 @@ const Internships = () => {
           </Grid>
         </Grid>
       </Container>
-    </Container>
+    </Box>
   );
 };
 

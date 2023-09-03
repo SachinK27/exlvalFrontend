@@ -10,11 +10,11 @@ import { Helmet } from "react-helmet";
 
 const OurJourney = () => {
   return (
-    <Container
-      sx={{
-        p: 0,
-        m: "auto",
-      }}
+    <Box
+    // sx={{
+    //   p: 0,
+    //   m: "auto",
+    // }}
     >
       <Helmet>
         <meta charSet="utf-8" />
@@ -148,29 +148,34 @@ const OurJourney = () => {
       </Box>
 
       <Box sx={{ my: 7 }} />
-      <Grid container>
-        <Grid
-          item
-          xl={5.5}
-          lg={5.5}
-          md={5.5}
-          sm={12}
-          xs={12}
-          align="center"
-          sx={{ display: { xs: "none", md: "block" } }}
-        >
-          <Image
-            src={mascot3}
-            style={{ height: "70vh", maxWidth: "80vw", objectFit: "contain" }}
-          />
+
+      <Container>
+        <Grid container>
+          <Grid
+            item
+            xl={5.5}
+            lg={5.5}
+            md={5.5}
+            sm={12}
+            xs={12}
+            align="center"
+            sx={{ display: { xs: "none", md: "block" } }}
+          >
+            <Image
+              src={mascot3}
+              style={{ height: "70vh", maxWidth: "80vw", objectFit: "contain" }}
+            />
+          </Grid>
+          <Grid item xl={6.5} lg={6.5} md={6.5} sm={12} xs={12}>
+            <Container
+            // sx={{ width: "100%" }}
+            >
+              <ContactForm />
+            </Container>
+          </Grid>
         </Grid>
-        <Grid item xl={6.5} lg={6.5} md={6.5} sm={12} xs={12}>
-          <Container sx={{ width: "100%" }}>
-            <ContactForm />
-          </Container>
-        </Grid>
-      </Grid>
-    </Container>
+      </Container>
+    </Box>
   );
 };
 export default OurJourney;

@@ -634,26 +634,26 @@ const PerformanceMarketingService = () => {
       <Container
         sx={{
           pt: 7,
-          maxWidth: "100vw !important",
-          fontSize: "18px",
+          // maxWidth: "100vw !important",
+          // fontSize: "18px",
         }}
       >
         <Grid
           ref={parentRef}
           container
-          sx={{
-            px: 5,
-            maxWidth: "100vw",
-            "@media (max-width: 959.95px)": {
-              px: 0,
-            },
-          }}
+          // sx={{
+          //   px: 5,
+          //   maxWidth: "100vw",
+          //   "@media (max-width: 959.95px)": {
+          //     px: 0,
+          //   },
+          // }}
         >
           <Grid
             item
             sm={12}
-            md={4.5}
-            lg={4.5}
+            md={5.5}
+            lg={5.5}
             display={{ xs: "none", sm: "none", md: "block", lg: "block" }}
             style={{ position: "relative" }}
           >
@@ -664,7 +664,7 @@ const PerformanceMarketingService = () => {
               ref={mascotRef}
             />
           </Grid>
-          <Grid item sm={12} md={7.5} lg={7.5} sx={{ maxWidth: "100%" }}>
+          <Grid item sm={12} md={6.5} lg={6.5} sx={{ maxWidth: "100%" }}>
             <Box>
               <UnderlinedText>
                 <Typography
@@ -690,6 +690,7 @@ const PerformanceMarketingService = () => {
                 ))}
               </Grid>
             </Box>
+
             <Box my={7} />
             <Box
               sx={{
@@ -709,7 +710,6 @@ const PerformanceMarketingService = () => {
                 </Typography>
               </UnderlinedText>
               <Box sx={{ my: 4 }} />
-
               <Grid container spacing={2} sx={{ my: 5 }}>
                 {iconsData.map((item, index) => (
                   <Grid
@@ -730,6 +730,7 @@ const PerformanceMarketingService = () => {
                 ))}
               </Grid>
             </Box>
+
             <Box my={10} />
             <Box>
               <UnderlinedText>
@@ -766,7 +767,7 @@ const PerformanceMarketingService = () => {
             <Box my={10} />
             <Container
               sx={{
-                width: "90%",
+                // width: "90%",
                 mb: 5,
                 "@media (max-width: 959.95px)": {
                   width: "100%",

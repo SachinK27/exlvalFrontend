@@ -290,7 +290,7 @@ const Homefixed = () => {
             <Box
               sx={{
                 position: "absolute",
-                top: { xs: "20%", lg: 0 },
+                top: { xs: "10%", sm: "20%", lg: 0 },
                 left: { xs: "5%", lg: "30%" },
                 width: "max-content",
                 height: "max-content",
@@ -311,7 +311,7 @@ const Homefixed = () => {
             <Box
               sx={{
                 position: "absolute",
-                bottom: { xs: "10%", lg: "10%" },
+                bottom: { xs: 0, sm: "10%", lg: "10%" },
                 left: { xs: "10%", lg: "20%" },
                 width: "max-content",
                 height: "max-content",
@@ -339,7 +339,7 @@ const Homefixed = () => {
             <Box
               sx={{
                 position: "absolute",
-                top: { xs: "15%", lg: "10%" },
+                top: { xs: "10%", sm: "15%", lg: "10%" },
                 right: { xs: 0, lg: "20%" },
                 width: "max-content",
                 height: "max-content",
@@ -372,7 +372,7 @@ const Homefixed = () => {
       </Grid>
 
       <Box ref={parentRef} sx={{ maxWidth: "100vw !important" }}>
-        <Grid container>
+        <Grid container sx={{ pb: 6 }}>
           <Grid
             item
             xs={12}
@@ -420,7 +420,6 @@ const Homefixed = () => {
             </Box>
 
             <Box sx={{ my: 4 }} />
-
             <Grid
               container
               spacing={2}
@@ -494,7 +493,6 @@ const Homefixed = () => {
             </Box>
 
             <Box sx={{ my: 10 }} />
-
             <Box>
               {/* Responsive Code Added */}
               <Box
@@ -616,7 +614,6 @@ const Homefixed = () => {
             </Box>
 
             <Box sx={{ my: 10 }} />
-
             <Box>
               {/* Responsive Code Added */}
               <Box
@@ -632,74 +629,6 @@ const Homefixed = () => {
               </Box>
 
               <Box sx={{ my: 7 }} />
-
-              {/* <Carousel2
-                cards={[
-                  {
-                    image:
-                      "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50",
-                    text1: `“Exlval has a friendly team — they do what is required and
-                deliver quality work on time.”`,
-                    text2: `Exlval developed and designed my website, and they’re working on
-                creating content for it. In addition, most of the online tasks
-                are handled by them, including social media management, SEO, and
-                paid ads.`,
-                    text3: `Exlval has assigned us different team members for all the
-                services they’re providing, including for content, SEO, design,
-                and social media. Their project management is good; Exlval is
-                always available when I need them.`,
-                  },
-                  {
-                    image:
-                      "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50",
-                    text1: `“Their personal attention and fast delivery 
-were Impressive.”`,
-                    text2: `I have Opted. Exlval for A neat and clean 
-website on time. As the owner of Exlval, 
-Lakshman Sharma was in known of me. Then 
-we started for Website Development and 
-secondly we started for Search Engine 
-Optimization.`,
-                    text3: `Must say very nice research and execution and 
-also very professional and good coordination in 
-between different teams. Their personal 
-attention and fast delivery were impressive. 
-Keep it up Exlval!`,
-                  },
-                  {
-                    image:
-                      "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50",
-                    text1: `“Exlval has a friendly team — they do what is required and
-                deliver quality work on time.”`,
-                    text2: `Exlval developed and designed my website, and they’re working on
-                creating content for it. In addition, most of the online tasks
-                are handled by them, including social media management, SEO, and
-                paid ads.`,
-                    text3: `Exlval has assigned us different team members for all the
-                services they’re providing, including for content, SEO, design,
-                and social media. Their project management is good; Exlval is
-                always available when I need them.`,
-                  },
-                  {
-                    image:
-                      "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50",
-                    text1: `“Their personal attention and fast delivery 
-were Impressive.”`,
-                    text2: `I have Opted. Exlval for A neat and clean 
-website on time. As the owner of Exlval, 
-Lakshman Sharma was in known of me. Then 
-we started for Website Development and 
-secondly we started for Search Engine 
-Optimization.`,
-                    text3: `Must say very nice research and execution and 
-also very professional and good coordination in 
-between different teams. Their personal 
-attention and fast delivery were impressive. 
-Keep it up Exlval!`,
-                  },
-                ]}
-              /> */}
-
               <Imagecarousel />
             </Box>
 

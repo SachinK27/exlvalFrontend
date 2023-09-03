@@ -109,10 +109,10 @@ const SEO = () => {
   }, []);
   return (
     <Box
-      sx={{
-        p: 0,
-        m: "auto",
-      }}
+    // sx={{
+    //   p: 0,
+    //   m: "auto",
+    // }}
     >
       <Container
         sx={{
@@ -561,26 +561,16 @@ const SEO = () => {
       <Container
         sx={{
           pt: 7,
-          maxWidth: "100vw !important",
-          fontSize: "18px",
+          // maxWidth: "100vw !important",
+          // fontSize: "18px",
         }}
       >
-        <Grid
-          ref={parentRef}
-          container
-          sx={{
-            px: 5,
-            maxWidth: "100vw",
-            "@media (max-width: 959.95px)": {
-              px: 0,
-            },
-          }}
-        >
+        <Grid ref={parentRef} container>
           <Grid
             item
             sm={12}
-            md={4.5}
-            lg={4.5}
+            md={5.5}
+            lg={5.5}
             display={{ xs: "none", sm: "none", md: "block", lg: "block" }}
             style={{ position: "relative" }}
           >
@@ -591,7 +581,8 @@ const SEO = () => {
               ref={mascotRef}
             />
           </Grid>
-          <Grid item sm={12} md={7.5} lg={7.5} sx={{ maxWidth: "100%" }}>
+
+          <Grid item sm={12} md={6.5} lg={6.5} sx={{ maxWidth: "100%" }}>
             <Box>
               <UnderlinedText>
                 <Typography
@@ -617,6 +608,7 @@ const SEO = () => {
                 ))}
               </Grid>
             </Box>
+
             <Box my={7} />
             <Box>
               <UnderlinedText>
@@ -651,6 +643,7 @@ const SEO = () => {
                 ))}
               </Grid>
             </Box>
+
             <Box my={10} />
             <Box>
               <UnderlinedText>
@@ -687,7 +680,7 @@ const SEO = () => {
             <Box my={10} />
             <Container
               sx={{
-                width: "90%",
+                // width: "90%",
                 mb: 5,
                 "@media (max-width: 959.95px)": {
                   width: "100%",

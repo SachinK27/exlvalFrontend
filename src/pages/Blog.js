@@ -411,7 +411,7 @@ const Blogs = () => {
         />
       </Grid>
 
-      <Grid container>
+      <Grid container sx={{ pt: 7 }}>
         <Grid
           item
           xl={5.5}
