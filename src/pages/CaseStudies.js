@@ -276,6 +276,7 @@ const CaseStudies = () => {
             </Grid>
           </Grid>
         </Grid>
+
         <Grid
           container
           spacing={2}
@@ -284,40 +285,48 @@ const CaseStudies = () => {
           }}
         ></Grid>
 
-        <Grid container sx={{ my: "80px" }}>
-          <Grid
-            item
-            sm={12}
-            xs={12}
-            md={6}
-            lg={6}
-            align="center"
-            justifyContent="center"
-            sx={{ display: { xs: "none", md: "block" } }}
-          >
-            <Image
-              src={mascot}
-              objectFit="contain"
-              sx={{ mt: "8vh", width: "100%", transform: "scale(1)" }}
-            />
-          </Grid>
-          <Grid
-            item
-            sm={12}
-            xs={12}
-            md={6}
-            lg={6}
-            align="center"
-            // sx={{width:"100%"}}
-          >
-            <Container
+        <Container>
+          <Grid container sx={{ my: "80px" }}>
+            <Grid
+              item
+              sm={12}
+              xs={12}
+              md={5.5}
+              lg={5.5}
               align="center"
-              sx={{ width: { xs: "98%", md: "95%" }, justifyContent: "center" }}
+              justifyContent="center"
+              sx={{ display: { xs: "none", md: "block" } }}
             >
-              <ContactForm />
-            </Container>
+              <Image
+                src={mascot}
+                objectFit="contain"
+                sx={{ mt: "8vh", width: "100%", transform: "scale(1)" }}
+              />
+            </Grid>
+
+            <Grid
+              item
+              sm={12}
+              xs={12}
+              md={6.5}
+              lg={6.5}
+              // align="center"
+              // sx={{width:"100%"}}
+            >
+              <Container
+                // align="center"
+                sx={
+                  {
+                    // width: { xs: "98%", md: "95%" },
+                    // justifyContent: "center",
+                  }
+                }
+              >
+                <ContactForm />
+              </Container>
+            </Grid>
           </Grid>
-        </Grid>
+        </Container>
       </Grid>
 
       {/* <div

@@ -48,11 +48,11 @@ const WhyUs = () => {
     };
   }, []);
   return (
-    <Container
-      sx={{
-        p: 0,
-        m: "auto",
-      }}
+    <Box
+    // sx={{
+    //   p: 0,
+    //   m: "auto",
+    // }}
     >
       <Helmet>
         <meta charSet="utf-8" />
@@ -106,18 +106,16 @@ const WhyUs = () => {
 
       <Container
         ref={parentRef}
-        sx={{ pt: 7, maxWidth: "100vw !important", fontSize: "18px" }}
+        // sx={{ pt: 7, maxWidth: "100vw !important", fontSize: "18px" }}
       >
         <Grid
           container
-          sx={
-            {
-              // px: 2,
-              // "@media (max-width: 959.95px)": {
-              //   px: 2,
-              // },
-            }
-          }
+          sx={{
+            px: 2,
+            // "@media (max-width: 959.95px)": {
+            //   px: 2,
+            // },
+          }}
         >
           <Grid
             item
@@ -406,13 +404,14 @@ const WhyUs = () => {
                 </Typography>
               </Box>
             </Box>
+
             <Container sx={{ width: "100%", mb: 5, px: 0 }}>
               <ContactForm />
             </Container>
           </Grid>
         </Grid>
       </Container>
-    </Container>
+    </Box>
   );
 };
 

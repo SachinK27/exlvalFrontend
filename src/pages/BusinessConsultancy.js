@@ -125,42 +125,43 @@ const BusinessConsultancy = () => {
         </Stack>
       </Grid>
 
-      <Grid
-        ref={parentRef}
-        container
-        sx={{
-          px: 5,
-          maxWidth: "100vw",
-          "@media (max-width: 959.95px)": {
-            px: 0,
-          },
-        }}
-      >
+      <Container>
         <Grid
-          item
-          sm={12}
-          md={5.5}
-          lg={5.5}
-          display={{ xs: "none", sm: "none", md: "block", lg: "block" }}
-          style={{ position: "relative" }}
+          ref={parentRef}
+          container
+          // sx={{
+          //   px: 5,
+          //   maxWidth: "100vw",
+          //   "@media (max-width: 959.95px)": {
+          //     px: 0,
+          //   },
+          // }}
         >
-          <Image
-            src={mascot}
-            sx={{ width: "28vw", objectFit: "contain", align: "center" }}
-            className="mascot-image-high"
-            ref={mascotRef}
-          />
-        </Grid>
-        <Grid item sm={12} md={6.5} lg={6.5} sx={{ maxWidth: "100%" }}>
-          <Container
-            sx={{
-              "@media (max-width: 959.95px)": {
-                width: "100%",
-                m: 0,
-                p: 2,
-              },
-            }}
+          <Grid
+            item
+            sm={12}
+            md={5.5}
+            lg={5.5}
+            display={{ xs: "none", sm: "none", md: "block", lg: "block" }}
+            style={{ position: "relative" }}
           >
+            <Image
+              src={mascot}
+              sx={{ width: "28vw", objectFit: "contain", align: "center" }}
+              className="mascot-image-high"
+              ref={mascotRef}
+            />
+          </Grid>
+          <Grid item sm={12} md={6.5} lg={6.5} sx={{ maxWidth: "100%" }}>
+            {/* <Container
+              sx={{
+                "@media (max-width: 959.95px)": {
+                  width: "100%",
+                  m: 0,
+                  p: 2,
+                },
+              }}
+            > */}
             <Typography
               component={"p"}
               sx={{
@@ -200,7 +201,7 @@ const BusinessConsultancy = () => {
             </Typography>
             <Container
               sx={{
-                width: "90%",
+                // width: "90%",
                 mt: 5,
                 "@media (max-width: 959.95px)": {
                   width: "100%",
@@ -211,9 +212,10 @@ const BusinessConsultancy = () => {
             >
               <ConsultingForm />
             </Container>
-          </Container>
+            {/* </Container> */}
+          </Grid>
         </Grid>
-      </Grid>
+      </Container>
     </Grid>
   );
 };
